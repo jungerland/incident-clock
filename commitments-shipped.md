@@ -25,10 +25,16 @@ Researched 2026-11-03. Sources are Vanta's own pages. [DOC] = help center or cha
 - **Ingestion:** Ironclad, Salesforce, SharePoint, manual PDF, API. Google Drive on the roadmap.
 - **Notifications:** upload summaries, weekly digest, unassigned-account emails. That's all.
 
+## Confirmed by Vanta sales chat (2026-11-03)
+
+> "During an incident, you can filter by event type and affected data to see which customers require notice, their contractual notification windows (such as 24 or 72 hours), and notification contacts."
+
+So the incident lookup exists as a manual filter on the commitment inventory. A first reply conflated this with control monitoring ("if any of your controls or policies are broken, you're notified").
+
 ## Not documented (marketing promises only, or absent)
 
-- **Deadline tracking.** No SLA clock or due dates. [MKT] promises "who needs to be notified, by when."
-- **Incident workflow.** No link from an incident to affected customers, no notice drafting. A customer quote (Perforce) asks to "plug into our incident response workflows."
+- **Deadline tracking.** The window is listed (24h, 72h), but no clock or due date computed from discovery time. [MKT] promises "who needs to be notified, by when."
+- **Incident workflow.** A person filters by hand. Nothing takes incident facts and works out which contracts are triggered (suspected vs. confirmed, which data is in the affected system), drafts notices, or tracks whether each notice went out. A customer quote (Perforce) asks to "plug into our incident response workflows."
 - **Operating data.** Analysis checks design coverage (is there a control or policy?), not whether the company actually does it. [MKT] claims "continuous assurance."
 - **Real alerts.** [MKT] "24/7 monitoring and proactive alerts"; no alert types in the docs.
 
