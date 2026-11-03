@@ -42,6 +42,14 @@ So the incident lookup exists as a manual filter on the commitment inventory. No
 - **Operating data.** Analysis checks design coverage (is there a control or policy?), not whether the company actually does it. [MKT] claims "continuous assurance."
 - **Real alerts.** [MKT] "24/7 monitoring and proactive alerts"; no alert types in the docs.
 
+## Perforce (the customer quote)
+
+Launch blog, 2026-02-25, verbatim:
+
+> "When an incident happens, the first question is always: who do we need to notify, and by when? To manually dig through our top customer contracts during a crisis is not sustainable. Customer Commitments simplifies that completely by making those obligations clear and actionable upfront—it's exactly the kind of structure we need to plug into our incident response workflows." (Aaron Kiemele, CISO, Perforce)
+
+Perforce case study (https://www.vanta.com/customers/perforce): DevOps platform, Minneapolis, 2,000+ employees, Vanta customer since 2024. 20+ products, multiple business units, six frameworks (ISO 27001/27018, SOC 2, TISAX, NIST CSF, ISO 42001), plans to consolidate 14 audits in Vanta. Uses Trust Center, Questionnaire Automation, Vendor Risk, Risk Management, Custom Frameworks, Access Reviews. The case study does not mention Customer Commitments; the blog quote reads as a need, not a confirmed deployment.
+
 ## Sources
 
 - https://www.vanta.com/products/customer-commitments
