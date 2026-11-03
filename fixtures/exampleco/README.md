@@ -13,8 +13,10 @@ All company and vendor names are fictional placeholders: Example National Bank, 
 |---|---|---|---|
 | `exampleco-standard-dpa.md` | ExampleCo standard terms | all | drafted |
 | `example-national-bank-security-addendum.md` | Large US bank, 12-hour notice | Commercial Cloud | drafted |
-| (planned) | Defense prime, 72-hour notice plus 90-day evidence preservation | Public Sector | |
-| (planned) | Health system BAA, 10-day notice | Healthcare and Life Sciences | |
-| (planned) | EU bank, "without undue delay" | ExampleCo EU | |
-| (planned) | XYZwire customer, 24 hours vs. ExampleCo's 72 hours | XYZwire | |
-| (planned) | Incident scenario and its answer key | | |
+| (planned) | Example Defense Systems, 72-hour notice plus 90-day evidence preservation | Commercial Cloud | |
+| (planned) | Example Health System BAA, 10-day notice, not exposed | Healthcare and Life Sciences | |
+| (planned) | Example Retail Group, XYZwire contract (24 hours) and ExampleCo contract (72 hours) | XYZwire | |
+| (planned) | Labelforge transfer log | | |
+| `incident-labelforge/target-summary.md` | Incident scenario: target output and answer key | | drafted |
+
+The EU bank was dropped (2026-11-03): it repeated the bank's role in the demo.
