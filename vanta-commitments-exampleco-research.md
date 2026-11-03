@@ -1,4 +1,4 @@
-# Vanta Customer Commitments: Customer Segments and a Recommended "Acme" Profile
+# Vanta Customer Commitments: Customer Segments and a Recommended "ExampleCo" Profile
 
 Prepared November 3, 2026 for a Senior PM, Commitments demo. Each section separates **Vanta's own claims** (Vanta blog, product pages, press releases, case studies) from **independent sources** (reporters, analysts, third-party datasets, regulators). **Inference** marks my own reasoning, which no source states directly.
 
@@ -10,7 +10,7 @@ Prepared November 3, 2026 for a Senior PM, Commitments demo. Each section separa
 - **Where Vanta is pushing** in 2025 and 2026: enterprises (with multiple business units), AI companies, government (FedRAMP and CMMC), regulated EU markets (DORA, NIS 2, C5) and privacy.
 - **The customers Vanta quotes for Customer Commitments** are larger than its typical customer. They are software vendors that sell into very large or mission-critical buyers: Perforce (2,000+ employees), Snyk (about 1,000 employees) and Nominal (about 75 employees, aerospace and defense).
 - **Who gets the most value from Commitments (inference):** a B2B software vendor that signs many contracts on its customers' paper with regulated enterprise buyers. Financial services stands out, because laws there (DORA, NYDFS Part 500, SEC Reg S-P) push security terms into vendor contracts.
-- **Recommended Acme:** an AI customer-servicing platform for banks, credit unions and insurers in the US and EU. About 240 employees, Series C, roughly $45M ARR. Holds SOC 2 Type II and ISO 27001, with ISO 42001 in progress. Stores consumers' nonpublic personal information (NPI), call recordings and transcripts, and relies on large language model (LLM) subprocessors.
+- **Recommended ExampleCo:** an AI customer-servicing platform for banks, credit unions and insurers in the US and EU. About 240 employees, Series C, roughly $45M ARR. Holds SOC 2 Type II and ISO 27001, with ISO 42001 in progress. Stores consumers' nonpublic personal information (NPI), call recordings and transcripts, and relies on large language model (LLM) subprocessors.
 
 ---
 
@@ -28,7 +28,7 @@ Prepared November 3, 2026 for a Senior PM, Commitments demo. Each section separa
 - TechCrunch reported that "three-quarters of the current Y Combinator cohort uses Vanta." It also said Vanta initially focused on ISO 27001, HIPAA and SOC 2, "especially for startups" ([TechCrunch, Frederic Lardinois, July 24, 2024](https://techcrunch.com/2024/07/24/trust-management-platform-vanta-raises-150m-series-c-now-valued-at-2-45b/)).
 - Caveat: both datasets only detect public signals such as Trust Centers and job posts, so they lean toward smaller companies that advertise their security posture. TechnologyChecker itself calls its count "a floor."
 
-**Inference, profile:** US-based B2B SaaS or AI software company, 11 to 200 employees, Series A or B. It starts with SOC 2 (often Type I, then Type II) to close its first enterprise deals, then adds ISO 27001 for EU or international buyers and HIPAA if it touches health data. Your current Acme (57 people, Series B, SOC 2 Type II, an EU customer asking for ISO 27001) is almost exactly this typical customer.
+**Inference, profile:** US-based B2B SaaS or AI software company, 11 to 200 employees, Series A or B. It starts with SOC 2 (often Type I, then Type II) to close its first enterprise deals, then adds ISO 27001 for EU or international buyers and HIPAA if it touches health data. Your current ExampleCo (57 people, Series B, SOC 2 Type II, an EU customer asking for ISO 27001) is almost exactly this typical customer.
 
 ---
 
@@ -78,21 +78,21 @@ These are independent sources: regulators and law firms.
 
 ---
 
-## 5. Recommended "Acme" for the demo
+## 5. Recommended "ExampleCo" for the demo
 
 The whole profile is inference, based on sections 1–4.
 
 | Attribute | Recommendation | Why |
 |---|---|---|
-| **Industry / product** | AI customer-servicing platform for banks, credit unions, insurers and wealth managers. AI agents handle inbound chat and voice, summarize calls, draft replies and route disputes and complaints. | Close to Acme's current customer-success story, but sold to the most heavily contracted buyers (Section 4). It also sits in two Vanta push areas: AI and financial services. |
+| **Industry / product** | AI customer-servicing platform for banks, credit unions, insurers and wealth managers. AI agents handle inbound chat and voice, summarize calls, draft replies and route disputes and complaints. | Close to ExampleCo's current customer-success story, but sold to the most heavily contracted buyers (Section 4). It also sits in two Vanta push areas: AI and financial services. |
 | **Employees** | About 240, including a 4-person GRC/security team led by a Head of GRC who reports to the CISO. | Large enough to have the GRC lead or CISO persona Vanta targets. Sits between Nominal (~75) and Perforce (2,000+). |
 | **Stage / scale** | Series C (raised in 2026); about $45M ARR; ~160 customers, ~40 of them enterprise accounts on customer paper (top-50 US banks, two EU banks, one UK insurer). | Upper mid-market, where Vanta leads, with an enterprise tail where it is fighting Drata ([YipitData](https://www.yipitdata.com/resources/vanta-vs-drata-compliance-software-2026)). |
 | **Frameworks held** | SOC 2 Type II (since 2023); ISO 27001 (certified 2025 for EU banks); ISO 42001 in progress; GDPR program; DORA treated as obligations passed down from EU bank customers rather than a certification. | Follows the typical Vanta path (SOC 2, then ISO 27001), then adds AI governance and DORA. |
 | **Data stored** | Consumers' nonpublic personal information (names, contact details, account identifiers, balances, transaction and dispute details); call recordings and transcripts; chat logs; uploaded ID and statement images; bank agents' SSO identities; model prompts and outputs. Hosted in AWS US and EU regions. Subprocessors: an LLM provider, a voice/telephony provider, a data warehouse. | Triggers breach-notice, data-residency, deletion and AI-training clauses. |
 | **Commitments to seed in the demo** | Breach notice that differs by customer (24h, 36h, 72h per Reg S-P, "without undue delay"); 30-day subprocessor notice with objection right; EU-only data residency for EU banks; "no training on customer data"; annual pen-test summary on request; deletion within 30 days with certificate; audit rights; DORA TLPT cooperation and BCP testing; SOC 2 report delivery. | Each maps to a Vanta commitment type, an Agent question or a GRC-gap check described in Section 3. |
-| **Demo story** | Acme wants to add a second LLM subprocessor. The agent finds the 27 contracts requiring advance notice, groups them by notice window and objection right, flags the 3 EU banks where the change would breach data residency, and drafts customer notices for the Trust Center. | Matches the "who do we need to notify, and by when?" problem Perforce's CISO describes ([Vanta](https://www.vanta.com/resources/introducing-customer-commitments)). |
+| **Demo story** | ExampleCo wants to add a second LLM subprocessor. The agent finds the 27 contracts requiring advance notice, groups them by notice window and objection right, flags the 3 EU banks where the change would breach data residency, and drafts customer notices for the Trust Center. | Matches the "who do we need to notify, and by when?" problem Perforce's CISO describes ([Vanta](https://www.vanta.com/resources/introducing-customer-commitments)). |
 
-**Lighter-touch alternative:** keep Acme as customer-success software but make about 30% of its revenue come from banks and insurers, with a few EU customers on DORA-driven paper. You keep the current story while making the contracts realistic. The trade-off is fewer commitments and weaker pain at 57 people.
+**Lighter-touch alternative:** keep ExampleCo as customer-success software but make about 30% of its revenue come from banks and insurers, with a few EU customers on DORA-driven paper. You keep the current story while making the contracts realistic. The trade-off is fewer commitments and weaker pain at 57 people.
 
 ---
 

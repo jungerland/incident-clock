@@ -1,6 +1,6 @@
 # Understanding Customer Commitments
 
-Notes from a side conversation about what makes Vanta's Customer Commitments product valuable, and how that affects Acme's profile in the demo.
+Notes from a side conversation about what makes Vanta's Customer Commitments product valuable, and how that affects ExampleCo's profile in the demo.
 
 ---
 
@@ -46,7 +46,7 @@ A bank's contract is therefore longer, stricter and different from the next bank
 - A 75-person vendor selling to the military and aerospace companies can carry heavier obligations than a 3,000-person company selling self-serve on its own terms. Vanta's Nominal case study says more than 75% of Nominal's customers require or track compliance metrics ([Vanta, Nominal case study](https://www.vanta.com/customers/nominal)).
 - Perforce's CISO talks about digging through "our top customer contracts" during an incident. The pain comes from those negotiated accounts, not from headcount ([Vanta, Feb 25, 2026](https://www.vanta.com/resources/introducing-customer-commitments)).
 
-Size still matters in one way. A company needs someone who owns GRC and the budget for a paid add-on. A large enterprise vendor that also sells to demanding buyers gets the most value of all, because it has many negotiated contracts and many triggering events. That's why the enterprise version of Acme is a strong option too.
+Size still matters in one way. A company needs someone who owns GRC and the budget for a paid add-on. A large enterprise vendor that also sells to demanding buyers gets the most value of all, because it has many negotiated contracts and many triggering events. That's why the enterprise version of ExampleCo is a strong option too.
 
 ---
 

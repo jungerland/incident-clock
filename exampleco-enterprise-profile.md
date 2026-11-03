@@ -1,6 +1,6 @@
-# Acme Enterprise: Demo Company Profile
+# ExampleCo Enterprise: Demo Company Profile
 
-Prepared November 3, 2026. This is a separate company from Acme (Mid-Market Edition, version 2) in `acme-midmarket-profile.md`, so the demo can switch between the two. Supporting research and full citations are in `vanta-commitments-acme-research.md`.
+Prepared November 3, 2026. This is a separate company from ExampleCo (Mid-Market Edition, version 2) in `exampleco-midmarket-profile.md`, so the demo can switch between the two. Supporting research and full citations are in `vanta-commitments-exampleco-research.md`.
 
 **How to read this:** cited facts link to their sources. Everything about the fictional company itself (its size, customers, frameworks, contracts and scenarios) is my inference, designed to fit those facts.
 
@@ -8,7 +8,7 @@ Prepared November 3, 2026. This is a separate company from Acme (Mid-Market Edit
 
 ## Industry choice: an enterprise data and AI platform
 
-Acme's current customer-success positioning had no influence on this choice. I scored candidate industries on two questions: how many of Vanta's push areas the company falls into, and how much Customer Commitments would be worth to it.
+ExampleCo's current customer-success positioning had no influence on this choice. I scored candidate industries on two questions: how many of Vanta's push areas the company falls into, and how much Customer Commitments would be worth to it.
 
 | Candidate industry | Vanta push areas covered | Contract-term variety (inference) | Verdict |
 |---|---|---|---|
@@ -27,11 +27,11 @@ Why this industry is the most valuable for Vanta:
 
 ## Company profile
 
-| Attribute | Acme Enterprise |
+| Attribute | ExampleCo Enterprise |
 |---|---|
-| **Product** | Acme Data Cloud, a governed data platform with an AI agent builder on top. Enterprises use it to bring in, store and analyze operational data, then build AI agents that work on it (fraud review, claims triage, clinical operations, supply chain). |
+| **Product** | ExampleCo Data Cloud, a governed data platform with an AI agent builder on top. Enterprises use it to bring in, store and analyze operational data, then build AI agents that work on it (fraud review, claims triage, clinical operations, supply chain). |
 | **Deployment options** | Shared commercial cloud on AWS, Azure and GCP; an EU sovereign region; a GovCloud environment; and bring-your-own-cloud, where the platform runs in the customer's own account. |
-| **Business units** (each a separate Vanta organization, joined in Organizations Center) | 1. Commercial Cloud. 2. Acme Public Sector (federal and defense). 3. Healthcare and Life Sciences. 4. Acme EU (Dublin and Frankfurt entities). 5. Pipewire, an observability startup acquired in 2025 that still runs on its own systems and contracts. |
+| **Business units** (each a separate Vanta organization, joined in Organizations Center) | 1. Commercial Cloud. 2. ExampleCo Public Sector (federal and defense). 3. Healthcare and Life Sciences. 4. ExampleCo EU (Dublin and Frankfurt entities). 5. Pipewire, an observability startup acquired in 2025 that still runs on its own systems and contracts. |
 | **Employees** | About 2,600. Security has about 90 people, GRC 14 (a VP of GRC plus GRC leads for each business unit), and legal 30, including a Deputy GC for commercial contracts. |
 | **Stage / scale** | Late-stage and pre-IPO: Series F in 2025, about $420M ARR, IPO targeted for 2027, so SOX readiness is under way. |
 | **Customers** | About 2,100. Around 650 are on contracts the customer drafted or heavily negotiated. These include about 120 financial institutions (US and EU), 45 federal agencies and defense prime contractors, 90 health systems and pharma companies, and 300 of the Fortune 1000. |
@@ -40,7 +40,7 @@ Why this industry is the most valuable for Vanta:
 | **Key subprocessors** | AWS, Azure, GCP, two large-model providers, a support platform, a data-labeling vendor, and an offshore support center. |
 | **People in the demo** | CISO; VP of GRC; GRC leads for each business unit; Deputy GC who runs the redlining of contract terms; incident commander. |
 
-**Rough scale of the problem (inference):** Vanta says a single contract "can contain 50+ commitments" ([Vanta What's New](https://www.vanta.com/whats-new)). At about 650 negotiated contracts, Acme Enterprise would be tracking more than 30,000 commitments across five business units.
+**Rough scale of the problem (inference):** Vanta says a single contract "can contain 50+ commitments" ([Vanta What's New](https://www.vanta.com/whats-new)). At about 650 negotiated contracts, ExampleCo Enterprise would be tracking more than 30,000 commitments across five business units.
 
 ---
 
@@ -48,7 +48,7 @@ Why this industry is the most valuable for Vanta:
 
 Each one comes from a real rule or common contract term. The variation between customers is what makes the demo interesting.
 
-| Commitment type | How it varies across Acme's contracts | Real-world basis |
+| Commitment type | How it varies across ExampleCo's contracts | Real-world basis |
 |---|---|---|
 | Breach notification | 12h or 24h (large banks); 72h (SEC-regulated firms); 72h to DoD, passed through prime contractors; 10 days under a negotiated BAA, against HIPAA's 60-day limit; "without undue delay" (EU) | [SEC Reg S-P](https://www.sec.gov/rules/final/2024/34-100155.pdf); [DFARS 252.204-7012](https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting.); [Ballard Spahr on HIPAA](https://www.ballardspahr.com/insights/alerts-and-articles/2024/01/hipaa-breach-notifications-a-question-of-timing) |
 | Forensic evidence preservation | Keep images of affected systems for at least 90 days for defense customers | [DFARS 252.204-7012](https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting.) |
@@ -71,15 +71,15 @@ Each one comes from a real rule or common contract term. The variation between c
 
 This story directly answers the question Perforce's CISO says comes first in an incident: "who do we need to notify, and by when?" ([Vanta, Feb 25, 2026](https://www.vanta.com/resources/introducing-customer-commitments)).
 
-**2. Redline checked against reality (deal-desk story).** A top-10 bank's draft contract asks for 6-hour breach notice and an EU-only AI model provider. The agent compares the draft with Acme's current incident-response tests and its list of subprocessors. It flags two terms Acme cannot meet today and suggests fallback wording. Vanta says the product can analyze a draft contract against a company's live compliance program ([Vanta Help Center](https://help.vanta.com/en/articles/13931299-managing-customer-commitments)).
+**2. Redline checked against reality (deal-desk story).** A top-10 bank's draft contract asks for 6-hour breach notice and an EU-only AI model provider. The agent compares the draft with ExampleCo's current incident-response tests and its list of subprocessors. It flags two terms ExampleCo cannot meet today and suggests fallback wording. Vanta says the product can analyze a draft contract against a company's live compliance program ([Vanta Help Center](https://help.vanta.com/en/articles/13931299-managing-customer-commitments)).
 
-**3. Combining an acquired company (Organizations Center story).** The agent loads Pipewire's 140 contracts, maps their commitments onto Acme's standard commitment types, and highlights conflicts. One example is Pipewire promising 24h breach notice to a shared customer whose Acme contract says 72h.
+**3. Combining an acquired company (Organizations Center story).** The agent loads Pipewire's 140 contracts, maps their commitments onto ExampleCo's standard commitment types, and highlights conflicts. One example is Pipewire promising 24h breach notice to a shared customer whose ExampleCo contract says 72h.
 
 ---
 
 ## Toggle comparison
 
-| | Acme (Mid-Market) | Acme Enterprise |
+| | ExampleCo (Mid-Market) | ExampleCo Enterprise |
 |---|---|---|
 | Industry | AI fraud and AML for banks and fintechs (one industry, deep rules) | Horizontal data and AI platform for regulated enterprises (many industries) |
 | Employees | ~260 | ~2,600 |
@@ -93,4 +93,4 @@ This story directly answers the question Perforce's CISO says comes first in an 
 Before building the demo, check that every framework listed above is available in Vanta. I couldn't load Vanta's framework catalog page to confirm SOC 1, 27017, 27018 and 27701. I did confirm FedRAMP, CMMC, HITRUST, DORA, NIS 2, ISO 42001 and C5 in the earlier research.
 
 
-Naming caution: Vanta has a real customer story for "Acme Technology," a small Singapore fintech ([Vanta](https://www.vanta.com/customers/acme-technology)). Consider a distinct product name or a short note saying Acme is fictional.
+Naming note: this fictional company was renamed from Acme to ExampleCo because Vanta has a real customer story for "Acme Technology," a small Singapore fintech ([Vanta](https://www.vanta.com/customers/acme-technology)).
