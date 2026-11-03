@@ -31,7 +31,7 @@ Why this industry is the most valuable for Vanta:
 |---|---|
 | **Product** | ExampleCo Data Cloud, a governed data platform with an AI agent builder on top. Enterprises use it to bring in, store and analyze operational data, then build AI agents that work on it (fraud review, claims triage, clinical operations, supply chain). |
 | **Deployment options** | Shared commercial cloud on AWS, Azure and GCP; an EU sovereign region; a GovCloud environment; and bring-your-own-cloud, where the platform runs in the customer's own account. |
-| **Business units** (each a separate Vanta organization, joined in Organizations Center) | 1. Commercial Cloud. 2. ExampleCo Public Sector (federal and defense). 3. Healthcare and Life Sciences. 4. ExampleCo EU (Dublin and Frankfurt entities). 5. Pipewire, an observability startup acquired in 2025 that still runs on its own systems and contracts. |
+| **Business units** (each a separate Vanta organization, joined in Organizations Center) | 1. Commercial Cloud. 2. ExampleCo Public Sector (federal and defense). 3. Healthcare and Life Sciences. 4. ExampleCo EU (Dublin and Frankfurt entities). 5. XYZwire, an observability startup acquired in 2025 that still runs on its own systems and contracts. |
 | **Employees** | About 2,600. Security has about 90 people, GRC 14 (a VP of GRC plus GRC leads for each business unit), and legal 30, including a Deputy GC for commercial contracts. |
 | **Stage / scale** | Late-stage and pre-IPO: Series F in 2025, about $420M ARR, IPO targeted for 2027, so SOX readiness is under way. |
 | **Customers** | About 2,100. Around 650 are on contracts the customer drafted or heavily negotiated. These include about 120 financial institutions (US and EU), 45 federal agencies and defense prime contractors, 90 health systems and pharma companies, and 300 of the Fortune 1000. |
@@ -64,7 +64,7 @@ Each one comes from a real rule or common contract term. The variation between c
 ## Demo stories
 
 **1. Incident at a shared subprocessor (main story).** A data-labeling vendor reports that someone accessed its systems using stolen credentials. The agent:
-- finds which business units and customers had data with that vendor, including Pipewire contracts that were never migrated;
+- finds which business units and customers had data with that vendor, including XYZwire contracts that were never migrated;
 - ranks notification deadlines, earliest first: bank customers at 12h and 24h, then the defense 72h path, then BAA customers at 10 days;
 - flags the defense contracts that require 90-day evidence preservation;
 - drafts customer notices for each business unit and shows the combined view in Organizations Center.
@@ -73,7 +73,7 @@ This story directly answers the question Perforce's CISO says comes first in an 
 
 **2. Redline checked against reality (deal-desk story).** A top-10 bank's draft contract asks for 6-hour breach notice and an EU-only AI model provider. The agent compares the draft with ExampleCo's current incident-response tests and its list of subprocessors. It flags two terms ExampleCo cannot meet today and suggests fallback wording. Vanta says the product can analyze a draft contract against a company's live compliance program ([Vanta Help Center](https://help.vanta.com/en/articles/13931299-managing-customer-commitments)).
 
-**3. Combining an acquired company (Organizations Center story).** The agent loads Pipewire's 140 contracts, maps their commitments onto ExampleCo's standard commitment types, and highlights conflicts. One example is Pipewire promising 24h breach notice to a shared customer whose ExampleCo contract says 72h.
+**3. Combining an acquired company (Organizations Center story).** The agent loads XYZwire's 140 contracts, maps their commitments onto ExampleCo's standard commitment types, and highlights conflicts. One example is XYZwire promising 24h breach notice to a shared customer whose ExampleCo contract says 72h.
 
 ---
 
