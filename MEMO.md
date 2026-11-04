@@ -1,6 +1,6 @@
 **PRODUCT MEMO**
 
-# Incident Interpreter: an incident notification agent
+# Incident Interpreter: examining contract implications
 
 When a vendor is breached, the first question is who to notify and by when. Vanta's Customer Commitments lists each customer's notification window. A human still has to decide which contracts apply, work out when each clock started, and write each notice. I built an agent prototype that does that work. You tell Incident Interpreter what happened, then it reads each contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. In a test with three fictional customers and one vendor breach, it got all 3 notify decisions and both deadlines right in each of 3 runs.
 
