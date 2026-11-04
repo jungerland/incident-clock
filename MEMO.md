@@ -34,7 +34,7 @@ For these three customers, that filter would show notification windows of 12 hou
 
 ## What I built
 
-A working prototype with an eval. Try the [demo](https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK), or see the [code and full results](https://github.com/jungerland/vanta-commitments).
+A working prototype with an eval. Try the [demo](https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK), or see the [code and full results](https://github.com/jungerland/incident-clock).
 
 It runs in two steps. The first reads each contract once and extracts its commitments, each with a quote and how it differs from the company's standard terms. The second runs when an incident happens and uses that list, the contract text, and a log of what was sent to the vendor.
 
