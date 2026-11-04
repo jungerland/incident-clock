@@ -1,6 +1,6 @@
 # What Vanta Customer Commitments Ships Today
 
-Researched 2026-11-03. Sources are Vanta's own pages. [DOC] = help center or changelog. [MKT] = marketing only. Some changelog entries came from a summary, not verbatim text; verify before quoting in an interview.
+Researched 2026-11-03. Sources are Vanta's own pages. [DOC] = help center or changelog. [MKT] = marketing only.
 
 ## Timeline
 
