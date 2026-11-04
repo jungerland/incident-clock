@@ -162,6 +162,53 @@
           "quote": "Customer Data is encrypted at rest using AES-256 and in transit using TLS 1.2 or higher.",
           "summary": "AES-256 at rest, TLS 1.2+ in transit.",
           "optional": true
+        },
+        {
+          "id": "DPA-5.1",
+          "section": "5.1",
+          "type": "subprocessor_scope",
+          "quote": "Customer grants ExampleCo general authorization to engage Subprocessors.",
+          "summary": "General authorization to engage subprocessors.",
+          "optional": true,
+          "notes": "Baseline for customer terms that require a closed list."
+        },
+        {
+          "id": "DPA-5.5",
+          "section": "5.5",
+          "type": "subprocessor_scope",
+          "quote": "ExampleCo remains responsible for its Subprocessors' performance of the obligations in this DPA.",
+          "summary": "ExampleCo stays responsible for its subprocessors.",
+          "optional": true,
+          "notes": "Baseline for customer flow-down terms."
+        },
+        {
+          "id": "DPA-7.4",
+          "section": "7.4",
+          "type": "incident_costs",
+          "quote": "ExampleCo's notification of or response to a Personal Data Breach is not an acknowledgment of fault or liability.",
+          "summary": "Notice or response is not an admission of fault.",
+          "optional": true,
+          "any_type_ok": true,
+          "notes": "Baseline for customer terms that shift incident costs to ExampleCo."
+        },
+        {
+          "id": "DPA-8.2",
+          "section": "8.2",
+          "type": "ai_data_use",
+          "quote": "ExampleCo may use Usage Data to operate, secure and improve the Services.",
+          "summary": "Usage Data may be used to operate, secure and improve the Services.",
+          "optional": true,
+          "notes": "A permission. Baseline for customer limits on de-identified data."
+        },
+        {
+          "id": "DPA-9.1",
+          "section": "9.1",
+          "type": "certification",
+          "quote": "ExampleCo will make its most recent SOC 2 Type II report available to Customer through the Trust Center, subject to Customer's acceptance of the Trust Center non-disclosure terms.",
+          "summary": "SOC 2 Type II report available through the Trust Center under its NDA terms.",
+          "optional": true,
+          "any_type_ok": true,
+          "notes": "Baseline for customer terms that require direct delivery."
         }
       ],
       "traps": []
