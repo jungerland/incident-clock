@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Incident Interpreter</title>
+<title>Incident Clock</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -118,7 +118,7 @@ summary:hover { background: var(--bg); }
 <div class="wrap">
   <header>
     <span class="eyebrow">Prototype · Incident response</span>
-    <h1>Incident Interpreter</h1>
+    <h1>Incident Clock</h1>
     <p class="subtitle">What your contracts require, and by when</p>
   </header>
 
@@ -127,7 +127,7 @@ summary:hover { background: var(--bg); }
     <button class="tab" role="tab" id="tab-demo" aria-controls="demo-panel">Demo</button>
   </nav>
 
-  <article id="memo-panel" role="tabpanel" aria-labelledby="tab-memo"><p>When a vendor is breached, the first question is who to notify and by when. Vanta's Customer Commitments lists each customer's notification window. A human still has to decide which contracts apply, work out when each clock started, and write each notice. I built an agent prototype that does that work. You tell Incident Interpreter what happened, then it reads each contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. In a test with three fictional customers and one vendor breach, it got all 3 notify decisions and both deadlines right in each of 3 runs.</p>
+  <article id="memo-panel" role="tabpanel" aria-labelledby="tab-memo"><p>When a vendor is breached, the first question is who to notify and by when. Vanta's Customer Commitments lists each customer's notification window. A human still has to decide which contracts apply, work out when each clock started, and write each notice. I built an agent prototype that does that work. You tell Incident Clock what happened, then it reads each contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. In a test with three fictional customers and one vendor breach, it got all 3 notify decisions and both deadlines right in each of 3 runs.</p>
 <p><strong>The test incident:</strong> ExampleCo is a fictional Vanta customer, a data and AI platform that sells to banks, retailers and hospitals. The table below lists three of ExampleCo's own customers. Labelforge, ExampleCo's data-labeling vendor, finds a login with a stolen credential at 6:00 AM PT on Nov 2 and tells ExampleCo at 3:00 PM PT. Labelforge doesn't yet know what was viewed. The time now is 4:00 PM PT on Nov 2.</p>
 <div class="tw"><table>
 <thead>
