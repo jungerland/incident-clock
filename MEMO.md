@@ -6,19 +6,15 @@ When a vendor is breached, the first question is who to notify and by when. Vant
 
 **The test incident:** ExampleCo is a fictional Vanta customer, a data and AI platform that sells to banks, retailers and hospitals. The table below lists three of ExampleCo's own customers. Labelforge, ExampleCo's data-labeling vendor, finds a login with a stolen credential at 6:00 AM PT on Nov 2 and tells ExampleCo at 3:00 PM PT. Labelforge doesn't yet know what was viewed. The time now is 4:00 PM PT on Nov 2.
 
-*Table legend*
-* The numbers in parentheses are contract sections. 
-* Tokenized means names and account numbers were replaced with tokens. 
-* Safe Harbor means 18 kinds of identifier were removed. 
-* The [demo](https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK) shows the agent's unedited output, the contract wording behind each decision, and the draft notices.
-
 | ExampleCo<br>Customer   | Notify? | Why                                                                                                                                                                               | Deadline                                                                                                               | Also do now                                                                                                                                                                     |
 | ----------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Awesome National Bank   | **Yes** | Labelforge held tokenized feedback samples. The contract counts tokenized and de-identified data as bank data (2.2) and covers suspected incidents (2.4).                         | **Nov 2, 6:00 PM** (2 hours left). The clock started when Labelforge found the breach, not when ExampleCo heard (2.3). | Phone and email the Cyber Fusion Center, not the relationship manager (6.2). Send written updates every 24 hours (6.3). Don't contact the bank's customers or regulators (6.4). |
 | Astounding Retail Group | **Yes** | This contract came with an acquisition and never moved to ExampleCo's standard terms (9.2). Derived logs and traces count as retailer data (2.2).                                 | **Nov 3, 3:00 PM** (23 hours left). 24 hours, not ExampleCo's usual 72, from when ExampleCo heard (6.1).               | Email and phone Security Operations (6.2). For legal: Labelforge was never approved under this contract (5.1), and the notice must name it (6.3).                               |
 | Amazing Health System   | **No**  | Labelforge held only data de-identified by HIPAA's Safe Harbor method. This contract says that data is not protected health information and is not subject to the contract (2.3). | n/a                                                                                                                    | Counsel to confirm.                                                                                                                                                             |
 
-I shortened the wording in this table by hand. The numbers in parentheses are contract sections. Tokenized means names and account numbers were replaced with tokens. Safe Harbor means 18 kinds of identifier were removed. The [demo](https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK) shows the agent's unedited output, the contract wording behind each decision, and the draft notices.
+The numbers in parentheses are contract sections. Tokenized means names and account numbers were replaced with tokens. Safe Harbor means 18 kinds of identifier were removed.
+
+I shortened the wording in this table by hand. The [demo](https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK) shows the agent's unedited output, the contract wording behind each decision, and the draft notices.
 
 ## The problem
 
