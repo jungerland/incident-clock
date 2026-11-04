@@ -6,8 +6,8 @@ alongside the standard DPA so the model can describe deviations, but quotes are
 checked only against the contract being extracted. Never reads the answer key.
 
 Usage:
-  python -m commitments.extract                 # 1 run, v1 prompt
-  python -m commitments.extract --runs 3 --prompt v1
+  python -m commitments.extract                 # 1 run, v2 prompt
+  python -m commitments.extract --runs 3 --prompt v2
 
 Output: runs/<timestamp>-<prompt>/run-NN.json
 """
@@ -158,7 +158,7 @@ def run_once(client: anthropic.Anthropic, prompt: str, files: list[Path], baseli
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--prompt", default="v1", help="prompt file name in commitments/prompts/, without .md")
+    parser.add_argument("--prompt", default="v2", help="prompt file name in commitments/prompts/, without .md")
     parser.add_argument("--runs", type=int, default=1)
     parser.add_argument("--contracts", type=Path, default=CONTRACTS)
     args = parser.parse_args()
