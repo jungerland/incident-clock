@@ -1,8 +1,8 @@
 **PRODUCT MEMO**
 
-# Breach Clock: an incident notification agent
+# Incident Interpreter: an incident notification agent
 
-When a vendor is breached, the first question is who to notify and by when. Vanta's Customer Commitments lists each customer's notification window. A human still has to decide which contracts apply, work out when each clock started, and write each notice. I built an agent prototype that does that work. You tell Breach Clock what happened, then it reads each contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. In a test with three fictional customers and one vendor breach, it got all 3 notify decisions and both deadlines right in each of 3 runs.
+When a vendor is breached, the first question is who to notify and by when. Vanta's Customer Commitments lists each customer's notification window. A human still has to decide which contracts apply, work out when each clock started, and write each notice. I built an agent prototype that does that work. You tell Incident Interpreter what happened, then it reads each contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. In a test with three fictional customers and one vendor breach, it got all 3 notify decisions and both deadlines right in each of 3 runs.
 
 **The test incident:** ExampleCo is a fictional Vanta customer, a data and AI platform that sells to banks, retailers and hospitals. The table below lists three of ExampleCo's own customers. Labelforge, ExampleCo's data-labeling vendor, finds a login with a stolen credential at 6:00 AM PT on Nov 2 and tells ExampleCo at 3:00 PM PT. Labelforge doesn't yet know what was viewed. The time now is 4:00 PM PT on Nov 2.
 
