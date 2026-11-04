@@ -1,0 +1,1 @@
+Labelforge, our data-labeling vendor, emailed us at 3:00 PM today (Nov 2). Someone logged into their annotation platform with a stolen employee credential. Their security team spotted it at 6:00 AM. They don't yet know what was viewed or downloaded.
