@@ -12,9 +12,12 @@ When a vendor is breached, the first question is who to notify and by when. Vant
 | Astounding Retail Group | **Yes** | This contract came with an acquisition and never moved to ExampleCo's standard terms (9.2). Derived logs and traces count as retailer data (2.2).                                 | **Nov 3, 3:00 PM** (23 hours left). 24 hours, not ExampleCo's usual 72, from when ExampleCo heard (6.1).               | Email and phone Security Operations (6.2). For legal: Labelforge was never approved under this contract (5.1), and the notice must name it (6.3).                               |
 | Amazing Health System   | **No**  | Labelforge held only data de-identified by HIPAA's Safe Harbor method. This contract says that data is not protected health information and is not subject to the contract (2.3). | n/a                                                                                                                    | Counsel to confirm.                                                                                                                                                             |
 
-The numbers in parentheses are contract sections. Tokenized means names and account numbers were replaced with tokens. Safe Harbor means 18 kinds of identifier were removed.
+*Table notes*
+* The numbers in parentheses are contract sections. 
+* Tokenized means names and account numbers were replaced with tokens. 
+* Safe Harbor means 18 kinds of identifier were removed.
 
-I shortened the wording in this table by hand. The [demo](https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK) shows the agent's unedited output, the contract wording behind each decision, and the draft notices.
+I shortened the wording in this table by hand. To view the agent's unedited output, the contract wording behind each decision, and the draft notices, check out the [demo](https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK).
 
 ## The problem
 
