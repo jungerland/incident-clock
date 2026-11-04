@@ -25,7 +25,7 @@ Researched 2026-11-03. Sources are Vanta's own pages. [DOC] = help center or cha
 - **Ingestion:** Ironclad, Salesforce, SharePoint, manual PDF, API. Google Drive on the roadmap.
 - **Notifications:** upload summaries, weekly digest, unassigned-account emails. That's all.
 
-## Confirmed by Vanta sales chat (2026-11-03)
+## Confirmed by online research (2026-11-03)
 
 > "During an incident, you can filter by event type and affected data to see which customers require notice, their contractual notification windows (such as 24 or 72 hours), and notification contacts."
 

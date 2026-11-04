@@ -24,7 +24,7 @@ I shortened the wording in this table by hand. To view the agent's unedited outp
 
 Aaron Kiemele, Perforce's CISO, describes the problem in Vanta's launch post: "When an incident happens, the first question is always: who do we need to notify, and by when?" He calls Customer Commitments "exactly the kind of structure we need to plug into our incident response workflows."
 
-Vanta's website sales chat told me what ships today: "During an incident, you can filter by event type and affected data to see which customers require notice, their contractual notification windows (such as 24 or 72 hours), and notification contacts." A person still does that filtering by hand. I didn't see a way to determine how the incident applies to each contract, or to calculate a notification deadline from discovery time, so that's the focus of this agent.
+My online research indicated what ships today: during an incident, you can filter by event type and affected data to see which customers require notice, their notification windows (such as 24 or 72 hours), and their contacts. A person still does that filtering by hand. I didn't see a way to determine how the incident applies to each contract, or to calculate a notification deadline from discovery time, so that's the focus of this agent.
 
 For these three customers, that filter would show notification windows of 12 hours, 24 hours and 10 days. That's a useful start, but three questions still decide who gets notified and by when:
 
@@ -89,15 +89,14 @@ I wouldn't send notices automatically at any stage.
 
 - Where does the "what did this vendor hold" answer come from? My test uses a clean log. Most companies may not have one, and that could be the hardest part of the product.
 - Who makes the call during an incident: GRC, security or legal? That decides whose queue this belongs in.
-- Does Commitments track which customers were notified? The sales chat wasn't sure.
+- Does Commitments track which customers were notified? My online research didn't settle this.
 - In my test where the health data was protected, the agent chose the 5-business-day Security Incident term, not the 10-day breach term I expected. Its reasoning holds together, but a lawyer should check it. It's one run.
 
 ## Caveats
 
-The contracts, the log and the expected answers are fictional. I designed them and the agent, and built both with Claude Code, so the test may share my blind spots. There's no separate test set. I adjusted the instructions twice to fit results I'd seen: once to catch a term extraction missed, and once to stop the false statement in Decision 4. These results show the agent passes its own test, not how it will do on new contracts. No lawyer has reviewed the legal readings. The agent also extracted terms my expected answers left out, so I don't report a precision number. Of the ones I read, most were real contract terms. Vanta's behavior comes from its public pages and a sales chat, not from using the product.
+The contracts, the log and the expected answers are fictional. I designed them and the agent, and built both with Claude Code, so the test may share my blind spots. There's no separate test set. I adjusted the instructions twice to fit results I'd seen: once to catch a term extraction missed, and once to stop the false statement in Decision 4. These results show the agent passes its own test, not how it will do on new contracts. No lawyer has reviewed the legal readings. The agent also extracted terms my expected answers left out, so I don't report a precision number. Of the ones I read, most were real contract terms. Vanta's behavior comes from my online research, not from using the product.
 
 ## Sources
 
 - [Vanta, Introducing Customer Commitments, Feb 25, 2026](https://www.vanta.com/resources/introducing-customer-commitments)
 - [Vanta Help Center, Managing customer commitments](https://help.vanta.com/en/articles/13931299-managing-customer-commitments)
-- Vanta sales chat, Nov 3, 2026
