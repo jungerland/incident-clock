@@ -1,4 +1,4 @@
-# Incident Interpreter: examining contract implications
+# Incident Interpreter: what your contracts require, and by when
 
 You tell it a vendor was breached. It reads each customer contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. It sends nothing.
 
