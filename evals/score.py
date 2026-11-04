@@ -123,7 +123,7 @@ def counterpart_ok(key_item: dict, item: dict) -> bool:
 # --- must_not_extract and traps --------------------------------------------
 
 def parse_must_not(text: str) -> tuple[str, tuple] | None:
-    """'ENB breach notification deadline = 72 hours' -> ('ENB', duration value)."""
+    """'ANB breach notification deadline = 72 hours' -> ('ANB', duration value)."""
     m = re.fullmatch(r"(\w+) breach notification deadline = (.+)", text)
     return (m.group(1), duration_value(m.group(2))) if m else None
 
@@ -147,23 +147,23 @@ def mentions(items: list[dict], fields: tuple[str, ...], pattern: str) -> bool:
 def trap_checks(hits: dict[str, list[dict]], by_contract: dict[str, list[dict]]) -> dict[str, tuple[bool, str]]:
     """Coded check for each trap the key scores in extraction. id -> (passed, what was checked)."""
     h = lambda i: hits.get(i, [])
-    enb, ehs = by_contract.get("ENB", []), by_contract.get("EHS", [])
+    anb, ahs = by_contract.get("ANB", []), by_contract.get("AHS", [])
     return {
-        "ENB-T2": (mentions(h("ENB-6.1"), ("scope", "deviation"), r"suspect"),
+        "ANB-T2": (mentions(h("ANB-6.1"), ("scope", "deviation"), r"suspect"),
                    "6.1 found, and its scope or deviation says suspected incidents count"),
-        "ENB-T4": (bool(h("ENB-D.2")) and not operative(enb, "PT72H") and bool(operative(h("ENB-6.1"), "PT12H")),
+        "ANB-T4": (bool(h("ANB-D.2")) and not operative(anb, "PT72H") and bool(operative(h("ANB-6.1"), "PT12H")),
                    "D.2 found, 72h not operative, 6.1's 12h operative"),
-        "ENB-T5": (bool(h("ENB-5.3-FLOW")) and not operative(enb, "PT6H"),
+        "ANB-T5": (bool(h("ANB-5.3-FLOW")) and not operative(anb, "PT6H"),
                    "5.3 flow-down found, 6h not operative"),
-        "ENB-T8": (has_deadline(h("ENB-5.2"), "P90D", "before")
-                   and mentions(h("ENB-5.2"), ("recipient",), r"tprm|third-party risk")
-                   and any(counterpart_ok({"standard_counterpart": "DPA-5.2"}, i) for i in h("ENB-5.2")),
+        "ANB-T8": (has_deadline(h("ANB-5.2"), "P90D", "before")
+                   and mentions(h("ANB-5.2"), ("recipient",), r"tprm|third-party risk")
+                   and any(counterpart_ok({"standard_counterpart": "DPA-5.2"}, i) for i in h("ANB-5.2")),
                    "5.2 found with 90 days before, TPRM recipient, deviation from DPA 5.2"),
-        "ENB-T9": (has_deadline(h("ENB-6.3-UPD"), "PT24H", "recurring"),
+        "ANB-T9": (has_deadline(h("ANB-6.3-UPD"), "PT24H", "recurring"),
                    "6.3 updates recorded as recurring every 24h"),
-        "ENB-T10": (any(counterpart_ok({"standard_counterpart": "DPA-6.2"}, i) for i in h("ENB-4.2")),
+        "ANB-T10": (any(counterpart_ok({"standard_counterpart": "DPA-6.2"}, i) for i in h("ANB-4.2")),
                     "4.2 found, flagged as a deviation from DPA 6.2"),
-        "EHS-T3": (bool(operative(h("EHS-4.1"), "P10D")) and not operative(ehs, "P60D"),
+        "AHS-T3": (bool(operative(h("AHS-4.1"), "P10D")) and not operative(ahs, "P60D"),
                    "4.1's 10 days operative, 60 days not"),
     }
 

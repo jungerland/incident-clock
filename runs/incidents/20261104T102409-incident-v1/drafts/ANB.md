@@ -1,11 +1,11 @@
 DRAFT FOR COUNSEL. NOT SENT.
 
-To: +1 (212) 555-0147, cfc-thirdparty@enb.example
-Subject: Security Incident Notice under Section 6.1, Bank Contract No. ENB-TPRM-2025-0418 (Labelforge, Inc.)
+To: +1 (212) 555-0147, cfc-thirdparty@anb.example
+Subject: Security Incident Notice under Section 6.1, Bank Contract No. ANB-TPRM-2025-0418 (Labelforge, Inc.)
 
-To the Example National Bank Cyber Fusion Center:
+To the Awesome National Bank Cyber Fusion Center:
 
-ExampleCo, Inc. (Commercial Cloud) is notifying you of a Security Incident under Section 6.1 of the Third-Party Information Security Addendum, Bank Contract No. ENB-TPRM-2025-0418. This notice is also being given by telephone.
+ExampleCo, Inc. (Commercial Cloud) is notifying you of a Security Incident under Section 6.1 of the Third-Party Information Security Addendum, Bank Contract No. ANB-TPRM-2025-0418. This notice is also being given by telephone.
 
 What happened: An unauthorized party logged into the annotation platform of our Approved Subcontractor Labelforge, Inc. using a stolen Labelforge employee credential.
 

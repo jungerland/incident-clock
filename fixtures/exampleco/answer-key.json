@@ -214,9 +214,9 @@
       "traps": []
     },
     {
-      "id": "ENB",
-      "file": "contracts/example-national-bank-security-addendum.md",
-      "counterparty": "Example National Bank, N.A. (and Affiliates, including ENB Securities LLC)",
+      "id": "ANB",
+      "file": "contracts/awesome-national-bank-security-addendum.md",
+      "counterparty": "Awesome National Bank, N.A. (and Affiliates, including ANB Securities LLC)",
       "paper": "customer",
       "role": "customer_contract",
       "business_unit": "Commercial Cloud",
@@ -225,7 +225,7 @@
       "notes": "Bank's own addendum. Overrides the DPA (1.2) and refuses any term incorporated from ExampleCo's Trust Center. Bank Data includes de-identified and derived data, so the de-identified samples at Labelforge are Bank Data.",
       "commitments": [
         {
-          "id": "ENB-1.2",
+          "id": "ANB-1.2",
           "section": "1.2",
           "type": "breach_notification",
           "quote": "This Addendum controls over any conflicting term of the Agreement, any order form, and any data processing addendum, privacy policy, or other document published or provided by Supplier.",
@@ -235,7 +235,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-3.2",
+          "id": "ANB-3.2",
           "section": "3.2",
           "type": "security_controls",
           "quote": "Supplier shall encrypt Bank Data at rest using AES-256 or stronger and in transit using TLS 1.2 or higher.",
@@ -245,7 +245,7 @@
           "optional": true
         },
         {
-          "id": "ENB-3.3",
+          "id": "ANB-3.3",
           "section": "3.3",
           "type": "security_controls",
           "quote": "Supplier shall require multi-factor authentication for all remote access to systems that store, process or transmit Bank Data.",
@@ -253,7 +253,7 @@
           "optional": true
         },
         {
-          "id": "ENB-3.4",
+          "id": "ANB-3.4",
           "section": "3.4",
           "type": "security_controls",
           "quote": "Supplier shall complete a criminal background check on all Supplier Personnel before granting them access to Bank Data, to the extent permitted by law.",
@@ -262,7 +262,7 @@
           "deviation": "No DPA equivalent."
         },
         {
-          "id": "ENB-3.5",
+          "id": "ANB-3.5",
           "section": "3.5",
           "type": "certification",
           "quote": "Supplier shall maintain throughout the term of the Agreement a current SOC 2 Type II report covering the Services.",
@@ -271,7 +271,7 @@
           "deviation": "Narrower than standard (SOC 2 only, no ISO 27001 requirement)."
         },
         {
-          "id": "ENB-4.1",
+          "id": "ANB-4.1",
           "section": "4.1",
           "type": "data_residency",
           "quote": "Supplier shall store and process Bank Data only within the United States.",
@@ -280,7 +280,7 @@
           "deviation": "Stricter: covers processing as well as storage, and is fixed to the US rather than a customer-chosen region."
         },
         {
-          "id": "ENB-4.2",
+          "id": "ANB-4.2",
           "section": "4.2",
           "type": "offshore_access",
           "quote": "Supplier shall not permit any Supplier Personnel located outside the United States to access Bank Data, including for support or maintenance, without Bank's prior written approval.",
@@ -289,7 +289,7 @@
           "deviation": "Conflicts with standard: the Manila support center may not touch Bank Data."
         },
         {
-          "id": "ENB-5.1",
+          "id": "ANB-5.1",
           "section": "5.1",
           "type": "subprocessor_scope",
           "quote": "Supplier may permit only the Subcontractors listed in Schedule 2 (\"Approved Subcontractors\") to access Bank Data, and each only within the scope stated for it in Schedule 2.",
@@ -299,20 +299,20 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-5.2",
+          "id": "ANB-5.2",
           "section": "5.2",
           "type": "subprocessor_notice",
           "quote": "Supplier shall give Bank's Third-Party Risk Management office at least ninety (90) days' prior written notice, delivered as provided in Exhibit C, before adding or replacing any Subcontractor or expanding an Approved Subcontractor's scope.",
           "summary": "90 days' written notice to Bank TPRM before adding, replacing or expanding a subcontractor; Trust Center update does not count.",
           "deadline": {"duration": "P90D", "direction": "before", "anchor": "adding, replacing or expanding a Subcontractor"},
-          "recipient": "Bank Third-Party Risk Management office, tprm-notices@enb.example, copy to Legal Department",
+          "recipient": "Bank Third-Party Risk Management office, tprm-notices@anb.example, copy to Legal Department",
           "standard_counterpart": "DPA-5.2",
           "deviation": "Stricter: 90 days vs. 30; direct written notice vs. Trust Center; also covers replacements and scope expansions.",
           "incident_relevant": true,
           "notes": "Replacing Labelforge after the breach triggers this. There is no emergency exception like DPA-5.4."
         },
         {
-          "id": "ENB-5.2-OBJ",
+          "id": "ANB-5.2-OBJ",
           "section": "5.2",
           "type": "subprocessor_notice",
           "quote": "Bank may object within thirty (30) days after receiving the notice. If Bank objects, Supplier shall not engage the Subcontractor for the Services provided to Bank, or Bank may terminate the affected Services without penalty and receive a pro-rata refund of prepaid fees.",
@@ -321,7 +321,7 @@
           "deviation": "Stricter: objection is a veto, not just a termination right; refund included."
         },
         {
-          "id": "ENB-5.3-FLOW",
+          "id": "ANB-5.3-FLOW",
           "section": "5.3",
           "type": "breach_notification",
           "quote": "Supplier shall require each Subcontractor to notify Supplier of any Security Incident within six (6) hours after the Subcontractor's Discovery.",
@@ -331,7 +331,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-6.1",
+          "id": "ANB-6.1",
           "section": "6.1",
           "type": "breach_notification",
           "quote": "Supplier shall notify Bank of any Security Incident as soon as possible and in no event later than twelve (12) hours after Discovery.",
@@ -344,18 +344,18 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-6.2",
+          "id": "ANB-6.2",
           "section": "6.2",
           "type": "breach_notification",
           "quote": "Supplier shall give notice under Section 6.1 by telephone and by email to Bank's Cyber Fusion Center as provided in Exhibit C. Notice provided only to Bank's relationship manager, or through a Supplier status page or trust site, does not satisfy Section 6.1.",
           "summary": "Notice must be by phone and email to the Cyber Fusion Center. Relationship manager, status page or trust site do not count.",
-          "recipient": "+1 (212) 555-0147 and cfc-thirdparty@enb.example",
+          "recipient": "+1 (212) 555-0147 and cfc-thirdparty@anb.example",
           "standard_counterpart": "DPA-7.2",
           "deviation": "Different recipient and two required channels.",
           "incident_relevant": true
         },
         {
-          "id": "ENB-6.3-INIT",
+          "id": "ANB-6.3-INIT",
           "section": "6.3",
           "type": "breach_notification",
           "quote": "Supplier's initial notice shall include all information then known about the Security Incident, including the date and time of Discovery, the systems and Subcontractors involved, and the categories of Bank Data affected or potentially affected.",
@@ -363,7 +363,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-6.3-UPD",
+          "id": "ANB-6.3-UPD",
           "section": "6.3",
           "type": "incident_updates",
           "quote": "Supplier shall provide written status updates at least once every twenty-four (24) hours until the Security Incident is contained, and shall deliver a written root-cause report within thirty (30) days after containment.",
@@ -375,7 +375,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-6.4",
+          "id": "ANB-6.4",
           "section": "6.4",
           "type": "incident_communications",
           "quote": "Supplier shall not notify any Bank customer, regulator, law enforcement agency or the media of a Security Incident involving Bank Data without Bank's prior written consent, unless required by law.",
@@ -385,7 +385,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-6.5",
+          "id": "ANB-6.5",
           "section": "6.5",
           "type": "evidence_preservation",
           "quote": "Supplier shall preserve all logs, images and other forensic evidence relating to a Security Incident for at least one (1) year after containment, and shall give Bank and its designated forensic investigator access to that evidence on request.",
@@ -396,7 +396,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-6.6",
+          "id": "ANB-6.6",
           "section": "6.6",
           "type": "incident_costs",
           "quote": "Supplier shall reimburse Bank's reasonable costs of investigating and responding to a Security Incident caused by Supplier or any Subcontractor, including costs of notifying affected individuals and providing them with twenty-four (24) months of credit monitoring.",
@@ -406,7 +406,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-6.8",
+          "id": "ANB-6.8",
           "section": "6.8",
           "type": "breach_notification",
           "quote": "Where this Addendum, the Agreement, any exhibit or schedule, or applicable law specifies more than one period for the same notice, the shortest period applies.",
@@ -414,7 +414,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-7.1",
+          "id": "ANB-7.1",
           "section": "7.1",
           "type": "ai_data_use",
           "quote": "Supplier shall not use Bank Data to train, fine-tune, evaluate or improve any artificial intelligence or machine learning model, other than a model used solely to provide the Services to Bank.",
@@ -423,7 +423,7 @@
           "deviation": "Stricter: covers evaluate and improve, any model (not just shared foundation models), and derived data."
         },
         {
-          "id": "ENB-7.2",
+          "id": "ANB-7.2",
           "section": "7.2",
           "type": "ai_data_use",
           "quote": "Supplier shall not permit any person to review, label or annotate Bank Data for the purpose of developing or improving any model, except as expressly permitted for an Approved Subcontractor in Schedule 2.",
@@ -433,7 +433,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-7.3",
+          "id": "ANB-7.3",
           "section": "7.3",
           "type": "ai_data_use",
           "quote": "Supplier shall identify in Schedule 2 every third-party model provider that receives Bank Data, and shall ensure that no model provider retains Bank Data after returning a response.",
@@ -442,7 +442,7 @@
           "deviation": "Stricter: no abuse-monitoring exception."
         },
         {
-          "id": "ENB-8.1",
+          "id": "ANB-8.1",
           "section": "8.1",
           "type": "testing_and_audit",
           "quote": "Supplier shall engage an independent third party to perform a penetration test of the Services at least once every twelve (12) months, and shall deliver an executive summary of the results to Bank within thirty (30) days after Bank's request.",
@@ -452,7 +452,7 @@
           "deviation": "Stricter: direct delivery with a 30-day deadline instead of Trust Center availability."
         },
         {
-          "id": "ENB-8.2",
+          "id": "ANB-8.2",
           "section": "8.2",
           "type": "testing_and_audit",
           "quote": "Supplier shall remediate vulnerabilities rated Critical within fifteen (15) days, and vulnerabilities rated High within thirty (30) days, after identification.",
@@ -461,7 +461,7 @@
           "deviation": "No DPA equivalent."
         },
         {
-          "id": "ENB-8.3",
+          "id": "ANB-8.3",
           "section": "8.3",
           "type": "certification",
           "quote": "Supplier shall deliver its SOC 2 Type II report to Bank within thirty (30) days after the report is issued, and a bridge letter on request.",
@@ -471,7 +471,7 @@
           "deviation": "Stricter: proactive delivery with a deadline instead of Trust Center access."
         },
         {
-          "id": "ENB-8.4",
+          "id": "ANB-8.4",
           "section": "8.4",
           "type": "testing_and_audit",
           "quote": "Bank, its auditors and its regulators may audit Supplier's compliance with this Addendum once in any twelve (12) month period on thirty (30) days' written notice, and at any time after a Security Incident on five (5) business days' written notice.",
@@ -481,7 +481,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ENB-9.1",
+          "id": "ANB-9.1",
           "section": "9.1",
           "type": "business_continuity",
           "quote": "Supplier shall maintain a business continuity and disaster recovery plan for the Services with a recovery time objective of no more than four (4) hours and a recovery point objective of no more than one (1) hour.",
@@ -490,21 +490,21 @@
           "deviation": "Standard Annex 2 has a plan but no RTO or RPO."
         },
         {
-          "id": "ENB-9.2",
+          "id": "ANB-9.2",
           "section": "9.2",
           "type": "business_continuity",
           "quote": "Supplier shall test the plan at least annually, provide Bank a summary of the results, and participate in Bank's annual operational resilience exercise on sixty (60) days' written notice.",
           "summary": "Annual BC/DR test with summary to Bank; join Bank's annual resilience exercise on 60 days' notice."
         },
         {
-          "id": "ENB-10.1",
+          "id": "ANB-10.1",
           "section": "10.1",
           "type": "insurance",
           "quote": "Supplier shall maintain cyber liability insurance with limits of no less than twenty-five million dollars ($25,000,000) per claim throughout the term of the Agreement and for two (2) years after.",
           "summary": "$25M per claim cyber insurance, during the term and 2 years after."
         },
         {
-          "id": "ENB-11.1",
+          "id": "ANB-11.1",
           "section": "11.1",
           "type": "data_deletion",
           "quote": "Within thirty (30) days after termination of the Agreement or Bank's written request, Supplier shall return Bank Data to Bank in the format Bank reasonably requests and then securely destroy all Bank Data, including in backups, held by Supplier and its Subcontractors.",
@@ -514,7 +514,7 @@
           "deviation": "Stricter: 30 days vs. 90; includes backups and subcontractors; also triggered by request, not just termination."
         },
         {
-          "id": "ENB-11.2",
+          "id": "ANB-11.2",
           "section": "11.2",
           "type": "data_deletion",
           "quote": "Within ten (10) business days after destruction, Supplier shall deliver a certificate of destruction signed by an officer of Supplier.",
@@ -524,21 +524,21 @@
           "deviation": "Stricter: automatic, officer-signed, with a deadline."
         },
         {
-          "id": "ENB-D.2",
+          "id": "ANB-D.2",
           "section": "Exhibit D, D.2",
           "type": "breach_notification",
-          "quote": "Supplier shall notify ENB Securities LLC as soon as possible, but no later than seventy-two (72) hours after becoming aware of a breach in security resulting in unauthorized access to a customer information system maintained by Supplier.",
-          "summary": "Reg S-P notice to ENB Securities within 72 hours. Supplements Section 6; does not set the deadline, because 6.8 applies the shorter 12 hours.",
+          "quote": "Supplier shall notify ANB Securities LLC as soon as possible, but no later than seventy-two (72) hours after becoming aware of a breach in security resulting in unauthorized access to a customer information system maintained by Supplier.",
+          "summary": "Reg S-P notice to ANB Securities within 72 hours. Supplements Section 6; does not set the deadline, because 6.8 applies the shorter 12 hours.",
           "deadline": {"duration": "PT72H", "direction": "after", "anchor": "becoming aware of a breach in security"},
           "governing": false,
-          "governed_by": "ENB-6.1 via ENB-6.8",
+          "governed_by": "ANB-6.1 via ANB-6.8",
           "incident_relevant": true,
-          "notes": "Extract it, but mark it as not the operative deadline. Recipient is ENB Securities LLC; Exhibit C names no separate contact, so the CFC notice is the practical route. Flag the missing contact as an open question."
+          "notes": "Extract it, but mark it as not the operative deadline. Recipient is ANB Securities LLC; Exhibit C names no separate contact, so the CFC notice is the practical route. Flag the missing contact as an open question."
         }
       ],
       "traps": [
         {
-          "id": "ENB-T1",
+          "id": "ANB-T1",
           "name": "Clock starts at the subcontractor's awareness",
           "where": "2.3, 6.1",
           "correct": "The 12-hour clock starts at Discovery, the earliest time ExampleCo or any subcontractor knew or should have known. If Labelforge found the intrusion before telling ExampleCo, the deadline is earlier than 12 hours after ExampleCo heard.",
@@ -546,7 +546,7 @@
           "scored_in": "incident scenario"
         },
         {
-          "id": "ENB-T2",
+          "id": "ANB-T2",
           "name": "Suspected incidents count",
           "where": "2.4",
           "correct": "Notice is owed on reasonable suspicion, and on unauthorized access to a subcontractor system holding Bank Data even before data access is confirmed.",
@@ -554,7 +554,7 @@
           "scored_in": "extraction and incident scenario"
         },
         {
-          "id": "ENB-T3",
+          "id": "ANB-T3",
           "name": "De-identified data is still Bank Data",
           "where": "2.2(c), Schedule 2",
           "correct": "Labelforge holds only de-identified feedback samples, but 2.2(c) makes de-identified and derived data Bank Data. A breach at Labelforge triggers 6.1.",
@@ -562,25 +562,25 @@
           "scored_in": "incident scenario"
         },
         {
-          "id": "ENB-T4",
+          "id": "ANB-T4",
           "name": "The 72-hour exhibit is not the deadline",
           "where": "Exhibit D, 6.8",
           "correct": "D.2's 72 hours is a supplemental notice to the broker-dealer affiliate. 6.8 makes the shortest period govern, so 12 hours applies.",
           "wrong": "Reporting 72 hours as the Bank's breach notice deadline, or treating the two as alternatives.",
-          "must_not_extract": "ENB breach notification deadline = 72 hours",
+          "must_not_extract": "ANB breach notification deadline = 72 hours",
           "scored_in": "extraction and incident scenario"
         },
         {
-          "id": "ENB-T5",
+          "id": "ANB-T5",
           "name": "Six hours is a flow-down, not a deadline to the Bank",
           "where": "5.3",
           "correct": "The 6-hour period is what ExampleCo must require of its subcontractors. It is useful in the incident (did Labelforge meet it?) but it is not ExampleCo's deadline to notify the Bank.",
           "wrong": "Reporting 6 hours as the Bank notice deadline.",
-          "must_not_extract": "ENB breach notification deadline = 6 hours",
+          "must_not_extract": "ANB breach notification deadline = 6 hours",
           "scored_in": "extraction"
         },
         {
-          "id": "ENB-T6",
+          "id": "ANB-T6",
           "name": "Notice channel",
           "where": "6.2, Exhibit C",
           "correct": "Phone and email to the Cyber Fusion Center. Exhibit C also lists a relationship manager, but 6.2 says notice to that person alone does not count.",
@@ -588,7 +588,7 @@
           "scored_in": "incident scenario (notice drafts)"
         },
         {
-          "id": "ENB-T7",
+          "id": "ANB-T7",
           "name": "No direct notice to the Bank's customers or regulators",
           "where": "6.4",
           "correct": "Drafts go to the Bank only. Any notice to the Bank's customers, regulators or the media needs the Bank's written consent first.",
@@ -596,7 +596,7 @@
           "scored_in": "incident scenario (notice drafts)"
         },
         {
-          "id": "ENB-T8",
+          "id": "ANB-T8",
           "name": "Trust Center terms do not bind the Bank",
           "where": "1.2, 5.2",
           "correct": "Subprocessor changes need 90 days' direct written notice to TPRM. Replacing Labelforge after the breach is itself a notice event, and the DPA's emergency exception (5.4) does not apply.",
@@ -604,7 +604,7 @@
           "scored_in": "extraction and incident scenario"
         },
         {
-          "id": "ENB-T9",
+          "id": "ANB-T9",
           "name": "Updates recur",
           "where": "6.3",
           "correct": "Status updates are due every 24 hours until containment, then a root-cause report within 30 days. The tracker needs a repeating obligation, not one deadline.",
@@ -612,7 +612,7 @@
           "scored_in": "extraction and incident tracking"
         },
         {
-          "id": "ENB-T10",
+          "id": "ANB-T10",
           "name": "Offshore support conflicts with the standard",
           "where": "4.2 vs. DPA 6.2",
           "correct": "Flag as a deviation: the Manila support center cannot access Bank Data. Relevant if incident response uses offshore staff.",
@@ -622,9 +622,9 @@
       ]
     },
     {
-      "id": "ERG",
-      "file": "contracts/example-retail-group-xyzwire-dpa.md",
-      "counterparty": "Example Retail Group, Inc.",
+      "id": "ARG",
+      "file": "contracts/astounding-retail-group-xyzwire-dpa.md",
+      "counterparty": "Astounding Retail Group, Inc.",
       "contracting_entity": "XYZwire, Inc. (ExampleCo subsidiary since 2025)",
       "paper": "customer",
       "role": "customer_contract",
@@ -634,7 +634,7 @@
       "notes": "Signed with XYZwire before ExampleCo acquired it. Never moved to ExampleCo's standard terms, and 9.2 says ExampleCo's terms do not apply without the retailer's written agreement. Amendment No. 1 added ExampleCo as a subprocessor but not Labelforge.",
       "commitments": [
         {
-          "id": "ERG-1.1",
+          "id": "ARG-1.1",
           "section": "1.1",
           "type": "breach_notification",
           "quote": "This VDPA prevails over the Subscription Agreement and over any data processing terms, policies or online terms of Vendor or its Affiliates.",
@@ -643,7 +643,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ERG-3.1",
+          "id": "ARG-3.1",
           "section": "3.1",
           "type": "ai_data_use",
           "quote": "Vendor shall process Retailer Data only to provide the services described in the Subscription Agreement (the \"Services\") and on Retailer's written instructions.",
@@ -651,7 +651,7 @@
           "optional": true
         },
         {
-          "id": "ERG-3.2",
+          "id": "ARG-3.2",
           "section": "3.2",
           "type": "ai_data_use",
           "quote": "Vendor shall not use Retailer Data to train or improve any machine learning model, except models used only to provide the Services to Retailer.",
@@ -660,7 +660,7 @@
           "deviation": "Stricter: any model, and covers improving as well as training."
         },
         {
-          "id": "ERG-3.3",
+          "id": "ARG-3.3",
           "section": "3.3",
           "type": "data_residency",
           "quote": "Vendor shall store Retailer Data only in the United States or Canada.",
@@ -669,7 +669,7 @@
           "deviation": "Fixed to US or Canada rather than a customer-chosen region."
         },
         {
-          "id": "ERG-4.1",
+          "id": "ARG-4.1",
           "section": "4.1",
           "type": "security_controls",
           "quote": "Vendor shall maintain administrative, technical and physical safeguards that meet or exceed the CIS Critical Security Controls, Implementation Group 2.",
@@ -678,7 +678,7 @@
           "deviation": "No DPA equivalent."
         },
         {
-          "id": "ERG-4.3",
+          "id": "ARG-4.3",
           "section": "4.3",
           "type": "certification",
           "quote": "Vendor shall obtain a SOC 2 Type II report covering the Services each year and provide it to Retailer within fifteen (15) days after Retailer's request.",
@@ -688,7 +688,7 @@
           "deviation": "Stricter: direct delivery with a 15-day deadline instead of Trust Center access."
         },
         {
-          "id": "ERG-5.1",
+          "id": "ARG-5.1",
           "section": "5.1",
           "type": "subprocessor_scope",
           "quote": "Vendor shall not permit any Subprocessor other than those listed in Appendix B to process Retailer Data without Retailer's prior written consent.",
@@ -698,7 +698,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ERG-5.2",
+          "id": "ARG-5.2",
           "section": "5.2",
           "type": "subprocessor_notice",
           "quote": "Vendor shall request consent for a new Subprocessor in writing at least thirty (30) days before the Subprocessor begins processing Retailer Data. Retailer's silence is not consent.",
@@ -708,7 +708,7 @@
           "deviation": "Stricter: consent required, not notice with a right to object."
         },
         {
-          "id": "ERG-5.3",
+          "id": "ARG-5.3",
           "section": "5.3",
           "type": "subprocessor_scope",
           "quote": "Vendor shall bind each Subprocessor in writing to obligations at least as protective as this VDPA, and remains liable for each Subprocessor's acts and omissions.",
@@ -717,7 +717,7 @@
           "deviation": "Adds a written flow-down requirement."
         },
         {
-          "id": "ERG-6.1",
+          "id": "ARG-6.1",
           "section": "6.1",
           "type": "breach_notification",
           "quote": "Vendor shall notify Retailer of a Data Incident without undue delay and no later than twenty-four (24) hours after Vendor becomes aware of it.",
@@ -730,18 +730,18 @@
           "incident_relevant": true
         },
         {
-          "id": "ERG-6.2",
+          "id": "ARG-6.2",
           "section": "6.2",
           "type": "breach_notification",
-          "quote": "Vendor shall send notice by email to Retailer Security Operations at secops@erg.example and by telephone to +1 (614) 555-0182. Notice to Retailer's account or procurement contacts does not satisfy Section 6.1.",
+          "quote": "Vendor shall send notice by email to Retailer Security Operations at secops@arg.example and by telephone to +1 (614) 555-0182. Notice to Retailer's account or procurement contacts does not satisfy Section 6.1.",
           "summary": "Email and phone Retailer Security Operations. Account or procurement contacts do not count.",
-          "recipient": "secops@erg.example and +1 (614) 555-0182",
+          "recipient": "secops@arg.example and +1 (614) 555-0182",
           "standard_counterpart": "DPA-7.2",
           "deviation": "Different recipient and two required channels.",
           "incident_relevant": true
         },
         {
-          "id": "ERG-6.3",
+          "id": "ARG-6.3",
           "section": "6.3",
           "type": "incident_updates",
           "quote": "Vendor's notice shall describe the Data Incident, the Retailer Data involved, any Subprocessor involved, and the steps Vendor has taken. Vendor shall supplement the notice as new information becomes available.",
@@ -751,7 +751,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ERG-6.4",
+          "id": "ARG-6.4",
           "section": "6.4",
           "type": "incident_communications",
           "quote": "Vendor shall not inform Retailer's customers or any third party of a Data Incident involving Retailer Data without Retailer's prior written approval, except as required by law.",
@@ -761,7 +761,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ERG-6.5",
+          "id": "ARG-6.5",
           "section": "6.5",
           "type": "incident_costs",
           "quote": "Vendor shall cooperate with Retailer's investigation and shall bear the reasonable costs of a Data Incident to the extent caused by Vendor or its Subprocessors.",
@@ -771,7 +771,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ERG-7.1",
+          "id": "ARG-7.1",
           "section": "7.1",
           "type": "data_deletion",
           "quote": "Within thirty (30) days after the Subscription Agreement ends, Vendor shall delete all Retailer Data and confirm the deletion to Retailer in writing.",
@@ -781,7 +781,7 @@
           "deviation": "Stricter: 30 days vs. 90; confirmation automatic."
         },
         {
-          "id": "ERG-8.1",
+          "id": "ARG-8.1",
           "section": "8.1",
           "type": "testing_and_audit",
           "quote": "Retailer may audit Vendor's compliance with this VDPA once per calendar year on thirty (30) days' notice, and within ten (10) days after notice following a Data Incident.",
@@ -791,7 +791,7 @@
           "incident_relevant": true
         },
         {
-          "id": "ERG-9.2",
+          "id": "ARG-9.2",
           "section": "9.2",
           "type": "breach_notification",
           "quote": "A change of control of Vendor, by merger, acquisition or otherwise, does not terminate or modify this VDPA. Any acquirer's standard terms do not apply to Retailer Data unless Retailer agrees in writing.",
@@ -803,16 +803,16 @@
       ],
       "traps": [
         {
-          "id": "ERG-T1",
+          "id": "ARG-T1",
           "name": "The acquisition does not bring ExampleCo's terms",
           "where": "1.1, 9.2",
           "correct": "The XYZwire agreement still governs. Notice is due in 24 hours, not the 72 hours in ExampleCo's DPA.",
           "wrong": "Applying ExampleCo's DPA because ExampleCo now owns XYZwire.",
-          "must_not_extract": "ERG breach notification deadline = 72 hours",
+          "must_not_extract": "ARG breach notification deadline = 72 hours",
           "scored_in": "incident scenario"
         },
         {
-          "id": "ERG-T2",
+          "id": "ARG-T2",
           "name": "Clock starts at XYZwire's awareness, not Labelforge's",
           "where": "6.1",
           "correct": "Unlike the bank contract, this one starts the clock when the Vendor becomes aware. ExampleCo runs security for XYZwire and learned at 3:00 PM on Nov 2, so the deadline is 3:00 PM on Nov 3.",
@@ -821,7 +821,7 @@
           "scored_in": "incident scenario"
         },
         {
-          "id": "ERG-T3",
+          "id": "ARG-T3",
           "name": "Labelforge was never approved",
           "where": "5.1, Appendix B, Amendment No. 1",
           "correct": "The amendment added ExampleCo but not Labelforge. Sending retailer data to Labelforge needed prior written consent. Flag for legal; the notice must still name Labelforge (6.3).",
@@ -829,7 +829,7 @@
           "scored_in": "incident scenario (finding and notice draft)"
         },
         {
-          "id": "ERG-T4",
+          "id": "ARG-T4",
           "name": "Derived data counts",
           "where": "2.2",
           "correct": "Feedback samples drawn from XYZwire telemetry are derived data and therefore Retailer Data.",
@@ -837,7 +837,7 @@
           "scored_in": "incident scenario"
         },
         {
-          "id": "ERG-T5",
+          "id": "ARG-T5",
           "name": "Notice channel",
           "where": "6.2",
           "correct": "Email and phone to Retailer Security Operations.",
@@ -847,9 +847,9 @@
       ]
     },
     {
-      "id": "EHS",
-      "file": "contracts/example-health-system-baa.md",
-      "counterparty": "Example Health System",
+      "id": "AHS",
+      "file": "contracts/amazing-health-system-baa.md",
+      "counterparty": "Amazing Health System",
       "paper": "customer",
       "role": "customer_contract",
       "business_unit": "Healthcare and Life Sciences",
@@ -858,7 +858,7 @@
       "notes": "The health system's own BAA. Stricter than HIPAA on timing (10 days vs. 60), but uses HIPAA's definitions, so Safe Harbor de-identified data is outside it. The 'not exposed' row depends on the transfer log showing Safe Harbor, not a limited data set.",
       "commitments": [
         {
-          "id": "EHS-2.2",
+          "id": "AHS-2.2",
           "section": "2.2",
           "type": "ai_data_use",
           "quote": "Business Associate shall limit its uses and disclosures of PHI to the minimum necessary.",
@@ -866,7 +866,7 @@
           "optional": true
         },
         {
-          "id": "EHS-2.3",
+          "id": "AHS-2.3",
           "section": "2.3",
           "type": "ai_data_use",
           "quote": "Business Associate may de-identify PHI only in accordance with the safe harbor method at 45 C.F.R. § 164.514(b)(2), and may use the de-identified information only to provide and improve the services under the Underlying Agreements. Information de-identified in accordance with this Section 2.3 is not PHI and is not subject to this BAA.",
@@ -876,7 +876,7 @@
           "incident_relevant": true
         },
         {
-          "id": "EHS-2.4",
+          "id": "AHS-2.4",
           "section": "2.4",
           "type": "ai_data_use",
           "quote": "A limited data set under 45 C.F.R. § 164.514(e) is PHI for all purposes of this BAA.",
@@ -884,7 +884,7 @@
           "incident_relevant": true
         },
         {
-          "id": "EHS-3.2",
+          "id": "AHS-3.2",
           "section": "3.2",
           "type": "offshore_access",
           "quote": "Business Associate shall not store, process or access PHI outside the United States.",
@@ -893,7 +893,7 @@
           "deviation": "Conflicts with standard: the Manila support center may not access PHI."
         },
         {
-          "id": "EHS-3.3",
+          "id": "AHS-3.3",
           "section": "3.3",
           "type": "certification",
           "quote": "Business Associate shall maintain HITRUST r2 certification for the systems that store or process PHI.",
@@ -902,7 +902,7 @@
           "deviation": "Adds HITRUST r2."
         },
         {
-          "id": "EHS-4.1",
+          "id": "AHS-4.1",
           "section": "4.1",
           "type": "breach_notification",
           "quote": "Business Associate shall report to Covered Entity any Breach of Unsecured PHI without unreasonable delay and in no event later than ten (10) calendar days after Discovery.",
@@ -915,7 +915,7 @@
           "incident_relevant": true
         },
         {
-          "id": "EHS-4.2",
+          "id": "AHS-4.2",
           "section": "4.2",
           "type": "breach_notification",
           "quote": "Business Associate shall report to Covered Entity any Security Incident within five (5) business days after Business Associate becomes aware of it.",
@@ -927,7 +927,7 @@
           "incident_relevant": true
         },
         {
-          "id": "EHS-4.3",
+          "id": "AHS-4.3",
           "section": "4.3",
           "type": "breach_notification",
           "quote": "Business Associate shall report to Covered Entity any use or disclosure of PHI not provided for by this BAA within ten (10) calendar days after becoming aware of it.",
@@ -938,18 +938,18 @@
           "incident_relevant": true
         },
         {
-          "id": "EHS-4.4",
+          "id": "AHS-4.4",
           "section": "4.4",
           "type": "breach_notification",
-          "quote": "Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to its Information Security Office at iso@ehs.example.",
+          "quote": "Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to its Information Security Office at iso@ahs.example.",
           "summary": "Reports go in writing to the Privacy Office, copying the Information Security Office.",
-          "recipient": "privacy-office@ehs.example, cc iso@ehs.example",
+          "recipient": "privacy-office@ahs.example, cc iso@ahs.example",
           "standard_counterpart": "DPA-7.2",
           "deviation": "Different recipients.",
           "incident_relevant": true
         },
         {
-          "id": "EHS-4.5",
+          "id": "AHS-4.5",
           "section": "4.5",
           "type": "breach_notification",
           "quote": "A report of a Breach shall include, to the extent known, the identity of each individual affected, the PHI involved, the date of the Breach and of its Discovery, and the steps taken to mitigate it.",
@@ -957,7 +957,7 @@
           "optional": true
         },
         {
-          "id": "EHS-4.6",
+          "id": "AHS-4.6",
           "section": "4.6",
           "type": "incident_costs",
           "quote": "Business Associate shall reimburse Covered Entity's reasonable costs of notifying individuals, regulators and the media of a Breach caused by Business Associate or its Subcontractors.",
@@ -966,7 +966,7 @@
           "deviation": "Opposite direction: standard disclaims fault."
         },
         {
-          "id": "EHS-5.1",
+          "id": "AHS-5.1",
           "section": "5.1",
           "type": "subprocessor_scope",
           "quote": "Business Associate shall ensure that each Subcontractor that creates, receives, maintains or transmits PHI on its behalf agrees in writing to the same restrictions and conditions that apply to Business Associate under this BAA.",
@@ -975,7 +975,7 @@
           "deviation": "Adds a written flow-down requirement for PHI."
         },
         {
-          "id": "EHS-6.1",
+          "id": "AHS-6.1",
           "section": "6.1",
           "type": "data_deletion",
           "quote": "Business Associate shall make PHI in a Designated Record Set available to Covered Entity within ten (10) business days after Covered Entity's request, so Covered Entity can meet 45 C.F.R. § 164.524.",
@@ -985,7 +985,7 @@
           "optional": true
         },
         {
-          "id": "EHS-7.1",
+          "id": "AHS-7.1",
           "section": "7.1",
           "type": "data_deletion",
           "quote": "On termination of the Underlying Agreements, Business Associate shall return or destroy all PHI within thirty (30) days.",
@@ -997,7 +997,7 @@
       ],
       "traps": [
         {
-          "id": "EHS-T1",
+          "id": "AHS-T1",
           "name": "Same facts as the bank, opposite answer",
           "where": "2.3, 1.1",
           "correct": "Labelforge held only Safe Harbor de-identified samples. Under 2.3 that data is not PHI and is outside the BAA, so no Breach report (4.1) or Security Incident report (4.2) is owed. Answer: No, with the reason and a note for counsel to confirm.",
@@ -1005,7 +1005,7 @@
           "scored_in": "incident scenario"
         },
         {
-          "id": "EHS-T2",
+          "id": "AHS-T2",
           "name": "The No depends on how the data was de-identified",
           "where": "2.3, 2.4",
           "correct": "The agent must check the transfer log for the method. Safe Harbor means outside the BAA. A limited data set would be PHI (2.4), and the answer would flip to Yes with a 10-day deadline.",
@@ -1013,16 +1013,16 @@
           "scored_in": "incident scenario"
         },
         {
-          "id": "EHS-T3",
+          "id": "AHS-T3",
           "name": "Ten days, not HIPAA's sixty",
           "where": "4.1",
           "correct": "The contract deadline is 10 calendar days after Discovery.",
           "wrong": "Reporting HIPAA's 60-day outer limit as the deadline.",
-          "must_not_extract": "EHS breach notification deadline = 60 days",
+          "must_not_extract": "AHS breach notification deadline = 60 days",
           "scored_in": "extraction"
         },
         {
-          "id": "EHS-T4",
+          "id": "AHS-T4",
           "name": "Security Incident is limited to this customer's ePHI",
           "where": "1.2, 4.2",
           "correct": "A break-in at Labelforge is a Security Incident under the BAA only if it involved this customer's ePHI. It did not.",

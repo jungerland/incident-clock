@@ -74,101 +74,101 @@ def test_key_types_are_in_schema() -> None:
 
 def test_72_hours_as_bank_deadline_is_caught() -> None:
     run = perfect_run()
-    find(run, "example-national-bank", "Exhibit D, D.2")["operative_notice_deadline"] = True
+    find(run, "awesome-national-bank", "Exhibit D, D.2")["operative_notice_deadline"] = True
     s = score_run(run, contracts, texts)
-    assert not next(m for m in s["must_not_extract"] if m["trap"] == "ENB-T4")["clean"]
-    assert not s["traps"]["ENB-T4"]["passed"]
+    assert not next(m for m in s["must_not_extract"] if m["trap"] == "ANB-T4")["clean"]
+    assert not s["traps"]["ANB-T4"]["passed"]
 
 
 def test_6_hours_as_bank_deadline_is_caught() -> None:
     run = perfect_run()
-    flow = find(run, "example-national-bank", "5.3")
+    flow = find(run, "awesome-national-bank", "5.3")
     flow["deadline"] = {"duration": "PT6H", "direction": "after", "anchor": "Subcontractor's Discovery"}
     flow["operative_notice_deadline"] = True
     s = score_run(run, contracts, texts)
-    assert not next(m for m in s["must_not_extract"] if m["trap"] == "ENB-T5")["clean"]
-    assert not s["traps"]["ENB-T5"]["passed"]
+    assert not next(m for m in s["must_not_extract"] if m["trap"] == "ANB-T5")["clean"]
+    assert not s["traps"]["ANB-T5"]["passed"]
 
 
 def test_6_hours_recorded_as_flow_down_is_fine() -> None:
     run = perfect_run()
-    find(run, "example-national-bank", "5.3")["deadline"] = {
+    find(run, "awesome-national-bank", "5.3")["deadline"] = {
         "duration": "PT6H", "direction": "after", "anchor": "Subcontractor's Discovery"}
     s = score_run(run, contracts, texts)
-    assert next(m for m in s["must_not_extract"] if m["trap"] == "ENB-T5")["clean"]
-    assert s["traps"]["ENB-T5"]["passed"]
+    assert next(m for m in s["must_not_extract"] if m["trap"] == "ANB-T5")["clean"]
+    assert s["traps"]["ANB-T5"]["passed"]
 
 
 def test_outside_deadlines_are_caught() -> None:
     run = perfect_run()
-    retail = find(run, "example-retail", "6.1")
+    retail = find(run, "astounding-retail", "6.1")
     retail["deadline"] = {"duration": "PT72H", "direction": "after", "anchor": "confirmation"}
-    health = find(run, "example-health", "4.1")
+    health = find(run, "amazing-health", "4.1")
     health["deadline"] = {"duration": "P60D", "direction": "after", "anchor": "Discovery"}
     s = score_run(run, contracts, texts)
     dirty = {m["trap"] for m in s["must_not_extract"] if not m["clean"]}
-    assert dirty == {"ERG-T1", "EHS-T3"}, dirty
-    assert {"ERG-6.1", "EHS-4.1"} <= set(s["wrong_deadline"])
+    assert dirty == {"ARG-T1", "AHS-T3"}, dirty
+    assert {"ARG-6.1", "AHS-4.1"} <= set(s["wrong_deadline"])
 
 
 def test_one_time_24h_update_fails_recurring_trap() -> None:
     run = perfect_run()
-    find(run, "example-national-bank", "6.3", "status updates")["deadline"]["direction"] = "after"
+    find(run, "awesome-national-bank", "6.3", "status updates")["deadline"]["direction"] = "after"
     s = score_run(run, contracts, texts)
-    assert not s["traps"]["ENB-T9"]["passed"]
+    assert not s["traps"]["ANB-T9"]["passed"]
 
 
 def test_merged_quote_credits_both_key_items() -> None:
     run = perfect_run()
-    first = find(run, "example-national-bank", "6.3", "initial notice")
-    second = find(run, "example-national-bank", "6.3", "status updates")
+    first = find(run, "awesome-national-bank", "6.3", "initial notice")
+    second = find(run, "awesome-national-bank", "6.3", "status updates")
     first["quote"] = f"{first['quote']} {second['quote']}"
     first["deadline"] = second["deadline"]
     first["secondary_deadline"] = second["secondary_deadline"]
     run["commitments"].remove(second)
     s = score_run(run, contracts, texts)
-    assert "ENB-6.3-INIT" in s["found"] and "ENB-6.3-UPD" in s["found"]
+    assert "ANB-6.3-INIT" in s["found"] and "ANB-6.3-UPD" in s["found"]
     assert not s["extras"]
 
 
 def test_split_commitment_keeps_both_deadlines() -> None:
     run = perfect_run()
-    updates = find(run, "example-national-bank", "6.3", "status updates")
+    updates = find(run, "awesome-national-bank", "6.3", "status updates")
     report = {**updates, "quote": "shall deliver a written root-cause report within thirty (30) days after containment",
               "deadline": updates["secondary_deadline"], "secondary_deadline": None}
     updates["quote"] = "Supplier shall provide written status updates at least once every twenty-four (24) hours"
     updates["secondary_deadline"] = None
     run["commitments"].append(report)
-    assert "ENB-6.3-UPD" not in score_run(run, contracts, texts)["wrong_deadline"]
+    assert "ANB-6.3-UPD" not in score_run(run, contracts, texts)["wrong_deadline"]
     run["commitments"].remove(report)
-    assert "ENB-6.3-UPD" in score_run(run, contracts, texts)["wrong_deadline"]
+    assert "ANB-6.3-UPD" in score_run(run, contracts, texts)["wrong_deadline"]
 
 
 def test_missing_incident_commitment_lowers_both_recalls() -> None:
     run = perfect_run()
-    run["commitments"].remove(find(run, "example-national-bank", "6.1"))
+    run["commitments"].remove(find(run, "awesome-national-bank", "6.1"))
     s = score_run(run, contracts, texts)
-    assert "ENB-6.1" in s["missed"]
+    assert "ANB-6.1" in s["missed"]
     assert s["metrics"]["recall"] < 1 and s["metrics"]["recall_incident"] < 1
-    assert not s["traps"]["ENB-T2"]["passed"]
+    assert not s["traps"]["ANB-T2"]["passed"]
 
 
 def test_wrong_fields_are_reported() -> None:
     run = perfect_run()
-    bank = find(run, "example-national-bank", "6.2")
-    bank["recipient"] = "dana.okafor@enb.example"
-    find(run, "example-national-bank", "4.2")["standard_counterpart"] = None
-    find(run, "example-national-bank", "4.1")["type"] = "insurance"
+    bank = find(run, "awesome-national-bank", "6.2")
+    bank["recipient"] = "dana.okafor@anb.example"
+    find(run, "awesome-national-bank", "4.2")["standard_counterpart"] = None
+    find(run, "awesome-national-bank", "4.1")["type"] = "insurance"
     s = score_run(run, contracts, texts)
-    assert s["wrong_recipient"] == ["ENB-6.2"]
-    assert s["wrong_counterpart"] == ["ENB-4.2"]
-    assert s["wrong_type"] == ["ENB-4.1"]
-    assert not s["traps"]["ENB-T10"]["passed"]
+    assert s["wrong_recipient"] == ["ANB-6.2"]
+    assert s["wrong_counterpart"] == ["ANB-4.2"]
+    assert s["wrong_type"] == ["ANB-4.1"]
+    assert not s["traps"]["ANB-T10"]["passed"]
 
 
 def test_invented_quote_counts_against_quote_accuracy() -> None:
     run = perfect_run()
-    fake = {**find(run, "example-national-bank", "6.1"), "quote": "Supplier shall notify Bank within 72 hours."}
+    fake = {**find(run, "awesome-national-bank", "6.1"), "quote": "Supplier shall notify Bank within 72 hours."}
     run["rejected"] = [fake]
     s = score_run(run, contracts, texts)
     assert s["metrics"]["quote_accuracy"] < 1
@@ -177,7 +177,7 @@ def test_invented_quote_counts_against_quote_accuracy() -> None:
 
 def test_unknown_commitment_is_an_extra() -> None:
     run = perfect_run()
-    extra = {**find(run, "example-national-bank", "6.1"), "section": "3.1", "deadline": None,
+    extra = {**find(run, "awesome-national-bank", "6.1"), "section": "3.1", "deadline": None,
              "operative_notice_deadline": False,
              "quote": "Supplier shall maintain a written information security program that is consistent "
                       "with the NIST Cybersecurity Framework"}

@@ -1,11 +1,11 @@
-# EXAMPLE HEALTH SYSTEM
+# AMAZING HEALTH SYSTEM
 # BUSINESS ASSOCIATE AGREEMENT
 
 **Business Associate:** ExampleCo, Inc. (Healthcare and Life Sciences)
-**EHS Agreement No.** EHS-BAA-2025-0211
+**AHS Agreement No.** AHS-BAA-2025-0211
 **Effective Date:** February 1, 2025
 
-This Business Associate Agreement ("BAA") is entered into by Example Health System, on behalf of itself and its affiliated hospitals and clinics ("Covered Entity"), and ExampleCo, Inc. ("Business Associate"). It applies to all agreements under which Business Associate creates, receives, maintains or transmits Protected Health Information for or on behalf of Covered Entity (the "Underlying Agreements").
+This Business Associate Agreement ("BAA") is entered into by Amazing Health System, on behalf of itself and its affiliated hospitals and clinics ("Covered Entity"), and ExampleCo, Inc. ("Business Associate"). It applies to all agreements under which Business Associate creates, receives, maintains or transmits Protected Health Information for or on behalf of Covered Entity (the "Underlying Agreements").
 
 ---
 
@@ -43,7 +43,7 @@ This Business Associate Agreement ("BAA") is entered into by Example Health Syst
 
 4.3 Business Associate shall report to Covered Entity any use or disclosure of PHI not provided for by this BAA within ten (10) calendar days after becoming aware of it.
 
-4.4 Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to its Information Security Office at iso@ehs.example.
+4.4 Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to its Information Security Office at iso@ahs.example.
 
 4.5 A report of a Breach shall include, to the extent known, the identity of each individual affected, the PHI involved, the date of the Breach and of its Discovery, and the steps taken to mitigate it.
 

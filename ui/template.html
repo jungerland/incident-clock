@@ -184,7 +184,7 @@ function leftWords(h) {
 function leftClass(h) { return h < 0 ? "late" : h <= 4 ? "soon" : "later"; }
 
 function currentRows() {
-  return DATA.rows.map(r => r.contract === "EHS" && method === "flip" ? DATA.flip : r);
+  return DATA.rows.map(r => r.contract === "AHS" && method === "flip" ? DATA.flip : r);
 }
 
 function renderSeg(id, items, isOn, onPick, labelOf) {
@@ -253,7 +253,7 @@ function render() {
     if (r.open_questions.length) right.push("<section><h3>Open questions</h3>" + list(r.open_questions, esc) + "</section>");
     right.push('<section><h3>Batches at the vendor</h3><ul><li>Held: ' + esc(r.batches_held.join(", ") || "none")
       + "</li><li>Deleted before the incident: " + esc(r.batches_gone.join(", ") || "none") + "</li></ul></section>");
-    const isOpen = r.contract in wasOpen ? wasOpen[r.contract] : r.contract === "ENB";
+    const isOpen = r.contract in wasOpen ? wasOpen[r.contract] : r.contract === "ANB";
     return '<details data-contract="' + esc(r.contract) + '"' + (isOpen ? " open" : "") + "><summary>" + esc(r.customer) + '</summary><div class="detail"><div>'
       + left.join("") + "</div><div>" + right.join("") + "</div></div></details>";
   }).join("");

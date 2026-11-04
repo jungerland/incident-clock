@@ -1,11 +1,11 @@
-# EXAMPLE RETAIL GROUP, INC.
+# ASTOUNDING RETAIL GROUP, INC.
 # VENDOR DATA PROTECTION AGREEMENT
 
 **Vendor:** XYZwire, Inc.
-**Retailer Agreement No.** ERG-VDPA-2024-0093
+**Retailer Agreement No.** ARG-VDPA-2024-0093
 **Effective Date:** January 15, 2024
 
-This Vendor Data Protection Agreement ("VDPA") is entered into by Example Retail Group, Inc. ("Retailer") and XYZwire, Inc. ("Vendor"), and forms part of the Subscription Agreement between them dated January 15, 2024 (the "Subscription Agreement").
+This Vendor Data Protection Agreement ("VDPA") is entered into by Astounding Retail Group, Inc. ("Retailer") and XYZwire, Inc. ("Vendor"), and forms part of the Subscription Agreement between them dated January 15, 2024 (the "Subscription Agreement").
 
 ---
 
@@ -51,7 +51,7 @@ This Vendor Data Protection Agreement ("VDPA") is entered into by Example Retail
 
 6.1 Vendor shall notify Retailer of a Data Incident without undue delay and no later than twenty-four (24) hours after Vendor becomes aware of it.
 
-6.2 Vendor shall send notice by email to Retailer Security Operations at secops@erg.example and by telephone to +1 (614) 555-0182. Notice to Retailer's account or procurement contacts does not satisfy Section 6.1.
+6.2 Vendor shall send notice by email to Retailer Security Operations at secops@arg.example and by telephone to +1 (614) 555-0182. Notice to Retailer's account or procurement contacts does not satisfy Section 6.1.
 
 6.3 Vendor's notice shall describe the Data Incident, the Retailer Data involved, any Subprocessor involved, and the steps Vendor has taken. Vendor shall supplement the notice as new information becomes available.
 

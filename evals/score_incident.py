@@ -48,36 +48,36 @@ def claimed_actions(row: dict) -> list[str]:
 
 
 def trap_checks(rows: dict[str, dict], expected: dict, flip: dict | None) -> dict[str, tuple[bool | None, str]]:
-    enb, erg, ehs = rows["ENB"], rows["ERG"], rows["EHS"]
+    anb, arg, ahs = rows["ANB"], rows["ARG"], rows["AHS"]
     right_time = lambda r, c: r["deadline"] == expected["rows"][c]["deadline"]
     return {
-        "ENB-T1": (right_time(enb, "ENB") and enb["clock_start"] == CLOCK_VENDOR,
+        "ANB-T1": (right_time(anb, "ANB") and anb["clock_start"] == CLOCK_VENDOR,
                    "12h runs from when the vendor found it"),
-        "ENB-T2": (enb["notify"] == "yes" and cites(enb, "2.4"), "yes, citing the suspected-incident definition (2.4)"),
-        "ENB-T3": (enb["notify"] == "yes" and cites(enb, "2.2"), "yes, citing de-identified data as Bank Data (2.2)"),
-        "ENB-T4": (right_time(enb, "ENB") and bare_section(enb["notice_section"] or "") == "6.1",
+        "ANB-T2": (anb["notify"] == "yes" and cites(anb, "2.4"), "yes, citing the suspected-incident definition (2.4)"),
+        "ANB-T3": (anb["notify"] == "yes" and cites(anb, "2.2"), "yes, citing de-identified data as Bank Data (2.2)"),
+        "ANB-T4": (right_time(anb, "ANB") and bare_section(anb["notice_section"] or "") == "6.1",
                    "deadline comes from 6.1, not the 72h exhibit"),
-        "ENB-T6": ({"cfc-thirdparty@enb.example", "12125550147"} <= to_contacts(enb)
-                   and "dana.okafor@enb.example" not in to_contacts(enb),
+        "ANB-T6": ({"cfc-thirdparty@anb.example", "12125550147"} <= to_contacts(anb)
+                   and "dana.okafor@anb.example" not in to_contacts(anb),
                    "draft goes to the Cyber Fusion Center by email and phone, not the relationship manager"),
-        "ENB-T7": (cites(enb, "6.4") and to_contacts(enb) <= {"cfc-thirdparty@enb.example", "12125550147"},
+        "ANB-T7": (cites(anb, "6.4") and to_contacts(anb) <= {"cfc-thirdparty@anb.example", "12125550147"},
                    "says not to contact the bank's customers or regulators (6.4); draft goes to the bank only"),
-        "ENB-T8": (cites(enb, "5.2"), "raises the 90-day notice for replacing a subcontractor (5.2)"),
-        "ENB-T9": (any(x["every"] == "PT24H" for x in enb["recurring"]), "24h updates tracked as a repeating duty"),
-        "ERG-T1": (right_time(erg, "ERG") and (cites(erg, "1.1") or cites(erg, "9.2")),
+        "ANB-T8": (cites(anb, "5.2"), "raises the 90-day notice for replacing a subcontractor (5.2)"),
+        "ANB-T9": (any(x["every"] == "PT24H" for x in anb["recurring"]), "24h updates tracked as a repeating duty"),
+        "ARG-T1": (right_time(arg, "ARG") and (cites(arg, "1.1") or cites(arg, "9.2")),
                    "24h, citing why ExampleCo's terms do not apply (1.1 or 9.2)"),
-        "ERG-T2": (right_time(erg, "ERG") and erg["clock_start"] == CLOCK_TOLD,
+        "ARG-T2": (right_time(arg, "ARG") and arg["clock_start"] == CLOCK_TOLD,
                    "24h runs from when ExampleCo was told, not from the vendor's discovery"),
-        "ERG-T3": (cites(erg, "5.1", ("legal_flags",)) and draft_mentions(erg, "labelforge"),
+        "ARG-T3": (cites(arg, "5.1", ("legal_flags",)) and draft_mentions(arg, "labelforge"),
                    "flags the unapproved subprocessor for legal (5.1); draft names Labelforge"),
-        "ERG-T4": (erg["notify"] == "yes" and cites(erg, "2.2"), "yes, citing derived data as Retailer Data (2.2)"),
-        "ERG-T5": ({"secops@erg.example", "16145550182"} <= to_contacts(erg),
+        "ARG-T4": (arg["notify"] == "yes" and cites(arg, "2.2"), "yes, citing derived data as Retailer Data (2.2)"),
+        "ARG-T5": ({"secops@arg.example", "16145550182"} <= to_contacts(arg),
                    "draft goes to Retailer Security Operations by email and phone"),
-        "EHS-T1": (ehs["notify"] == "no" and cites(ehs, "2.3"), "no, citing Safe Harbor data as outside the BAA (2.3)"),
-        "EHS-T2": ((ehs["notify"] == "no" and ehs["methods_held"] == ["hipaa_safe_harbor"]
+        "AHS-T1": (ahs["notify"] == "no" and cites(ahs, "2.3"), "no, citing Safe Harbor data as outside the BAA (2.3)"),
+        "AHS-T2": ((ahs["notify"] == "no" and ahs["methods_held"] == ["hipaa_safe_harbor"]
                     and bool(flip and flip["notify"] == "yes" and flip["deadline"])) if flip else None,
                    "no on Safe Harbor data, and yes with a deadline when the same data is a limited data set"),
-        "EHS-T4": (ehs["notify"] == "no" and cites(ehs, "1.2"), "no, citing the ePHI limit on Security Incident (1.2)"),
+        "AHS-T4": (ahs["notify"] == "no" and cites(ahs, "1.2"), "no, citing the ePHI limit on Security Incident (1.2)"),
     }
 
 
@@ -117,7 +117,7 @@ def main() -> None:
     flip = None
     if args.flip:
         flip_run = json.loads(sorted(args.flip.glob("run-*.json"))[0].read_text())
-        flip = next(r for r in flip_run["rows"] if r["contract"] == "EHS")
+        flip = next(r for r in flip_run["rows"] if r["contract"] == "AHS")
 
     files = sorted(args.path.glob("run-*.json"))
     scores = [score_run(json.loads(f.read_text()), expected, traps_expected, flip) for f in files]
@@ -144,7 +144,7 @@ def main() -> None:
     for c, q in claims:
         print(f"  {c}: {q[:120]}")
     if flip:
-        print(f"\nFlip (limited data set)       EHS {flip['notify']}, section {flip['notice_section']}, "
+        print(f"\nFlip (limited data set)       AHS {flip['notify']}, section {flip['notice_section']}, "
               f"{flip['time_limit']}, deadline {flip['deadline']}")
 
     passed = [mean(bool(t["passed"]) for t in s["traps"].values() if t["passed"] is not None) for s in scores]

@@ -26,7 +26,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 The flip run uses the limited data set log:
 
 ```
-.venv/bin/python -m commitments.incident --label flip --only EHS \
+.venv/bin/python -m commitments.incident --label flip --only AHS \
   --transfer-log fixtures/exampleco/incident-labelforge/labelforge-transfer-log-limited-data-set.csv
 ```
 

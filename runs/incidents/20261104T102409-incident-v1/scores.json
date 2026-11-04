@@ -3,76 +3,76 @@
   "per_run": [
     {
       "decisions": {
-        "ENB": true,
-        "ERG": true,
-        "EHS": true
+        "ANB": true,
+        "ARG": true,
+        "AHS": true
       },
       "deadlines": {
-        "ENB": true,
-        "ERG": true
+        "ANB": true,
+        "ARG": true
       },
       "traps": {
-        "ENB-T1": {
+        "ANB-T1": {
           "passed": true,
           "check": "12h runs from when the vendor found it"
         },
-        "ENB-T2": {
+        "ANB-T2": {
           "passed": true,
           "check": "yes, citing the suspected-incident definition (2.4)"
         },
-        "ENB-T3": {
+        "ANB-T3": {
           "passed": true,
           "check": "yes, citing de-identified data as Bank Data (2.2)"
         },
-        "ENB-T4": {
+        "ANB-T4": {
           "passed": true,
           "check": "deadline comes from 6.1, not the 72h exhibit"
         },
-        "ENB-T6": {
+        "ANB-T6": {
           "passed": true,
           "check": "draft goes to the Cyber Fusion Center by email and phone, not the relationship manager"
         },
-        "ENB-T7": {
+        "ANB-T7": {
           "passed": true,
           "check": "says not to contact the bank's customers or regulators (6.4); draft goes to the bank only"
         },
-        "ENB-T8": {
+        "ANB-T8": {
           "passed": true,
           "check": "raises the 90-day notice for replacing a subcontractor (5.2)"
         },
-        "ENB-T9": {
+        "ANB-T9": {
           "passed": true,
           "check": "24h updates tracked as a repeating duty"
         },
-        "ERG-T1": {
+        "ARG-T1": {
           "passed": true,
           "check": "24h, citing why ExampleCo's terms do not apply (1.1 or 9.2)"
         },
-        "ERG-T2": {
+        "ARG-T2": {
           "passed": true,
           "check": "24h runs from when ExampleCo was told, not from the vendor's discovery"
         },
-        "ERG-T3": {
+        "ARG-T3": {
           "passed": true,
           "check": "flags the unapproved subprocessor for legal (5.1); draft names Labelforge"
         },
-        "ERG-T4": {
+        "ARG-T4": {
           "passed": true,
           "check": "yes, citing derived data as Retailer Data (2.2)"
         },
-        "ERG-T5": {
+        "ARG-T5": {
           "passed": true,
           "check": "draft goes to Retailer Security Operations by email and phone"
         },
-        "EHS-T1": {
+        "AHS-T1": {
           "passed": true,
           "check": "no, citing Safe Harbor data as outside the BAA (2.3)"
         },
-        "EHS-T2": {
+        "AHS-T2": {
           "passed": null,
           "check": "no on Safe Harbor data, and yes with a deadline when the same data is a limited data set"
         },
-        "EHS-T4": {
+        "AHS-T4": {
           "passed": true,
           "check": "no, citing the ePHI limit on Security Incident (1.2)"
         }

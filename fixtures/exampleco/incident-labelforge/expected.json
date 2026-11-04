@@ -2,9 +2,9 @@
   "source": "target-summary.md, in structured form for the scorer",
   "now": "2026-11-02T16:00:00-05:00",
   "rows": {
-    "ENB": {"notify": "yes", "deadline": "2026-11-02T18:00:00-05:00"},
-    "ERG": {"notify": "yes", "deadline": "2026-11-03T15:00:00-05:00"},
-    "EHS": {"notify": "no", "deadline": null}
+    "ANB": {"notify": "yes", "deadline": "2026-11-02T18:00:00-05:00"},
+    "ARG": {"notify": "yes", "deadline": "2026-11-03T15:00:00-05:00"},
+    "AHS": {"notify": "no", "deadline": null}
   },
   "separate_finding": {"elapsed_hours": 9, "limit_hours": 6}
 }

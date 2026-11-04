@@ -5,16 +5,16 @@ Test contracts for the commitments agent, with an answer key for each contract.
 - `contracts/` holds the contracts. `exampleco-standard-dpa.md` is ExampleCo's own standard terms, the baseline every customer contract is compared against. Each other file is a customer contract, written in that customer's voice on the customer's own template.
 - `answer-key.json` lists, for each contract, every commitment a correct agent should extract (with an exact quote from the contract), how it differs from the DPA, and the traps planted in the contract. Each trap names the correct reading and the wrong one.
 
-All company and vendor names are fictional placeholders: Example National Bank, Labelforge (the data-labeling vendor in the incident story), Model Provider A, Helpdesk Platform. AWS is the only real company named.
+All company and vendor names are fictional placeholders: Awesome National Bank, Labelforge (the data-labeling vendor in the incident story), Model Provider A, Helpdesk Platform. AWS is the only real company named.
 
 ## Status
 
 | Contract | Customer | Business unit | Status |
 |---|---|---|---|
 | `exampleco-standard-dpa.md` | ExampleCo standard terms | all | drafted |
-| `example-national-bank-security-addendum.md` | Large US bank, 12-hour notice | Commercial Cloud | drafted |
-| `example-health-system-baa.md` | Example Health System BAA, 10-day notice, not exposed | Healthcare and Life Sciences | drafted |
-| `example-retail-group-xyzwire-dpa.md` | Example Retail Group, XYZwire contract from before the acquisition, 24-hour notice | XYZwire | drafted |
+| `awesome-national-bank-security-addendum.md` | Large US bank, 12-hour notice | Commercial Cloud | drafted |
+| `amazing-health-system-baa.md` | Amazing Health System BAA, 10-day notice, not exposed | Healthcare and Life Sciences | drafted |
+| `astounding-retail-group-xyzwire-dpa.md` | Astounding Retail Group, XYZwire contract from before the acquisition, 24-hour notice | XYZwire | drafted |
 | `incident-labelforge/labelforge-transfer-log.csv` | Labelforge transfer log | | drafted |
 | `incident-labelforge/target-summary.md` | Incident scenario: target output and answer key | | drafted |
 

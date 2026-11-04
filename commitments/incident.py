@@ -10,7 +10,7 @@ answer key or the target summary.
 Usage:
   python -m commitments.incident                   # Labelforge incident, latest v2 ledger
   python -m commitments.incident --runs 3
-  python -m commitments.incident --transfer-log <csv> --only EHS
+  python -m commitments.incident --transfer-log <csv> --only AHS
 
 Output: runs/incidents/<timestamp>-<prompt>/run-NN.json, summary.md, drafts/
 """
@@ -42,9 +42,9 @@ DEMO_NOW = "2026-11-02T16:00"
 TABLE_ACTIONS = 4   # the rest go under the table, so a reviewer can skim it
 
 CONTRACT_FILES = {
-    "ENB": "example-national-bank-security-addendum.md",
-    "ERG": "example-retail-group-xyzwire-dpa.md",
-    "EHS": "example-health-system-baa.md",
+    "ANB": "awesome-national-bank-security-addendum.md",
+    "ARG": "astounding-retail-group-xyzwire-dpa.md",
+    "AHS": "amazing-health-system-baa.md",
 }
 CLOCK_VENDOR = "vendor_found_it"
 CLOCK_TOLD = "exampleco_told"
@@ -466,7 +466,7 @@ def main() -> None:
     parser.add_argument("--report", type=Path, default=INCIDENT_DIR / "incident.md")
     parser.add_argument("--transfer-log", type=Path, default=INCIDENT_DIR / "labelforge-transfer-log.csv")
     parser.add_argument("--now", default=DEMO_NOW, help="local time, YYYY-MM-DDTHH:MM")
-    parser.add_argument("--only", nargs="*", help="contract ids, such as EHS")
+    parser.add_argument("--only", nargs="*", help="contract ids, such as AHS")
     parser.add_argument("--label", default="", help="added to the output folder name")
     args = parser.parse_args()
 

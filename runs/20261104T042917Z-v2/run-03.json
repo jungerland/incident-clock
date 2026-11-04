@@ -5,28 +5,28 @@
   "run": 3,
   "created": "2026-11-04T04:39:19+00:00",
   "contracts": [
-    "example-health-system-baa.md",
-    "example-national-bank-security-addendum.md",
-    "example-retail-group-xyzwire-dpa.md",
+    "amazing-health-system-baa.md",
+    "awesome-national-bank-security-addendum.md",
+    "astounding-retail-group-xyzwire-dpa.md",
     "exampleco-standard-dpa.md"
   ],
   "commitments": [
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "Preamble",
       "type": "breach_notification",
       "quote": "It applies to all agreements under which Business Associate creates, receives, maintains or transmits Protected Health Information for or on behalf of Covered Entity (the \"Underlying Agreements\").",
-      "summary": "The BAA applies to every agreement under which ExampleCo handles PHI for Example Health System and its affiliated hospitals and clinics.",
+      "summary": "The BAA applies to every agreement under which ExampleCo handles PHI for Amazing Health System and its affiliated hospitals and clinics.",
       "deadline": null,
       "secondary_deadline": null,
       "operative_notice_deadline": false,
       "recipient": null,
-      "scope": "All Underlying Agreements involving PHI of Example Health System and its affiliated hospitals and clinics.",
+      "scope": "All Underlying Agreements involving PHI of Amazing Health System and its affiliated hospitals and clinics.",
       "standard_counterpart": "11.1",
       "deviation": "The DPA says it controls over the Agreement as to processing of Customer Personal Data. The BAA has no order-of-precedence clause and does not address the DPA. Inference: if both documents apply to the same data, which notice period controls (DPA 72 hours after confirmation versus BAA 10 days after Discovery or 5 business days after awareness) is not resolved by either document's text."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "1.2",
       "type": "breach_notification",
       "quote": "\"Security Incident\" has the meaning given in 45 C.F.R. \u00a7 164.304, limited to incidents involving ePHI that Business Associate or its Subcontractors create, receive, maintain or transmit for Covered Entity.",
@@ -40,7 +40,7 @@
       "deviation": "The DPA's Personal Data Breach requires ExampleCo confirmation of an actual compromise and excludes unsuccessful attempts. The HIPAA definition covers attempted as well as successful incidents and does not require confirmation, but it is limited to electronic PHI."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "2.1",
       "type": "ai_data_use",
       "quote": "Business Associate may use and disclose PHI only as necessary to perform the Underlying Agreements, as required by law, or as permitted by this BAA.",
@@ -54,7 +54,7 @@
       "deviation": "The DPA limits processing to Customer's documented instructions. The BAA limits use and disclosure to performance, legal requirement or BAA permission. The type is the closest available; the term is a general use limitation, not specific to AI."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "2.2",
       "type": "ai_data_use",
       "quote": "Business Associate shall limit its uses and disclosures of PHI to the minimum necessary.",
@@ -68,7 +68,7 @@
       "deviation": "The DPA has no minimum-necessary standard."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "2.3",
       "type": "ai_data_use",
       "quote": "Business Associate may de-identify PHI only in accordance with the safe harbor method at 45 C.F.R. \u00a7 164.514(b)(2), and may use the de-identified information only to provide and improve the services under the Underlying Agreements.",
@@ -82,7 +82,7 @@
       "deviation": "DPA 8.2 lets ExampleCo use aggregated or de-identified Usage Data to operate, secure and improve the Services, with no prescribed de-identification method. The BAA requires the safe harbor method only (expert determination is not allowed) and limits use to providing and improving the services under the Underlying Agreements."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "2.3",
       "type": "ai_data_use",
       "quote": "Information de-identified in accordance with this Section 2.3 is not PHI and is not subject to this BAA.",
@@ -96,7 +96,7 @@
       "deviation": "The DPA's Usage Data carve-out covers any aggregated or de-identified data that does not identify Customer or any person. The BAA carve-out is narrower and depends on safe harbor compliance."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "2.4",
       "type": "ai_data_use",
       "quote": "A limited data set under 45 C.F.R. \u00a7 164.514(e) is PHI for all purposes of this BAA.",
@@ -110,7 +110,7 @@
       "deviation": "The DPA has no equivalent. Inference: under the DPA, partially de-identified data might fall within Usage Data. The BAA expressly keeps limited data sets inside all its protections."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "3.1",
       "type": "security_controls",
       "quote": "Business Associate shall comply with Subpart C of 45 C.F.R. Part 164 with respect to ePHI.",
@@ -124,7 +124,7 @@
       "deviation": "The DPA commits to Annex 2 Security Measures, which ExampleCo may update unilaterally. The BAA requires compliance with the HIPAA Security Rule, an external regulatory standard ExampleCo cannot change."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "3.2",
       "type": "data_residency",
       "quote": "Business Associate shall not store, process or access PHI outside the United States.",
@@ -138,7 +138,7 @@
       "deviation": "The DPA stores data at rest in the region the customer selects. The BAA imposes a fixed US-only restriction on storage and on all processing, not only storage at rest."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "3.2",
       "type": "offshore_access",
       "quote": "Business Associate shall not store, process or access PHI outside the United States.",
@@ -152,7 +152,7 @@
       "deviation": "The DPA permits access from outside the hosting region for support, maintenance and security, including from the Manila, Philippines support center. The BAA prohibits any access to PHI from outside the US, so offshore support access to PHI is not allowed."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "3.3",
       "type": "certification",
       "quote": "Business Associate shall maintain HITRUST r2 certification for the systems that store or process PHI.",
@@ -166,7 +166,7 @@
       "deviation": "The DPA commits to SOC 2 Type II and ISO/IEC 27001 or substantially equivalent successors. The BAA requires HITRUST r2 specifically and allows no successor substitution."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "4.1",
       "type": "breach_notification",
       "quote": "Business Associate shall report to Covered Entity any Breach of Unsecured PHI without unreasonable delay and in no event later than ten (10) calendar days after Discovery.",
@@ -178,13 +178,13 @@
       },
       "secondary_deadline": null,
       "operative_notice_deadline": true,
-      "recipient": "Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to the Information Security Office at iso@ehs.example (Section 4.4), in writing.",
+      "recipient": "Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to the Information Security Office at iso@ahs.example (Section 4.4), in writing.",
       "scope": "Breaches of Unsecured PHI in any form (not only electronic), including limited data sets.",
       "standard_counterpart": "7.1",
       "deviation": "The DPA requires notice within 72 hours after ExampleCo confirms a breach. The BAA allows 10 calendar days, a longer period, but starts the clock at Discovery, which includes constructive knowledge by any workforce member or agent, not ExampleCo's confirmation. There is no confirmation step."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "4.2",
       "type": "breach_notification",
       "quote": "Business Associate shall report to Covered Entity any Security Incident within five (5) business days after Business Associate becomes aware of it.",
@@ -196,13 +196,13 @@
       },
       "secondary_deadline": null,
       "operative_notice_deadline": true,
-      "recipient": "Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to the Information Security Office at iso@ehs.example (Section 4.4), in writing.",
+      "recipient": "Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to the Information Security Office at iso@ahs.example (Section 4.4), in writing.",
       "scope": "Security Incidents involving ePHI handled by ExampleCo or its Subcontractors (Section 1.2), including attempted incidents, except unsuccessful attempts covered by the standing notice. Inference: a Breach of ePHI will usually also be a Security Incident, so this shorter period may require an initial report before the Section 4.1 deadline.",
       "standard_counterpart": "7.1",
       "deviation": "The DPA has a single 72-hour deadline after confirmation of a Personal Data Breach and excludes unconfirmed or attempted incidents. The BAA adds a separate 5 business day duty for Security Incidents, including unconfirmed ones, triggered by awareness."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "4.2",
       "type": "breach_notification",
       "quote": "This Section 4.2 serves as notice of, and no further report is required for, unsuccessful attempts such as pings, port scans and blocked log-in attempts that do not result in unauthorized access to ePHI.",
@@ -216,7 +216,7 @@
       "deviation": "The DPA excludes unsuccessful attempts from the breach definition entirely. The BAA treats them as Security Incidents but deems them already reported. Denial-of-service attacks are not expressly listed, unlike in the DPA."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "4.3",
       "type": "breach_notification",
       "quote": "Business Associate shall report to Covered Entity any use or disclosure of PHI not provided for by this BAA within ten (10) calendar days after becoming aware of it.",
@@ -228,27 +228,27 @@
       },
       "secondary_deadline": null,
       "operative_notice_deadline": true,
-      "recipient": "Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to the Information Security Office at iso@ehs.example (Section 4.4), in writing.",
+      "recipient": "Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to the Information Security Office at iso@ahs.example (Section 4.4), in writing.",
       "scope": "Any use or disclosure of PHI not provided for by the BAA, whether or not it is a Breach or Security Incident.",
       "standard_counterpart": "7.1",
       "deviation": "The DPA has no separate duty to report non-permitted uses or disclosures that fall short of a confirmed breach."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "4.4",
       "type": "incident_communications",
-      "quote": "Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to its Information Security Office at iso@ehs.example.",
+      "quote": "Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to its Information Security Office at iso@ahs.example.",
       "summary": "All Section 4 reports must be in writing to the Privacy Office, with a copy to the Information Security Office.",
       "deadline": null,
       "secondary_deadline": null,
       "operative_notice_deadline": false,
-      "recipient": "Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to the Information Security Office at iso@ehs.example.",
+      "recipient": "Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to the Information Security Office at iso@ahs.example.",
       "scope": "All reports under Sections 4.1 to 4.3.",
       "standard_counterpart": "7.2",
       "deviation": "The DPA sends notice to the security contact designated in the admin console, or otherwise to the account owner. The BAA fixes two named email addresses, requires written reports, and requires a copy to the ISO."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "4.5",
       "type": "breach_notification",
       "quote": "A report of a Breach shall include, to the extent known, the identity of each individual affected, the PHI involved, the date of the Breach and of its Discovery, and the steps taken to mitigate it.",
@@ -256,13 +256,13 @@
       "deadline": null,
       "secondary_deadline": null,
       "operative_notice_deadline": false,
-      "recipient": "Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to iso@ehs.example.",
+      "recipient": "Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to iso@ahs.example.",
       "scope": "Reports of Breaches of Unsecured PHI.",
       "standard_counterpart": "7.3",
       "deviation": "The DPA requires the nature of the breach, categories of data and measures taken. The BAA requires identification of each affected individual and the breach and Discovery dates. Unlike DPA 7.3, the BAA states no express duty to provide further information as it becomes available."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "4.6",
       "type": "incident_costs",
       "quote": "Business Associate shall reimburse Covered Entity's reasonable costs of notifying individuals, regulators and the media of a Breach caused by Business Associate or its Subcontractors.",
@@ -276,7 +276,7 @@
       "deviation": "No DPA equivalent. The DPA's only related term (7.4) says notification is not an acknowledgment of fault, and the DPA has no cost reimbursement."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "5.1",
       "type": "subprocessor_scope",
       "quote": "Business Associate shall ensure that each Subcontractor that creates, receives, maintains or transmits PHI on its behalf agrees in writing to the same restrictions and conditions that apply to Business Associate under this BAA.",
@@ -290,7 +290,7 @@
       "deviation": "The DPA makes ExampleCo responsible for Subprocessors' performance. The BAA requires a written flow-down of identical terms, including the US-only and 5-day and 10-day reporting duties. The BAA contains no Subcontractor notice or objection mechanism comparable to DPA 5.2 to 5.4."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "6.1",
       "type": "data_deletion",
       "quote": "Business Associate shall make PHI in a Designated Record Set available to Covered Entity within ten (10) business days after Covered Entity's request, so Covered Entity can meet 45 C.F.R. \u00a7 164.524.",
@@ -308,7 +308,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "6.2",
       "type": "testing_and_audit",
       "quote": "Business Associate shall make its internal practices, books and records relating to PHI available to the Secretary of Health and Human Services for purposes of determining compliance with the HIPAA Rules.",
@@ -322,7 +322,7 @@
       "deviation": "The DPA limits audits to Trust Center reports, plus one on-site audit per 12 months on 60 days' notice when a supervisory authority requires it. The BAA grants HHS access with no frequency, notice or cost limits."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "7.1",
       "type": "data_deletion",
       "quote": "On termination of the Underlying Agreements, Business Associate shall return or destroy all PHI within thirty (30) days.",
@@ -340,7 +340,7 @@
       "deviation": "The DPA allows 90 days to delete, plus a further 35 days for backup overwrite, and provides certification only on request. The BAA requires return or destruction of all PHI within 30 days, with no separate backup period."
     },
     {
-      "contract": "example-health-system-baa.md",
+      "contract": "amazing-health-system-baa.md",
       "section": "7.1",
       "type": "data_deletion",
       "quote": "If return or destruction is not feasible, Business Associate shall extend the protections of this BAA to that PHI for as long as it retains it.",
@@ -354,7 +354,7 @@
       "deviation": "The DPA has no infeasibility provision or post-termination continuation of protections."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "1.2",
       "type": "breach_notification",
       "quote": "This Addendum controls over any conflicting term of the Agreement, any order form, and any data processing addendum, privacy policy, or other document published or provided by Supplier.",
@@ -368,7 +368,7 @@
       "deviation": "Reverses the DPA's precedence rule. The DPA says it controls over the Agreement for processing; here the Bank Addendum controls over the DPA itself, so DPA terms such as the 72-hour confirmed-breach notice, 30-day subprocessor notice and Manila support access give way where they conflict."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "1.2",
       "type": "subprocessor_notice",
       "quote": "Terms incorporated by reference to a Supplier website, including any Supplier trust or security site, do not bind Bank and do not modify this Addendum.",
@@ -382,7 +382,7 @@
       "deviation": "The DPA relies on the Trust Center for subprocessor lists and notices (5.1, 5.2), report access (9.1, 9.2) and AI provider disclosure (8.3). None of these Trust Center mechanisms binds Bank."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "2.2",
       "type": "ai_data_use",
       "quote": "\"Bank Data\" means all data and information, in any form, that Supplier or any Subcontractor receives, accesses, creates or processes in connection with the Agreement, including (a) data provided by or on behalf of Bank or its customers; (b) metadata, logs and configuration data relating to Bank's use of the Services; and (c) any data derived from any of the foregoing, including model outputs, embeddings, annotations, and data that has been aggregated, de-identified, pseudonymized or tokenized.",
@@ -396,7 +396,7 @@
       "deviation": "The DPA covers only Customer Personal Data and lets ExampleCo use aggregated or de-identified Usage Data to improve the Services (1.6, 8.2). Here aggregated and de-identified data remain Bank Data, so there is no Usage Data carve-out and the protections are not limited to personal data."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "3.1",
       "type": "security_controls",
       "quote": "Supplier shall maintain a written information security program that is consistent with the NIST Cybersecurity Framework and the FFIEC Information Technology Examination Handbook.",
@@ -410,7 +410,7 @@
       "deviation": "The DPA refers only to the Annex 2 measures, which ExampleCo may update unilaterally. This term requires a written program aligned to the named NIST and FFIEC frameworks."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "3.2",
       "type": "security_controls",
       "quote": "Supplier shall encrypt Bank Data at rest using AES-256 or stronger and in transit using TLS 1.2 or higher.",
@@ -424,7 +424,7 @@
       "deviation": "The encryption standard matches Annex 2. It applies to the broader Bank Data and is a fixed contractual duty rather than a measure ExampleCo can update."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "3.3",
       "type": "security_controls",
       "quote": "Supplier shall require multi-factor authentication for all remote access to systems that store, process or transmit Bank Data.",
@@ -438,7 +438,7 @@
       "deviation": "The DPA requires MFA for access to production systems. This term covers all remote access to any system handling Bank Data."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "3.4",
       "type": "security_controls",
       "quote": "Supplier shall complete a criminal background check on all Supplier Personnel before granting them access to Bank Data, to the extent permitted by law.",
@@ -452,7 +452,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "3.5",
       "type": "certification",
       "quote": "Supplier shall maintain throughout the term of the Agreement a current SOC 2 Type II report covering the Services.",
@@ -466,7 +466,7 @@
       "deviation": "Requires a current SOC 2 Type II report with no option to substitute a successor standard. ISO/IEC 27001 is not required."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "4.1",
       "type": "data_residency",
       "quote": "Supplier shall store and process Bank Data only within the United States.",
@@ -480,7 +480,7 @@
       "deviation": "The DPA fixes only at-rest storage, in the customer-selected region. This term requires both storage and processing to stay in the US."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "4.2",
       "type": "offshore_access",
       "quote": "Supplier shall not permit any Supplier Personnel located outside the United States to access Bank Data, including for support or maintenance, without Bank's prior written approval.",
@@ -494,7 +494,7 @@
       "deviation": "The DPA permits offshore support, maintenance and security access, including from the Manila support center. This term prohibits offshore access without prior written approval, so routine Manila support for Bank would breach it."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "5.1",
       "type": "subprocessor_scope",
       "quote": "Supplier may permit only the Subcontractors listed in Schedule 2 (\"Approved Subcontractors\") to access Bank Data, and each only within the scope stated for it in Schedule 2.",
@@ -508,7 +508,7 @@
       "deviation": "Replaces the DPA's general authorization and Trust Center list with a closed list in which each Subcontractor has a defined scope. Supplier Affiliates are covered as well."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "5.2",
       "type": "subprocessor_notice",
       "quote": "Supplier shall give Bank's Third-Party Risk Management office at least ninety (90) days' prior written notice, delivered as provided in Exhibit C, before adding or replacing any Subcontractor or expanding an Approved Subcontractor's scope.",
@@ -520,13 +520,13 @@
       },
       "secondary_deadline": null,
       "operative_notice_deadline": false,
-      "recipient": "Bank Third-Party Risk Management office, tprm-notices@enb.example, with a copy to Example National Bank, N.A., Legal Department, 100 Example Plaza, New York, NY 10001 (Exhibit C)",
+      "recipient": "Bank Third-Party Risk Management office, tprm-notices@anb.example, with a copy to Awesome National Bank, N.A., Legal Department, 100 Example Plaza, New York, NY 10001 (Exhibit C)",
       "scope": "New Subcontractors, replacement Subcontractors, and expansions of an Approved Subcontractor's scope.",
       "standard_counterpart": "5.2",
       "deviation": "Requires 90 days' notice instead of 30, delivered directly to TPRM with a copy to Legal rather than by a Trust Center update or email to subscribers. Scope expansions also trigger notice, and there is no emergency-replacement exception like DPA 5.4."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "5.2",
       "type": "subprocessor_notice",
       "quote": "Bank may object within thirty (30) days after receiving the notice. If Bank objects, Supplier shall not engage the Subcontractor for the Services provided to Bank, or Bank may terminate the affected Services without penalty and receive a pro-rata refund of prepaid fees.",
@@ -544,7 +544,7 @@
       "deviation": "The DPA allows objection only on reasonable data protection grounds within 15 days, with termination as the sole remedy. Here Bank has 30 days with no grounds requirement, Supplier is barred from using the Subcontractor for Bank, and termination comes with no penalty and a pro-rata refund."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "5.3",
       "type": "subprocessor_scope",
       "quote": "Supplier shall impose on each Subcontractor written obligations at least as protective of Bank Data as this Addendum.",
@@ -558,7 +558,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "5.3",
       "type": "breach_notification",
       "quote": "Supplier shall require each Subcontractor to notify Supplier of any Security Incident within six (6) hours after the Subcontractor's Discovery.",
@@ -576,7 +576,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "5.4",
       "type": "subprocessor_scope",
       "quote": "Supplier remains fully liable to Bank for the acts and omissions of its Subcontractors.",
@@ -590,7 +590,7 @@
       "deviation": "The DPA makes ExampleCo responsible for its Subprocessors' performance of DPA obligations. This term imposes full liability for all of a Subcontractor's acts and omissions."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.1",
       "type": "breach_notification",
       "quote": "Supplier shall notify Bank of any Security Incident as soon as possible and in no event later than twelve (12) hours after Discovery.",
@@ -602,13 +602,13 @@
       },
       "secondary_deadline": null,
       "operative_notice_deadline": true,
-      "recipient": "Bank Cyber Fusion Center, telephone (24x7) +1 (212) 555-0147 and email cfc-thirdparty@enb.example (Exhibit C)",
+      "recipient": "Bank Cyber Fusion Center, telephone (24x7) +1 (212) 555-0147 and email cfc-thirdparty@anb.example (Exhibit C)",
       "scope": "Security Incidents: actual or reasonably suspected unauthorized access to, or acquisition, use, disclosure, alteration or destruction of, Bank Data, and unauthorized access to any Supplier or Subcontractor system handling Bank Data, whether or not data access is confirmed.",
       "standard_counterpart": "7.1",
       "deviation": "The DPA allows 72 hours after ExampleCo confirms a breach of personal data. This term allows 12 hours, the clock starts at actual or constructive knowledge by Supplier or any Subcontractor, and suspected incidents and system intrusions count even without confirmed data access."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.2",
       "type": "breach_notification",
       "quote": "Supplier shall give notice under Section 6.1 by telephone and by email to Bank's Cyber Fusion Center as provided in Exhibit C. Notice provided only to Bank's relationship manager, or through a Supplier status page or trust site, does not satisfy Section 6.1.",
@@ -616,13 +616,13 @@
       "deadline": null,
       "secondary_deadline": null,
       "operative_notice_deadline": false,
-      "recipient": "Bank Cyber Fusion Center, telephone (24x7) +1 (212) 555-0147 and email cfc-thirdparty@enb.example. The relationship manager, Dana Okafor (dana.okafor@enb.example), is for routine matters only (Exhibit C).",
+      "recipient": "Bank Cyber Fusion Center, telephone (24x7) +1 (212) 555-0147 and email cfc-thirdparty@anb.example. The relationship manager, Dana Okafor (dana.okafor@anb.example), is for routine matters only (Exhibit C).",
       "scope": null,
       "standard_counterpart": "7.2",
       "deviation": "The DPA sends notice to the console-designated security contact or the account owner. This term requires dual-channel notice to a fixed Bank Cyber Fusion Center and excludes the relationship manager and status or trust pages."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.3",
       "type": "breach_notification",
       "quote": "Supplier's initial notice shall include all information then known about the Security Incident, including the date and time of Discovery, the systems and Subcontractors involved, and the categories of Bank Data affected or potentially affected.",
@@ -636,7 +636,7 @@
       "deviation": "Requires all known information plus specific items (Discovery time, systems, Subcontractors, potentially affected data). The DPA requires only the nature of the breach, the data categories and the measures taken."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.3",
       "type": "incident_updates",
       "quote": "Supplier shall provide written status updates at least once every twenty-four (24) hours until the Security Incident is contained",
@@ -654,7 +654,7 @@
       "deviation": "The DPA requires further information only as it becomes available. This term requires a written update at least every 24 hours."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.3",
       "type": "incident_updates",
       "quote": "and shall deliver a written root-cause report within thirty (30) days after containment.",
@@ -672,7 +672,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.4",
       "type": "incident_communications",
       "quote": "Supplier shall not notify any Bank customer, regulator, law enforcement agency or the media of a Security Incident involving Bank Data without Bank's prior written consent, unless required by law.",
@@ -686,7 +686,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.4",
       "type": "incident_communications",
       "quote": "Where law requires such notice, Supplier shall inform Bank before giving it, to the extent legally permitted.",
@@ -704,7 +704,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.5",
       "type": "evidence_preservation",
       "quote": "Supplier shall preserve all logs, images and other forensic evidence relating to a Security Incident for at least one (1) year after containment",
@@ -722,7 +722,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.5",
       "type": "evidence_preservation",
       "quote": "and shall give Bank and its designated forensic investigator access to that evidence on request.",
@@ -736,7 +736,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.6",
       "type": "incident_costs",
       "quote": "Supplier shall reimburse Bank's reasonable costs of investigating and responding to a Security Incident caused by Supplier or any Subcontractor, including costs of notifying affected individuals and providing them with twenty-four (24) months of credit monitoring.",
@@ -750,7 +750,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "6.8",
       "type": "breach_notification",
       "quote": "Where this Addendum, the Agreement, any exhibit or schedule, or applicable law specifies more than one period for the same notice, the shortest period applies.",
@@ -764,7 +764,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "7.1",
       "type": "ai_data_use",
       "quote": "Supplier shall not use Bank Data to train, fine-tune, evaluate or improve any artificial intelligence or machine learning model, other than a model used solely to provide the Services to Bank.",
@@ -778,7 +778,7 @@
       "deviation": "The DPA bars only training or fine-tuning of foundation models offered to other customers, and 8.2 allows Usage Data to improve the Services. This term bars training, fine-tuning, evaluation and improvement of any model other than a Bank-only model, and it covers de-identified data."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "7.2",
       "type": "ai_data_use",
       "quote": "Supplier shall not permit any person to review, label or annotate Bank Data for the purpose of developing or improving any model, except as expressly permitted for an Approved Subcontractor in Schedule 2.",
@@ -792,7 +792,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "7.3",
       "type": "ai_data_use",
       "quote": "Supplier shall identify in Schedule 2 every third-party model provider that receives Bank Data",
@@ -806,7 +806,7 @@
       "deviation": "Model providers must appear in the contractual Schedule 2 rather than on the Trust Center list."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "7.3",
       "type": "ai_data_use",
       "quote": "and shall ensure that no model provider retains Bank Data after returning a response.",
@@ -820,7 +820,7 @@
       "deviation": "Requires zero retention with no abuse-monitoring exception, and Supplier must ensure the result rather than merely require it of providers."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "8.1",
       "type": "testing_and_audit",
       "quote": "Supplier shall engage an independent third party to perform a penetration test of the Services at least once every twelve (12) months, and shall deliver an executive summary of the results to Bank within thirty (30) days after Bank's request.",
@@ -842,7 +842,7 @@
       "deviation": "The testing frequency matches. The summary must be delivered directly to Bank within 30 days of request instead of being posted on the Trust Center."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "8.2",
       "type": "testing_and_audit",
       "quote": "Supplier shall remediate vulnerabilities rated Critical within fifteen (15) days, and vulnerabilities rated High within thirty (30) days, after identification.",
@@ -864,7 +864,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "8.3",
       "type": "testing_and_audit",
       "quote": "Supplier shall deliver its SOC 2 Type II report to Bank within thirty (30) days after the report is issued, and a bridge letter on request.",
@@ -882,7 +882,7 @@
       "deviation": "The report must be delivered proactively within 30 days, with no Trust Center NDA condition, and a bridge letter is added. The DPA only makes the report available on the Trust Center."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "8.4",
       "type": "testing_and_audit",
       "quote": "Bank, its auditors and its regulators may audit Supplier's compliance with this Addendum once in any twelve (12) month period on thirty (30) days' written notice, and at any time after a Security Incident on five (5) business days' written notice.",
@@ -904,7 +904,7 @@
       "deviation": "The DPA treats reports as satisfying audit rights and allows an on-site audit only when a supervisory authority requires one, on 60 days' notice and at Customer's cost. Here audit rights are direct on 30 days' notice, extend to auditors and regulators, and add post-incident audits on 5 business days' notice. Neither notice period is limited to business hours, and neither shifts cost to Bank."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "8.4",
       "type": "testing_and_audit",
       "quote": "Nothing in this Addendum limits the access of any regulator with authority over Bank.",
@@ -918,7 +918,7 @@
       "deviation": "The DPA caps audits at one per year at Customer's expense. Regulator access here is unrestricted."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "9.1",
       "type": "business_continuity",
       "quote": "Supplier shall maintain a business continuity and disaster recovery plan for the Services with a recovery time objective of no more than four (4) hours and a recovery point objective of no more than one (1) hour.",
@@ -940,7 +940,7 @@
       "deviation": "Annex 2 requires a BC/DR plan with no recovery objectives. This term fixes an RTO of 4 hours and an RPO of 1 hour."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "9.2",
       "type": "business_continuity",
       "quote": "Supplier shall test the plan at least annually, provide Bank a summary of the results",
@@ -958,7 +958,7 @@
       "deviation": "The annual testing matches Annex 2. Providing Bank a summary of the results is an added duty."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "9.2",
       "type": "business_continuity",
       "quote": "and participate in Bank's annual operational resilience exercise on sixty (60) days' written notice.",
@@ -976,7 +976,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "10.1",
       "type": "insurance",
       "quote": "Supplier shall maintain cyber liability insurance with limits of no less than twenty-five million dollars ($25,000,000) per claim throughout the term of the Agreement and for two (2) years after.",
@@ -994,7 +994,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "11.1",
       "type": "data_deletion",
       "quote": "Within thirty (30) days after termination of the Agreement or Bank's written request, Supplier shall return Bank Data to Bank in the format Bank reasonably requests",
@@ -1012,7 +1012,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "11.1",
       "type": "data_deletion",
       "quote": "and then securely destroy all Bank Data, including in backups, held by Supplier and its Subcontractors.",
@@ -1030,7 +1030,7 @@
       "deviation": "The DPA allows 90 days after termination plus a further 35 days for backups. This term requires destruction within 30 days, including backups and Subcontractor copies, triggered by termination or by Bank's request."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "11.2",
       "type": "data_deletion",
       "quote": "Within ten (10) business days after destruction, Supplier shall deliver a certificate of destruction signed by an officer of Supplier.",
@@ -1048,7 +1048,7 @@
       "deviation": "The DPA provides certification only on request. Here the certificate is automatic, must be officer-signed, and is due within 10 business days."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "12.1",
       "type": "breach_notification",
       "quote": "Sections 6, 10 and 11 survive termination of the Agreement for as long as Supplier or any Subcontractor holds Bank Data.",
@@ -1062,7 +1062,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "Schedule 2",
       "type": "subprocessor_scope",
       "quote": "All Bank Data, US regions only",
@@ -1076,7 +1076,7 @@
       "deviation": "Approval is fixed in the contract and limited to US regions, rather than depending on the Trust Center list."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "Schedule 2",
       "type": "ai_data_use",
       "quote": "Prompts and outputs only; zero retention",
@@ -1090,7 +1090,7 @@
       "deviation": "The DPA allows retention for abuse monitoring. Zero retention is required here, and data scope is limited to prompts and outputs."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "Schedule 2",
       "type": "ai_data_use",
       "quote": "Only de-identified feedback samples that Bank submits through the Services' feedback feature, for improving Bank's own agents. Bank Data in identifiable form is not permitted.",
@@ -1104,7 +1104,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "Schedule 2",
       "type": "subprocessor_scope",
       "quote": "Contact details of Bank users only",
@@ -1118,11 +1118,11 @@
       "deviation": "Data access is limited by contract to Bank user contact details."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "D.2",
       "type": "breach_notification",
-      "quote": "Supplier shall notify ENB Securities LLC as soon as possible, but no later than seventy-two (72) hours after becoming aware of a breach in security resulting in unauthorized access to a customer information system maintained by Supplier.",
-      "summary": "Supplier must notify ENB Securities within 72 hours after becoming aware of a security breach giving unauthorized access to a customer information system it maintains, but Section 6.8 makes the 12-hour period in 6.1 govern.",
+      "quote": "Supplier shall notify ANB Securities LLC as soon as possible, but no later than seventy-two (72) hours after becoming aware of a breach in security resulting in unauthorized access to a customer information system maintained by Supplier.",
+      "summary": "Supplier must notify ANB Securities within 72 hours after becoming aware of a security breach giving unauthorized access to a customer information system it maintains, but Section 6.8 makes the 12-hour period in 6.1 govern.",
       "deadline": {
         "duration": "PT72H",
         "direction": "after",
@@ -1130,27 +1130,27 @@
       },
       "secondary_deadline": null,
       "operative_notice_deadline": false,
-      "recipient": "ENB Securities LLC. Exhibit C gives no separate contact; by inference, notice goes through the Bank Cyber Fusion Center, +1 (212) 555-0147 and cfc-thirdparty@enb.example, as under Section 6.1.",
-      "scope": "Customer information of ENB Securities LLC, an SEC-registered broker-dealer (D.1).",
+      "recipient": "ANB Securities LLC. Exhibit C gives no separate contact; by inference, notice goes through the Bank Cyber Fusion Center, +1 (212) 555-0147 and cfc-thirdparty@anb.example, as under Section 6.1.",
+      "scope": "Customer information of ANB Securities LLC, an SEC-registered broker-dealer (D.1).",
       "standard_counterpart": "7.1",
       "deviation": "Matches the DPA's 72 hours but runs from awareness rather than confirmation. Section 6.8's shortest-period rule and D.3 mean the 12-hour period after Discovery in 6.1 governs."
     },
     {
-      "contract": "example-national-bank-security-addendum.md",
+      "contract": "awesome-national-bank-security-addendum.md",
       "section": "D.3",
       "type": "breach_notification",
       "quote": "This Exhibit supplements, and does not replace, Section 6 of the Addendum.",
-      "summary": "Exhibit D adds to Section 6 and does not replace it, so all Section 6 incident duties still apply to ENB Securities LLC.",
+      "summary": "Exhibit D adds to Section 6 and does not replace it, so all Section 6 incident duties still apply to ANB Securities LLC.",
       "deadline": null,
       "secondary_deadline": null,
       "operative_notice_deadline": false,
       "recipient": null,
-      "scope": "Supplier's obligations to ENB Securities LLC (see also Section 6.7).",
+      "scope": "Supplier's obligations to ANB Securities LLC (see also Section 6.7).",
       "standard_counterpart": null,
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "1.1",
       "type": "breach_notification",
       "quote": "This VDPA prevails over the Subscription Agreement and over any data processing terms, policies or online terms of Vendor or its Affiliates.",
@@ -1164,7 +1164,7 @@
       "deviation": "The DPA says the DPA controls over the Agreement for processing of Customer Personal Data. The VDPA instead makes Retailer's own terms prevail over all Vendor and Affiliate data processing terms, which would include the ExampleCo DPA itself."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "2.2",
       "type": "ai_data_use",
       "quote": "\"Retailer Data\" means all data that Retailer, its employees or its customers provide to Vendor or that Vendor collects from Retailer's systems, including telemetry, logs, traces and metrics, and all data derived from any of it.",
@@ -1178,7 +1178,7 @@
       "deviation": "The DPA covers only Customer Personal Data. It carves out aggregated or de-identified 'Usage Data', which ExampleCo may use to operate, secure and improve the Services (DPA 8.2). The VDPA treats telemetry and all derived data as Retailer Data, so there is no Usage Data carve-out."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "3.1",
       "type": "ai_data_use",
       "quote": "Vendor shall process Retailer Data only to provide the services described in the Subscription Agreement (the \"Services\") and on Retailer's written instructions.",
@@ -1192,7 +1192,7 @@
       "deviation": "The DPA treats the Agreement, the DPA and Customer's configuration of the Services as instructions, and applies only to personal data. The VDPA limits processing to providing the Services on written instructions and covers all Retailer Data."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "3.2",
       "type": "ai_data_use",
       "quote": "Vendor shall not use Retailer Data to train or improve any machine learning model, except models used only to provide the Services to Retailer.",
@@ -1206,7 +1206,7 @@
       "deviation": "The DPA bars training or fine-tuning only of foundation models made available to other customers, and it permits use of Usage Data to improve the Services. The VDPA bars training or improving any model except one dedicated to Retailer, and it has no Usage Data exception."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "3.3",
       "type": "data_residency",
       "quote": "Vendor shall store Retailer Data only in the United States or Canada.",
@@ -1220,7 +1220,7 @@
       "deviation": "The DPA stores data in the region Customer selects, and DPA 6.2 permits access from outside that region, including from Manila. The VDPA fixes storage to the US or Canada. It does not expressly address offshore access. Inference: Manila support access under ExampleCo's DPA is not authorized by the VDPA, and its permissibility depends on the processing limits in 3.1 and 5.3."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "4.1",
       "type": "security_controls",
       "quote": "Vendor shall maintain administrative, technical and physical safeguards that meet or exceed the CIS Critical Security Controls, Implementation Group 2.",
@@ -1234,7 +1234,7 @@
       "deviation": "The DPA refers to its own Annex 2 measures, which ExampleCo may update unilaterally provided overall security is not materially reduced. The VDPA sets an external benchmark (CIS IG2) and gives Vendor no unilateral right to change it."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "4.2",
       "type": "security_controls",
       "quote": "Vendor shall encrypt Retailer Data at rest and in transit using industry-standard encryption.",
@@ -1248,7 +1248,7 @@
       "deviation": "The DPA specifies AES-256 at rest and TLS 1.2+ in transit. The VDPA requires 'industry-standard' encryption without naming algorithms; the substance is similar but less specific."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "4.3",
       "type": "certification",
       "quote": "Vendor shall obtain a SOC 2 Type II report covering the Services each year",
@@ -1266,7 +1266,7 @@
       "deviation": "The DPA requires both SOC 2 Type II and ISO/IEC 27001, or substantially equivalent successor standards. The VDPA requires only SOC 2 Type II, but expressly every year, and does not allow successor standards."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "4.3",
       "type": "testing_and_audit",
       "quote": "provide it to Retailer within fifteen (15) days after Retailer's request",
@@ -1284,7 +1284,7 @@
       "deviation": "The DPA makes the report available through the Trust Center, subject to the Trust Center NDA, with no delivery deadline. The VDPA requires direct delivery within 15 days of request and imposes no NDA condition."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "5.1",
       "type": "subprocessor_scope",
       "quote": "Vendor shall not permit any Subprocessor other than those listed in Appendix B to process Retailer Data without Retailer's prior written consent.",
@@ -1298,7 +1298,7 @@
       "deviation": "The DPA grants general authorization for Subprocessors. The VDPA requires specific prior written consent for any Subprocessor not listed in Appendix B."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "5.2",
       "type": "subprocessor_notice",
       "quote": "Vendor shall request consent for a new Subprocessor in writing at least thirty (30) days before the Subprocessor begins processing Retailer Data. Retailer's silence is not consent.",
@@ -1316,7 +1316,7 @@
       "deviation": "The DPA has a 30-day notice via a Trust Center update and email to subscribers, a 15-day objection window (5.3), termination as sole remedy, and an urgent-replacement exception (5.4). The VDPA requires an affirmative written consent request, treats silence as no consent, and has no urgent-replacement exception."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "5.3",
       "type": "subprocessor_scope",
       "quote": "Vendor shall bind each Subprocessor in writing to obligations at least as protective as this VDPA",
@@ -1330,7 +1330,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "5.3",
       "type": "subprocessor_scope",
       "quote": "and remains liable for each Subprocessor's acts and omissions",
@@ -1344,7 +1344,7 @@
       "deviation": "The DPA makes ExampleCo responsible for Subprocessors' performance of DPA obligations. The VDPA makes Vendor liable for all of each Subprocessor's acts and omissions, which is broader."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "6.1",
       "type": "breach_notification",
       "quote": "Vendor shall notify Retailer of a Data Incident without undue delay and no later than twenty-four (24) hours after Vendor becomes aware of it.",
@@ -1356,27 +1356,27 @@
       },
       "secondary_deadline": null,
       "operative_notice_deadline": true,
-      "recipient": "Retailer Security Operations: email secops@erg.example and telephone +1 (614) 555-0182",
+      "recipient": "Retailer Security Operations: email secops@arg.example and telephone +1 (614) 555-0182",
       "scope": "Under 2.3, Data Incident means any actual or reasonably suspected unauthorized access to, or acquisition, disclosure or loss of, Retailer Data (all data, including telemetry), including while held by a Subprocessor.",
       "standard_counterpart": "7.1",
       "deviation": "The DPA allows 72 hours after ExampleCo confirms a Personal Data Breach, and excludes unsuccessful attempts and non-personal data. The VDPA allows 24 hours from awareness and covers suspected incidents, all Retailer Data and incidents at Subprocessors. Under 1.1, the VDPA period controls over ExampleCo's terms."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "6.2",
       "type": "breach_notification",
-      "quote": "Vendor shall send notice by email to Retailer Security Operations at secops@erg.example and by telephone to +1 (614) 555-0182. Notice to Retailer's account or procurement contacts does not satisfy Section 6.1.",
+      "quote": "Vendor shall send notice by email to Retailer Security Operations at secops@arg.example and by telephone to +1 (614) 555-0182. Notice to Retailer's account or procurement contacts does not satisfy Section 6.1.",
       "summary": "Incident notice must go by both email and telephone to Retailer Security Operations, and notice to account or procurement contacts does not count.",
       "deadline": null,
       "secondary_deadline": null,
       "operative_notice_deadline": false,
-      "recipient": "Retailer Security Operations: secops@erg.example and +1 (614) 555-0182",
+      "recipient": "Retailer Security Operations: secops@arg.example and +1 (614) 555-0182",
       "scope": null,
       "standard_counterpart": "7.2",
       "deviation": "The DPA sends notice to the console-designated security contact or, failing that, the account owner. The VDPA fixes the email and phone channels and expressly says notice to account contacts is ineffective."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "6.3",
       "type": "breach_notification",
       "quote": "Vendor's notice shall describe the Data Incident, the Retailer Data involved, any Subprocessor involved, and the steps Vendor has taken.",
@@ -1390,7 +1390,7 @@
       "deviation": "The DPA requires content only 'to the extent then known' and does not require identifying Subprocessors. The VDPA adds Subprocessor identification and has no 'to the extent known' qualifier."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "6.3",
       "type": "incident_updates",
       "quote": "Vendor shall supplement the notice as new information becomes available.",
@@ -1404,7 +1404,7 @@
       "deviation": "Substantially the same as the DPA's commitment to provide further information as it becomes available; neither sets an update cadence."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "6.4",
       "type": "incident_communications",
       "quote": "Vendor shall not inform Retailer's customers or any third party of a Data Incident involving Retailer Data without Retailer's prior written approval, except as required by law.",
@@ -1418,7 +1418,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "6.5",
       "type": "evidence_preservation",
       "quote": "Vendor shall cooperate with Retailer's investigation",
@@ -1432,7 +1432,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "6.5",
       "type": "incident_costs",
       "quote": "and shall bear the reasonable costs of a Data Incident to the extent caused by Vendor or its Subprocessors",
@@ -1446,7 +1446,7 @@
       "deviation": "No DPA equivalent. The DPA (7.4) instead states that notification is not an acknowledgment of fault or liability."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "7.1",
       "type": "data_deletion",
       "quote": "Within thirty (30) days after the Subscription Agreement ends, Vendor shall delete all Retailer Data",
@@ -1464,7 +1464,7 @@
       "deviation": "The DPA allows 90 days after termination, plus a further 35 days for backups, and covers only personal data. The VDPA requires deletion of all Retailer Data within 30 days and has no backup exception."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "7.1",
       "type": "data_deletion",
       "quote": "and confirm the deletion to Retailer in writing",
@@ -1482,7 +1482,7 @@
       "deviation": "The DPA provides certification only on Customer's written request. The VDPA requires written confirmation automatically."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "8.1",
       "type": "testing_and_audit",
       "quote": "Retailer may audit Vendor's compliance with this VDPA once per calendar year on thirty (30) days' notice",
@@ -1500,7 +1500,7 @@
       "deviation": "Under the DPA, reports satisfy audit rights, and an on-site audit is allowed only where a supervisory authority requires it, once per 12 months, on 60 days' notice and at Customer's expense. The VDPA gives a direct annual audit right on 30 days' notice, with no regulator trigger and no cost allocation stated."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "8.1",
       "type": "testing_and_audit",
       "quote": "and within ten (10) days after notice following a Data Incident",
@@ -1518,7 +1518,7 @@
       "deviation": "The DPA has no incident-triggered audit right. The VDPA adds an expedited audit on 10 days' notice after a Data Incident."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "9.1",
       "type": "breach_notification",
       "quote": "This VDPA binds and benefits each party's successors and permitted assigns.",
@@ -1532,7 +1532,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "9.2",
       "type": "breach_notification",
       "quote": "A change of control of Vendor, by merger, acquisition or otherwise, does not terminate or modify this VDPA.",
@@ -1546,7 +1546,7 @@
       "deviation": "No DPA equivalent."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "9.2",
       "type": "breach_notification",
       "quote": "Any acquirer's standard terms do not apply to Retailer Data unless Retailer agrees in writing.",
@@ -1560,7 +1560,7 @@
       "deviation": "The DPA asserts its own control over the Agreement. The VDPA blocks an acquirer's standard terms, such as the ExampleCo DPA, from applying to Retailer Data absent Retailer's written agreement."
     },
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "Appendix B",
       "type": "subprocessor_scope",
       "quote": "Amazon Web Services, Inc. | Hosting | United States | Helpdesk Platform, Inc. | Support ticketing | United States",
@@ -2078,7 +2078,7 @@
   ],
   "rejected": [
     {
-      "contract": "example-retail-group-xyzwire-dpa.md",
+      "contract": "astounding-retail-group-xyzwire-dpa.md",
       "section": "Appendix B (Amendment No. 1)",
       "type": "subprocessor_scope",
       "quote": "Amendment No. 1 to Appendix B (September 8, 2025), added: ExampleCo, Inc. (Vendor Affiliate) | Platform hosting and AI features for the Services | United States",
@@ -2098,9 +2098,9 @@
     "output_tokens": 49209
   },
   "served_by": {
-    "example-health-system-baa.md": "claude-opus-5-5",
-    "example-national-bank-security-addendum.md": "claude-opus-5-5",
-    "example-retail-group-xyzwire-dpa.md": "claude-opus-5-5",
+    "amazing-health-system-baa.md": "claude-opus-5-5",
+    "awesome-national-bank-security-addendum.md": "claude-opus-5-5",
+    "astounding-retail-group-xyzwire-dpa.md": "claude-opus-5-5",
     "exampleco-standard-dpa.md": "claude-opus-5-5"
   }
 }
