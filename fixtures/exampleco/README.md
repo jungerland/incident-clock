@@ -13,10 +13,9 @@ All company and vendor names are fictional placeholders: Example National Bank, 
 |---|---|---|---|
 | `exampleco-standard-dpa.md` | ExampleCo standard terms | all | drafted |
 | `example-national-bank-security-addendum.md` | Large US bank, 12-hour notice | Commercial Cloud | drafted |
-| (planned) | Example Defense Systems, 72-hour notice plus 90-day evidence preservation | Commercial Cloud | |
 | (planned) | Example Health System BAA, 10-day notice, not exposed | Healthcare and Life Sciences | |
-| (planned) | Example Retail Group, XYZwire contract (24 hours) and ExampleCo contract (72 hours) | XYZwire | |
+| (planned) | Example Retail Group, XYZwire contract from before the acquisition, 24-hour notice | XYZwire | |
 | (planned) | Labelforge transfer log | | |
 | `incident-labelforge/target-summary.md` | Incident scenario: target output and answer key | | drafted |
 
-The EU bank was dropped (2026-11-03): it repeated the bank's role in the demo.
+Dropped on 2026-11-03 to keep the demo explainable in a short memo: the EU bank (repeated the bank's role) and the defense prime (needed too much backstory; its evidence-keeping duty is already in the bank contract).
