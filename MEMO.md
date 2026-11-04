@@ -30,7 +30,7 @@ For these three customers, that filter would show notification windows of 12 hou
 
 - **Does this contract apply to this data?** De-identified data is covered by the bank's contract and is outside the health system's contract.
 - **When did the clock start?** The bank's clock started at 6:00 AM, when the vendor found the breach. The retailer's started at 3:00 PM, when ExampleCo heard. A person who starts both at 3:00 PM plans for a bank deadline 9 hours too late.
-- **Which term governs?** The bank's contract also has a 72-hour term in an exhibit and a 6-hour term for subcontractors. Neither is the deadline for notifying the bank.
+- **Which time limit applies?** The bank's contract also has a 72-hour term in an exhibit and a 6-hour term for subcontractors. Neither is the deadline for notifying the bank.
 
 ## What I built
 
