@@ -110,7 +110,7 @@ def contract_files(contract_dir: Path) -> list[Path]:
     return files
 
 
-def extract_contract(client: anthropic.Anthropic, prompt: str, path: Path, baseline: str) -> dict:
+def extract_contract(client: anthropic.Anthropic, prompt: str, path: Path, baseline: str, model: str = MODEL) -> dict:
     text = path.read_text()
     parts = [prompt]
     if path.name != BASELINE:
@@ -118,7 +118,7 @@ def extract_contract(client: anthropic.Anthropic, prompt: str, path: Path, basel
     parts.append(f'<contract file="{path.name}">\n{text}\n</contract>')
 
     with client.beta.messages.stream(
-        model=MODEL,
+        model=model,
         max_tokens=MAX_TOKENS,
         betas=["server-side-fallback-2026-07-01"],
         fallbacks="default",
@@ -145,9 +145,9 @@ def extract_contract(client: anthropic.Anthropic, prompt: str, path: Path, basel
     return {"commitments": accepted, "rejected": rejected, "usage": usage, "served_by": response.model}
 
 
-def run_once(client: anthropic.Anthropic, prompt: str, files: list[Path], baseline: str) -> dict:
+def run_once(client: anthropic.Anthropic, prompt: str, files: list[Path], baseline: str, model: str = MODEL) -> dict:
     with ThreadPoolExecutor(max_workers=len(files)) as pool:
-        results = list(pool.map(lambda f: extract_contract(client, prompt, f, baseline), files))
+        results = list(pool.map(lambda f: extract_contract(client, prompt, f, baseline, model), files))
     return {
         "commitments": [c for r in results for c in r["commitments"]],
         "rejected": [c for r in results for c in r["rejected"]],
@@ -161,21 +161,23 @@ def main() -> None:
     parser.add_argument("--prompt", default="v2", help="prompt file name in commitments/prompts/, without .md")
     parser.add_argument("--runs", type=int, default=1)
     parser.add_argument("--contracts", type=Path, default=CONTRACTS)
+    parser.add_argument("--model", default=MODEL)
     args = parser.parse_args()
 
     prompt = (PROMPTS / f"{args.prompt}.md").read_text()
     files = contract_files(args.contracts)
     baseline = (args.contracts / BASELINE).read_text()
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    out_dir = RUNS / f"{stamp}-{args.prompt}"
+    suffix = "" if args.model == MODEL else f"-{args.model}"
+    out_dir = RUNS / f"{stamp}-{args.prompt}{suffix}"
     out_dir.mkdir(parents=True)
 
     client = anthropic.Anthropic()
     for i in range(1, args.runs + 1):
-        result = run_once(client, prompt, files, baseline)
+        result = run_once(client, prompt, files, baseline, args.model)
         record = {
             "prompt": args.prompt,
-            "model": MODEL,
+            "model": args.model,
             "effort": EFFORT,
             "run": i,
             "created": datetime.now(timezone.utc).isoformat(timespec="seconds"),
