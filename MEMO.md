@@ -4,7 +4,13 @@
 
 When a vendor is breached, the first question is who to notify and by when. Vanta's Customer Commitments lists each customer's notification window. A human still has to decide which contracts apply, work out when each clock started, and write each notice. I built an agent prototype that does that work. You tell Breach Clock what happened, then it reads each contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. In a test with three fictional customers and one vendor breach, it got all 3 notify decisions and both deadlines right in each of 3 runs.
 
-**The test incident:** ExampleCo is a fictional Vanta customer, a data and AI platform that sells to banks, retailers and hospitals. The table below lists three of ExampleCo's own customers. Labelforge, ExampleCo's data-labeling vendor, finds a login with a stolen credential at 6:00 AM on Nov 2 and tells ExampleCo at 3:00 PM. Labelforge doesn't yet know what was viewed. The time now is 4:00 PM Pacific.
+**The test incident:** ExampleCo is a fictional Vanta customer, a data and AI platform that sells to banks, retailers and hospitals. The table below lists three of ExampleCo's own customers. Labelforge, ExampleCo's data-labeling vendor, finds a login with a stolen credential at 6:00 AM PT on Nov 2 and tells ExampleCo at 3:00 PM PT. Labelforge doesn't yet know what was viewed. The time now is 4:00 PM PT on Nov 2.
+
+*Table legend*
+* The numbers in parentheses are contract sections. 
+* Tokenized means names and account numbers were replaced with tokens. 
+* Safe Harbor means 18 kinds of identifier were removed. 
+* The [demo](https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK) shows the agent's unedited output, the contract wording behind each decision, and the draft notices.
 
 | ExampleCo<br>Customer   | Notify? | Why                                                                                                                                                                               | Deadline                                                                                                               | Also do now                                                                                                                                                                     |
 | ----------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -18,11 +24,11 @@ I shortened the wording in this table by hand. The numbers in parentheses are co
 
 Aaron Kiemele, Perforce's CISO, describes the problem in Vanta's launch post: "When an incident happens, the first question is always: who do we need to notify, and by when?" He calls Customer Commitments "exactly the kind of structure we need to plug into our incident response workflows."
 
-Vanta's sales team told me what ships today: "During an incident, you can filter by event type and affected data to see which customers require notice, their contractual notification windows (such as 24 or 72 hours), and notification contacts." I couldn't find a deadline calculated from discovery time, and the sales team wasn't sure whether notified customers are tracked.
+Vanta's website sales chat told me what ships today: "During an incident, you can filter by event type and affected data to see which customers require notice, their contractual notification windows (such as 24 or 72 hours), and notification contacts." A person still does that filtering by hand. I didn't see a way to determine how the incident applies to each contract, or to calculate a notification deadline from discovery time, so that's the focus of this agent.
 
 A list of windows would show 12 hours, 24 hours and 10 days for these customers. It leaves three questions open, and these are the ones that decide the outcome:
 
-- **Does this contract apply to this data?** De-identified data is covered by the bank's contract and outside the health system's.
+- **Does this contract apply to this data?** De-identified data is covered by the bank's contract and is outside the health system's contract.
 - **When did the clock start?** The bank's clock started at 6:00 AM, when the vendor found the breach. The retailer's started at 3:00 PM, when ExampleCo heard. A person who starts both at 3:00 PM plans for a bank deadline 9 hours too late.
 - **Which term governs?** The bank's contract also has a 72-hour term in an exhibit and a 6-hour term for subcontractors. Neither is the deadline for notifying the bank.
 
@@ -44,7 +50,7 @@ The agent also flagged something I hadn't put in my expected answers, in 2 of 3 
 
 ## Product decisions
 
-1. **Start from the incident, not a filter.** The person says what happened in plain words. The agent works out which contracts are affected, because that's the slow part during an incident.
+1. **Start from the incident, not a filter.**  A human says what happened in plain words. The agent works out which contracts are affected, because that's the slow part during an incident.
 2. **The model reads, code decides.** The model is good at judgment: does tokenized feedback count as bank data? It's the wrong place for the final say. Code works out which data the vendor held, checks every quote and recipient against the contract, takes the time limit from the extracted commitment, and does the deadline arithmetic. Anything that fails a check goes to human review.
 3. **"No" needs the same evidence as "yes."** A wrong no is the costliest mistake here, because nobody gets told. So the health system's no cites contract wording and depends on how the data was de-identified. To test that, I changed the log to say a limited data set, which this contract treats as protected. The answer changed to yes.
 4. **Draft for counsel, never send.** A notice is a legal statement. My first version wrote "we have instructed that all logs be preserved" in the bank's draft, which the incident report never said. No check caught it. I found it by reading the drafts. The instructions now tell the agent to leave a placeholder for steps taken, and none of the 7 later drafts made that claim. A code check can't catch every false sentence, so human review of each notice stays.
@@ -83,7 +89,7 @@ I wouldn't send notices automatically at any stage.
 
 - Where does the "what did this vendor hold" answer come from? My test uses a clean log. Most companies may not have one, and that could be the hardest part of the product.
 - Who makes the call during an incident: GRC, security or legal? That decides whose queue this belongs in.
-- Does Commitments track which customers were notified? The sales team wasn't sure.
+- Does Commitments track which customers were notified? The sales chat wasn't sure.
 - In my test where the health data was protected, the agent chose the 5-business-day Security Incident term, not the 10-day breach term I expected. Its reasoning holds together, but a lawyer should check it. It's one run.
 
 ## Caveats
