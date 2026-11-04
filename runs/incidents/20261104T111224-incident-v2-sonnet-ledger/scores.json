@@ -1,0 +1,252 @@
+{
+  "runs": 3,
+  "per_run": [
+    {
+      "decisions": {
+        "ANB": true,
+        "ARG": true,
+        "AHS": true
+      },
+      "deadlines": {
+        "ANB": true,
+        "ARG": true
+      },
+      "traps": {
+        "ANB-T1": {
+          "passed": true,
+          "check": "12h runs from when the vendor found it"
+        },
+        "ANB-T2": {
+          "passed": true,
+          "check": "yes, citing the suspected-incident definition (2.4)"
+        },
+        "ANB-T3": {
+          "passed": true,
+          "check": "yes, citing de-identified data as Bank Data (2.2)"
+        },
+        "ANB-T4": {
+          "passed": true,
+          "check": "deadline comes from 6.1, not the 72h exhibit"
+        },
+        "ANB-T6": {
+          "passed": true,
+          "check": "draft goes to the Cyber Fusion Center by email and phone, not the relationship manager"
+        },
+        "ANB-T7": {
+          "passed": true,
+          "check": "says not to contact the bank's customers or regulators (6.4); draft goes to the bank only"
+        },
+        "ANB-T8": {
+          "passed": true,
+          "check": "raises the 90-day notice for replacing a subcontractor (5.2)"
+        },
+        "ANB-T9": {
+          "passed": true,
+          "check": "24h updates tracked as a repeating duty"
+        },
+        "ARG-T1": {
+          "passed": true,
+          "check": "24h, citing why ExampleCo's terms do not apply (1.1 or 9.2)"
+        },
+        "ARG-T2": {
+          "passed": true,
+          "check": "24h runs from when ExampleCo was told, not from the vendor's discovery"
+        },
+        "ARG-T3": {
+          "passed": true,
+          "check": "flags the unapproved subprocessor for legal (5.1); draft names Labelforge"
+        },
+        "ARG-T4": {
+          "passed": true,
+          "check": "yes, citing derived data as Retailer Data (2.2)"
+        },
+        "ARG-T5": {
+          "passed": true,
+          "check": "draft goes to Retailer Security Operations by email and phone"
+        },
+        "AHS-T1": {
+          "passed": true,
+          "check": "no, citing Safe Harbor data as outside the BAA (2.3)"
+        },
+        "AHS-T2": {
+          "passed": true,
+          "check": "no on Safe Harbor data, and yes with a deadline when the same data is a limited data set"
+        },
+        "AHS-T4": {
+          "passed": true,
+          "check": "no, citing the ePHI limit on Security Incident (1.2)"
+        }
+      },
+      "separate_finding_ok": true,
+      "needs_person": [],
+      "draft_claims": {
+        "ARG": [
+          "Steps taken: [PLACEHOLDER - describe steps XYZwire and Labelforge have actually taken, if any, confirmed before sending."
+        ]
+      },
+      "dropped_citations": 0
+    },
+    {
+      "decisions": {
+        "ANB": true,
+        "ARG": true,
+        "AHS": true
+      },
+      "deadlines": {
+        "ANB": true,
+        "ARG": true
+      },
+      "traps": {
+        "ANB-T1": {
+          "passed": true,
+          "check": "12h runs from when the vendor found it"
+        },
+        "ANB-T2": {
+          "passed": true,
+          "check": "yes, citing the suspected-incident definition (2.4)"
+        },
+        "ANB-T3": {
+          "passed": true,
+          "check": "yes, citing de-identified data as Bank Data (2.2)"
+        },
+        "ANB-T4": {
+          "passed": true,
+          "check": "deadline comes from 6.1, not the 72h exhibit"
+        },
+        "ANB-T6": {
+          "passed": true,
+          "check": "draft goes to the Cyber Fusion Center by email and phone, not the relationship manager"
+        },
+        "ANB-T7": {
+          "passed": true,
+          "check": "says not to contact the bank's customers or regulators (6.4); draft goes to the bank only"
+        },
+        "ANB-T8": {
+          "passed": true,
+          "check": "raises the 90-day notice for replacing a subcontractor (5.2)"
+        },
+        "ANB-T9": {
+          "passed": true,
+          "check": "24h updates tracked as a repeating duty"
+        },
+        "ARG-T1": {
+          "passed": true,
+          "check": "24h, citing why ExampleCo's terms do not apply (1.1 or 9.2)"
+        },
+        "ARG-T2": {
+          "passed": true,
+          "check": "24h runs from when ExampleCo was told, not from the vendor's discovery"
+        },
+        "ARG-T3": {
+          "passed": true,
+          "check": "flags the unapproved subprocessor for legal (5.1); draft names Labelforge"
+        },
+        "ARG-T4": {
+          "passed": true,
+          "check": "yes, citing derived data as Retailer Data (2.2)"
+        },
+        "ARG-T5": {
+          "passed": true,
+          "check": "draft goes to Retailer Security Operations by email and phone"
+        },
+        "AHS-T1": {
+          "passed": true,
+          "check": "no, citing Safe Harbor data as outside the BAA (2.3)"
+        },
+        "AHS-T2": {
+          "passed": true,
+          "check": "no on Safe Harbor data, and yes with a deadline when the same data is a limited data set"
+        },
+        "AHS-T4": {
+          "passed": true,
+          "check": "no, citing the ePHI limit on Security Incident (1.2)"
+        }
+      },
+      "separate_finding_ok": true,
+      "needs_person": [],
+      "draft_claims": {},
+      "dropped_citations": 0
+    },
+    {
+      "decisions": {
+        "ANB": true,
+        "ARG": true,
+        "AHS": true
+      },
+      "deadlines": {
+        "ANB": true,
+        "ARG": true
+      },
+      "traps": {
+        "ANB-T1": {
+          "passed": true,
+          "check": "12h runs from when the vendor found it"
+        },
+        "ANB-T2": {
+          "passed": true,
+          "check": "yes, citing the suspected-incident definition (2.4)"
+        },
+        "ANB-T3": {
+          "passed": true,
+          "check": "yes, citing de-identified data as Bank Data (2.2)"
+        },
+        "ANB-T4": {
+          "passed": true,
+          "check": "deadline comes from 6.1, not the 72h exhibit"
+        },
+        "ANB-T6": {
+          "passed": true,
+          "check": "draft goes to the Cyber Fusion Center by email and phone, not the relationship manager"
+        },
+        "ANB-T7": {
+          "passed": true,
+          "check": "says not to contact the bank's customers or regulators (6.4); draft goes to the bank only"
+        },
+        "ANB-T8": {
+          "passed": true,
+          "check": "raises the 90-day notice for replacing a subcontractor (5.2)"
+        },
+        "ANB-T9": {
+          "passed": true,
+          "check": "24h updates tracked as a repeating duty"
+        },
+        "ARG-T1": {
+          "passed": true,
+          "check": "24h, citing why ExampleCo's terms do not apply (1.1 or 9.2)"
+        },
+        "ARG-T2": {
+          "passed": true,
+          "check": "24h runs from when ExampleCo was told, not from the vendor's discovery"
+        },
+        "ARG-T3": {
+          "passed": true,
+          "check": "flags the unapproved subprocessor for legal (5.1); draft names Labelforge"
+        },
+        "ARG-T4": {
+          "passed": true,
+          "check": "yes, citing derived data as Retailer Data (2.2)"
+        },
+        "ARG-T5": {
+          "passed": true,
+          "check": "draft goes to Retailer Security Operations by email and phone"
+        },
+        "AHS-T1": {
+          "passed": true,
+          "check": "no, citing Safe Harbor data as outside the BAA (2.3)"
+        },
+        "AHS-T2": {
+          "passed": true,
+          "check": "no on Safe Harbor data, and yes with a deadline when the same data is a limited data set"
+        },
+        "AHS-T4": {
+          "passed": true,
+          "check": "no, citing the ePHI limit on Security Incident (1.2)"
+        }
+      },
+      "separate_finding_ok": true,
+      "needs_person": [],
+      "draft_claims": {},
+      "dropped_citations": 0
+    }
+  ]
+}

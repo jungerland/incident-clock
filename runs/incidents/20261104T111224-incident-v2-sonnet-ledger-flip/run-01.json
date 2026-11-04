@@ -1,0 +1,164 @@
+{
+  "prompt": "incident-v2",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "run": 1,
+  "ledger": "runs/20261104T190137Z-v2-claude-sonnet-5-5/run-01.json",
+  "transfer_log": "labelforge-transfer-log-limited-data-set.csv",
+  "now": "2026-11-02T16:00:00-08:00",
+  "facts": {
+    "title": "Labelforge annotation platform accessed with stolen employee credential",
+    "vendor": "Labelforge",
+    "vendor_found_at": "2026-11-02T06:00:00-08:00",
+    "exampleco_told_at": "2026-11-02T15:00:00-08:00",
+    "known": "Someone logged into Labelforge's annotation platform using a stolen employee credential. Labelforge's security team spotted the login at 6:00 AM on Nov 2, and Labelforge emailed us about it at 3:00 PM the same day.",
+    "not_yet_known": "What data was viewed or downloaded."
+  },
+  "rows": [
+    {
+      "contract": "AHS",
+      "customer": "Amazing Health System",
+      "notify": "yes",
+      "why": "Both batches Labelforge held are limited data sets, and Section 2.4 makes those PHI. A successful login with a stolen credential to the system holding them is a Security Incident that must be reported to AHS within 5 business days under Section 4.2, even though it is not yet known what data was viewed or downloaded.",
+      "evidence": [
+        {
+          "section": "2.4",
+          "quote": "A limited data set under 45 C.F.R. \u00a7 164.514(e) is PHI for all purposes of this BAA.",
+          "point": "Both batches are limited data sets, so they are PHI."
+        },
+        {
+          "section": "2.3",
+          "quote": "Information de-identified in accordance with this Section 2.3 is not PHI and is not subject to this BAA.",
+          "point": "The carve-out covers only safe-harbor de-identification. These batches kept service dates and ZIP codes, so it does not apply."
+        },
+        {
+          "section": "1.2",
+          "quote": "\"Security Incident\" has the meaning given in 45 C.F.R. \u00a7 164.304, limited to incidents involving ePHI that Business Associate or its Subcontractors create, receive, maintain or transmit for Covered Entity.",
+          "point": "Covers attempted or successful unauthorized access to ePHI held by a Subcontractor such as Labelforge."
+        },
+        {
+          "section": "1.3",
+          "quote": "\"Subcontractor\" has the meaning given in 45 C.F.R. \u00a7 160.103.",
+          "point": "Labelforge maintains AHS PHI on ExampleCo's behalf, so it is a Subcontractor."
+        },
+        {
+          "section": "4.2",
+          "quote": "Business Associate shall report to Covered Entity any Security Incident within five (5) business days after Business Associate becomes aware of it.",
+          "point": "A report is owed now. Confirmed exfiltration is not required."
+        },
+        {
+          "section": "4.2",
+          "quote": "This Section 4.2 serves as notice of, and no further report is required for, unsuccessful attempts such as pings, port scans and blocked log-in attempts that do not result in unauthorized access to ePHI.",
+          "point": "The exception does not apply. The stolen-credential login succeeded."
+        },
+        {
+          "section": "1.1",
+          "quote": "Terms used but not defined in this BAA have the meanings given in the HIPAA Rules (45 C.F.R. Parts 160 and 164), including \"Breach,\" \"Discovery,\" \"Protected Health Information\" (\"PHI\"), \"Electronic Protected Health Information\" (\"ePHI\") and \"Unsecured Protected Health Information.\"",
+          "point": "Whether this is a Breach of Unsecured PHI turns on the HIPAA definitions and is still undetermined."
+        }
+      ],
+      "notice_section": "4.2",
+      "clock_start": "exampleco_told",
+      "clock_reason": "Section 4.2 runs from when \"Business Associate becomes aware\", and ExampleCo (the Business Associate) learned of the incident when Labelforge emailed at 3:00 PM on Nov 2.",
+      "time_limit": "5 business days",
+      "deadline": "2026-11-09T15:00:00-08:00",
+      "also_do": [
+        {
+          "section": "4.4",
+          "quote": "Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to its Information Security Office at iso@ahs.example.",
+          "point": "After counsel review, send the written Security Incident report to privacy-office@ahs.example with a copy to iso@ahs.example."
+        },
+        {
+          "section": "4.1",
+          "quote": "Business Associate shall report to Covered Entity any Breach of Unsecured PHI without unreasonable delay and in no event later than ten (10) calendar days after Discovery.",
+          "point": "Get Labelforge's access logs now and decide quickly whether this is a Breach. If it is, a separate Breach report is due within 10 calendar days of Discovery."
+        },
+        {
+          "section": "4.5",
+          "quote": "A report of a Breach shall include, to the extent known, the identity of each individual affected, the PHI involved, the date of the Breach and of its Discovery, and the steps taken to mitigate it.",
+          "point": "Start collecting affected-individual identities, the PHI involved, the dates and the mitigation steps for both batches (2,700 and 3,100 records)."
+        },
+        {
+          "section": "4.3",
+          "quote": "Business Associate shall report to Covered Entity any use or disclosure of PHI not provided for by this BAA within ten (10) calendar days after becoming aware of it.",
+          "point": "Assess whether the intruder's access is an impermissible disclosure that needs a 4.3 report within 10 days of awareness."
+        },
+        {
+          "section": "5.1",
+          "quote": "Business Associate shall ensure that each Subcontractor that creates, receives, maintains or transmits PHI on its behalf agrees in writing to the same restrictions and conditions that apply to Business Associate under this BAA.",
+          "point": "Pull Labelforge's written subcontractor BAA and use it to require cooperation, logs and reporting."
+        },
+        {
+          "section": "3.1",
+          "quote": "Business Associate shall comply with Subpart C of 45 C.F.R. Part 164 with respect to ePHI.",
+          "point": "Run and document Security Rule incident response: identify, mitigate and record the incident and its outcome."
+        },
+        {
+          "section": "6.2",
+          "quote": "Business Associate shall make its internal practices, books and records relating to PHI available to the Secretary of Health and Human Services for purposes of determining compliance with the HIPAA Rules.",
+          "point": "Keep incident records and vendor communications so they can be produced to HHS."
+        },
+        {
+          "section": "4.6",
+          "quote": "Business Associate shall reimburse Covered Entity's reasonable costs of notifying individuals, regulators and the media of a Breach caused by Business Associate or its Subcontractors.",
+          "point": "Leave notice to individuals, regulators and media to AHS. Do not contact them directly, and track possible reimbursement costs."
+        },
+        {
+          "section": "7.1",
+          "quote": "On termination of the Underlying Agreements, Business Associate shall return or destroy all PHI within thirty (30) days. If return or destruction is not feasible, Business Associate shall extend the protections of this BAA to that PHI for as long as it retains it.",
+          "point": "If ExampleCo ends or changes the Labelforge relationship, require return or destruction of AHS PHI. Any replacement vendor must meet 3.2 (US only), 3.3 (HITRUST r2) and 5.1."
+        }
+      ],
+      "recurring": [],
+      "legal_flags": [
+        {
+          "section": "2.3",
+          "quote": "Business Associate may de-identify PHI only in accordance with the safe harbor method at 45 C.F.R. \u00a7 164.514(b)(2), and may use the de-identified information only to provide and improve the services under the Underlying Agreements.",
+          "point": "ExampleCo sent limited data sets (PHI under 2.4) to Labelforge to \"improve the claims-triage agent feature\". The BAA ties improvement use to safe-harbor data, and 2.1 limits PHI use to what is \"necessary to perform the Underlying Agreements\". The disclosure itself may be impermissible and reportable under 4.3."
+        },
+        {
+          "section": "2.2",
+          "quote": "Business Associate shall limit its uses and disclosures of PHI to the minimum necessary.",
+          "point": "Keeping service dates and ZIP codes in labeling feedback may exceed minimum necessary."
+        }
+      ],
+      "open_questions": [
+        "What data did the intruder view or download, and over what period was the credential used?",
+        "Is this a Breach of Unsecured PHI after a HIPAA risk assessment? Were the batches encrypted or otherwise secured?",
+        "Is Labelforge an agent of ExampleCo under federal common law? If so, HIPAA Discovery may date from Labelforge's 6:00 AM detection rather than ExampleCo's 3:00 PM notice.",
+        "Does a 4.1 Breach report or the 4.2 Security Incident report govern if both apply, given the BAA has no precedence term?",
+        "Is there a signed subcontractor BAA with Labelforge as Section 5.1 requires?",
+        "Does Labelforge store, process or access AHS PHI only in the US (3.2)? Where was the compromised employee and the login source?",
+        "Does Labelforge hold HITRUST r2 certification for the annotation platform (3.3)?",
+        "Should the scheduled 2026-11-29 removal of batch LF-2026-0602 be paused so the investigation can proceed?",
+        "Do the Underlying Agreements authorize using AHS PHI to improve the claims-triage feature?"
+      ],
+      "notice_draft": {
+        "to": [
+          "privacy-office@ahs.example",
+          "iso@ahs.example"
+        ],
+        "subject": "Security Incident Report under BAA AHS-BAA-2025-0211, Section 4.2 (Labelforge annotation platform)",
+        "body": "To the Amazing Health System Privacy Office (copy: Information Security Office):\n\nExampleCo, Inc. is reporting a Security Incident under Section 4.2 of Business Associate Agreement AHS-BAA-2025-0211.\n\nWhat happened: Labelforge is a Subcontractor that ExampleCo uses for annotation. Someone logged into Labelforge's annotation platform using a stolen Labelforge employee credential. Labelforge's security team spotted the login at 6:00 AM Pacific on November 2, 2026. Labelforge notified ExampleCo by email at 3:00 PM Pacific the same day.\n\nAHS data on the platform: At the time of the incident, Labelforge held two batches of reviewer feedback on claims-triage agent outputs from ExampleCo's AI agent builder:\n- Batch LF-2026-0602, sent June 2, 2026: 2,700 records.\n- Batch LF-2026-0915, sent September 15, 2026: 3,100 records.\nBoth batches are limited data sets under 45 C.F.R. 164.514(e). Names and record numbers were removed, but service dates and ZIP codes were kept. The batches were provided to improve the claims-triage agent feature for Amazing Health System.\n\nWhat is not yet known: We do not yet know what data, if any, was viewed or downloaded, or when the unauthorized access began. We have not yet determined whether this incident is a Breach of Unsecured PHI. If it is, we will report under Section 4.1 with the information Section 4.5 requires, to the extent known: the individuals affected, the PHI involved, the dates of the Breach and its Discovery, and mitigation steps.\n\nSteps taken: [TO BE COMPLETED: steps ExampleCo and Labelforge have actually taken, if any]\n\nContact: [NAME, TITLE, EMAIL, PHONE]\n\nWe will provide updates as the investigation proceeds.\n\nExampleCo, Inc.\n[DRAFT FOR COUNSEL REVIEW - NOT SENT]"
+      },
+      "vendor_report_section": null,
+      "status": "Draft ready for counsel; flagged for legal",
+      "needs_person": false,
+      "dropped_citations": [],
+      "batches_held": [
+        "LF-2026-0602",
+        "LF-2026-0915"
+      ],
+      "batches_gone": [],
+      "methods_held": [
+        "limited_data_set"
+      ],
+      "served_by": "claude-opus-5-5"
+    }
+  ],
+  "vendor_finding": null,
+  "usage": {
+    "input_tokens": 9114,
+    "output_tokens": 5972
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "prompt": "incident-v2",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "run": 3,
+  "ledger": "runs/20261104T190137Z-v2-claude-sonnet-5-5/run-01.json",
+  "transfer_log": "labelforge-transfer-log.csv",
+  "now": "2026-11-02T16:00:00-08:00",
+  "facts": {
+    "title": "Labelforge annotation platform accessed with stolen employee credential",
+    "vendor": "Labelforge",
+    "vendor_found_at": "2026-11-02T06:00:00-08:00",
+    "exampleco_told_at": "2026-11-02T15:00:00-08:00",
+    "known": "Someone logged into Labelforge's annotation platform using a stolen employee credential. Labelforge's security team detected the access at 6:00 AM on Nov 2 and notified us by email at 3:00 PM the same day.",
+    "not_yet_known": "What data was viewed or downloaded."
+  },
+  "rows": [
+    {
+      "contract": "ANB",
+      "customer": "Awesome National Bank",
+      "notify": "yes",
+      "why": "Someone used a stolen credential to log into Labelforge's annotation platform, which holds ANB's tokenized fraud-review feedback. That is a Security Incident under this contract even though no access to the data has been confirmed. Tokenized data is expressly Bank Data, and the 12-hour clock runs from Labelforge's own discovery at 06:00 PT, so notice is due to the Bank's Cyber Fusion Center by phone and email.",
+      "evidence": [
+        {
+          "section": "2.2",
+          "quote": "\"Bank Data\" means all data and information, in any form, that Supplier or any Subcontractor receives, accesses, creates or processes in connection with the Agreement, including (a) data provided by or on behalf of Bank or its customers; (b) metadata, logs and configuration data relating to Bank's use of the Services; and (c) any data derived from any of the foregoing, including model outputs, embeddings, annotations, and data that has been aggregated, de-identified, pseudonymized or tokenized.",
+          "point": "The tokenized feedback batches are Bank Data."
+        },
+        {
+          "section": "2.5",
+          "quote": "\"Subcontractor\" means any third party, including any Supplier Affiliate, that Supplier engages to perform any part of the Services or that has access to Bank Data.",
+          "point": "Labelforge is a Subcontractor."
+        },
+        {
+          "section": "Schedule 2",
+          "quote": "Labelforge, Inc. | Human annotation of feedback samples | Only de-identified feedback samples that Bank submits through the Services' feedback feature, for improving Bank's own agents.",
+          "point": "Labelforge is an Approved Subcontractor holding Bank feedback samples."
+        },
+        {
+          "section": "2.4",
+          "quote": "\"Security Incident\" means any actual or reasonably suspected (a) unauthorized access to, or acquisition, use, disclosure, alteration or destruction of, Bank Data; or (b) unauthorized access to any system of Supplier or any Subcontractor that stores, processes or transmits Bank Data, whether or not unauthorized access to Bank Data has been confirmed.",
+          "point": "A stolen-credential login to Labelforge's platform counts without confirmed data access."
+        },
+        {
+          "section": "2.3",
+          "quote": "\"Discovery\" means the earliest time at which Supplier or any Subcontractor knew, or by exercising reasonable diligence would have known, of a Security Incident.",
+          "point": "Labelforge's detection starts the clock."
+        },
+        {
+          "section": "6.1",
+          "quote": "Supplier shall notify Bank of any Security Incident as soon as possible and in no event later than twelve (12) hours after Discovery.",
+          "point": "Notice is owed within 12 hours of Discovery."
+        },
+        {
+          "section": "6.8",
+          "quote": "Where this Addendum, the Agreement, any exhibit or schedule, or applicable law specifies more than one period for the same notice, the shortest period applies.",
+          "point": "The 12-hour period governs over any longer period, such as the 72 hours in D.2."
+        },
+        {
+          "section": "1.2",
+          "quote": "This Addendum controls over any conflicting term of the Agreement, any order form, and any data processing addendum, privacy policy, or other document published or provided by Supplier.",
+          "point": "Longer Supplier DPA timelines do not apply."
+        }
+      ],
+      "notice_section": "6.1",
+      "clock_start": "vendor_found_it",
+      "clock_reason": "Section 2.3 defines Discovery as the earliest time Supplier or any Subcontractor knew, and Labelforge, a Subcontractor, detected the access at 06:00 PT on Nov 2.",
+      "time_limit": "PT12H",
+      "deadline": "2026-11-02T18:00:00-08:00",
+      "also_do": [
+        {
+          "section": "6.2",
+          "quote": "Supplier shall give notice under Section 6.1 by telephone and by email to Bank's Cyber Fusion Center as provided in Exhibit C.",
+          "point": "Call the Cyber Fusion Center at +1 (212) 555-0147 now, well before 12 hours from 06:00 PT Nov 2 run out."
+        },
+        {
+          "section": "Exhibit C",
+          "quote": "Email: cfc-thirdparty@anb.example",
+          "point": "Send the written notice to cfc-thirdparty@anb.example at the same time as the call."
+        },
+        {
+          "section": "6.3",
+          "quote": "Supplier's initial notice shall include all information then known about the Security Incident, including the date and time of Discovery, the systems and Subcontractors involved, and the categories of Bank Data affected or potentially affected.",
+          "point": "Make sure the initial notice includes Discovery time, Labelforge and its platform, and the data categories."
+        },
+        {
+          "section": "6.2",
+          "quote": "Notice provided only to Bank's relationship manager, or through a Supplier status page or trust site, does not satisfy Section 6.1.",
+          "point": "Do not rely on Dana Okafor or a status or trust page for notice."
+        },
+        {
+          "section": "6.4",
+          "quote": "Supplier shall not notify any Bank customer, regulator, law enforcement agency or the media of a Security Incident involving Bank Data without Bank's prior written consent, unless required by law.",
+          "point": "Do not contact Bank customers, regulators, law enforcement or the media without the Bank's written consent."
+        },
+        {
+          "section": "6.4",
+          "quote": "Where law requires such notice, Supplier shall inform Bank before giving it, to the extent legally permitted.",
+          "point": "If law requires any outside notice, tell the Bank first."
+        },
+        {
+          "section": "6.5",
+          "quote": "Supplier shall preserve all logs, images and other forensic evidence relating to a Security Incident for at least one (1) year after containment, and shall give Bank and its designated forensic investigator access to that evidence on request.",
+          "point": "Instruct Labelforge in writing to preserve all logs, images and other forensic evidence for at least one year after containment."
+        },
+        {
+          "section": "6.3",
+          "quote": "Supplier shall provide written status updates at least once every twenty-four (24) hours until the Security Incident is contained",
+          "point": "Set up written status updates to the Bank at least every 24 hours until containment."
+        },
+        {
+          "section": "5.2",
+          "quote": "Supplier shall give Bank's Third-Party Risk Management office at least ninety (90) days' prior written notice, delivered as provided in Exhibit C, before adding or replacing any Subcontractor or expanding an Approved Subcontractor's scope.",
+          "point": "Do not replace Labelforge or move the data to a new vendor, including a forensic firm with data access, without 90 days' notice to tprm-notices@anb.example with a copy to the Legal Department. The text has no emergency exception."
+        },
+        {
+          "section": "5.1",
+          "quote": "Supplier may permit only the Subcontractors listed in Schedule 2 (\"Approved Subcontractors\") to access Bank Data, and each only within the scope stated for it in Schedule 2.",
+          "point": "Keep any outside incident-response firm away from Bank Data unless it is approved."
+        },
+        {
+          "section": "8.4",
+          "quote": "at any time after a Security Incident on five (5) business days' written notice",
+          "point": "Prepare for a possible Bank audit on 5 business days' notice."
+        },
+        {
+          "section": "6.3",
+          "quote": "shall deliver a written root-cause report within thirty (30) days after containment.",
+          "point": "Get Labelforge's root-cause findings in time to deliver the report within 30 days after containment."
+        },
+        {
+          "section": "6.6",
+          "quote": "Supplier shall reimburse Bank's reasonable costs of investigating and responding to a Security Incident caused by Supplier or any Subcontractor, including costs of notifying affected individuals and providing them with twenty-four (24) months of credit monitoring.",
+          "point": "Track the Bank's response costs for reimbursement."
+        }
+      ],
+      "recurring": [
+        {
+          "section": "6.3",
+          "every": "PT24H",
+          "summary": "Supplier must give written status updates at least every 24 hours until the Security Incident is contained."
+        }
+      ],
+      "legal_flags": [
+        {
+          "section": "5.3",
+          "quote": "Supplier shall require each Subcontractor to notify Supplier of any Security Incident within six (6) hours after the Subcontractor's Discovery.",
+          "point": "Labelforge detected the access at 06:00 but notified ExampleCo at 15:00, nine hours later. This is beyond the required 6 hours, and the delay leaves ExampleCo only about 3 hours of its 12-hour window."
+        },
+        {
+          "section": "Schedule 2",
+          "quote": "Only de-identified feedback samples that Bank submits through the Services' feedback feature, for improving Bank's own agents. Bank Data in identifiable form is not permitted.",
+          "point": "The batches are tokenized, and Section 2.2 lists tokenized separately from de-identified. Legal should decide whether tokenized samples with free-text comments fall within Labelforge's permitted scope."
+        }
+      ],
+      "open_questions": [
+        "Has the access been contained, and when did the unauthorized access actually begin?",
+        "Was any of the three ANB batches viewed or downloaded?",
+        "Whose employee credential was used? Did that account have multi-factor authentication, as Section 3.3 requires for remote access?",
+        "Does Labelforge hold or have access to the token mapping? Could the free-text agent outputs or analyst comments contain identifying details?",
+        "Does ExampleCo's contract with Labelforge flow down the 6-hour reporting duty and other Addendum protections, as Section 5.3 requires?",
+        "Does any batch include customer information of ANB Securities LLC, which would bring in Exhibit D?",
+        "Does any law require ExampleCo to notify regulators or individuals, which under Section 6.4 would require telling the Bank first?",
+        "Has anyone at ExampleCo already contacted Bank personnel or third parties about this incident?",
+        "Will ExampleCo suspend, replace or recall data from Labelforge? Any replacement needs 90 days' notice under Section 5.2.",
+        "Were all Labelforge personnel with access, including the compromised account, US-based and background-checked, as Sections 3.4 and 4.2 and Schedule 2 require?",
+        "Who at ExampleCo will place the call and own the 24-hour updates?"
+      ],
+      "notice_draft": {
+        "to": [
+          "+1 (212) 555-0147",
+          "cfc-thirdparty@anb.example"
+        ],
+        "subject": "Security Incident Notice under Addendum ANB-TPRM-2025-0418, Section 6.1: Labelforge annotation platform",
+        "body": "To: Awesome National Bank Cyber Fusion Center\n\nExampleCo, Inc. (Commercial Cloud) is notifying the Bank of a Security Incident under Section 6.1 of the Third-Party Information Security Addendum, Bank Contract No. ANB-TPRM-2025-0418.\n\nWhat happened: Someone logged into the annotation platform of Labelforge, Inc. using a stolen employee credential. Labelforge is an Approved Subcontractor listed in Schedule 2.\n\nDate and time of Discovery: Labelforge's security team detected the access at 6:00 AM Pacific on November 2, 2026. Labelforge notified ExampleCo by email at 3:00 PM Pacific the same day.\n\nSystems and Subcontractors involved: Labelforge, Inc. annotation platform.\n\nCategories of Bank Data potentially affected: Labelforge held three batches of analyst feedback on the Bank's fraud-review agent outputs, submitted to improve the Bank's own fraud-review agents. The batches contain agent output text, analyst ratings and analyst comments. Customer names and account numbers were replaced with tokens.\n- Batch LF-2026-0714, sent July 14, 2026: 4,200 records\n- Batch LF-2026-0908, sent September 8, 2026: 3,850 records\n- Batch LF-2026-1020, sent October 20, 2026: 1,900 records\nTotal: 9,950 records.\n\nWhat is not yet known: We do not yet know what data was viewed or downloaded. We do not yet know when the unauthorized access began, or whether it has been contained.\n\nSteps taken so far: [TO BE COMPLETED BY EXAMPLECO: describe only steps actually confirmed]\n\nNext steps: ExampleCo will send written status updates at least once every 24 hours until the incident is contained. ExampleCo will deliver a written root-cause report within 30 days after containment.\n\nExampleCo contact for this incident: [NAME, TITLE, PHONE, EMAIL]\n\nExampleCo, Inc."
+      },
+      "vendor_report_section": "5.3",
+      "status": "Draft ready for counsel; flagged for legal",
+      "needs_person": false,
+      "dropped_citations": [],
+      "batches_held": [
+        "LF-2026-0714",
+        "LF-2026-0908",
+        "LF-2026-1020"
+      ],
+      "batches_gone": [],
+      "methods_held": [
+        "tokenized"
+      ],
+      "served_by": "claude-opus-5-5"
+    },
+    {
+      "contract": "ARG",
+      "customer": "Astounding Retail Group",
+      "notify": "yes",
+      "why": "Labelforge held log lines and trace snippets from Astounding Retail Group's checkout services. These are Retailer Data under 2.2 whether or not the identifiers are hashed, and a stolen-credential login to the platform holding them is at least a reasonably suspected unauthorized access, which is a Data Incident under 2.3. XYZwire must notify ARG Security Operations by email and phone within 24 hours of becoming aware.",
+      "evidence": [
+        {
+          "section": "2.2",
+          "quote": "\"Retailer Data\" means all data that Retailer, its employees or its customers provide to Vendor or that Vendor collects from Retailer's systems, including telemetry, logs, traces and metrics, and all data derived from any of it.",
+          "point": "Covers logs and traces and everything derived from them, not only personal data, so hashing the identifiers does not take batch LF-2026-0818 out of scope."
+        },
+        {
+          "section": "2.3",
+          "quote": "\"Data Incident\" means any actual or reasonably suspected unauthorized access to, or acquisition, disclosure or loss of, Retailer Data, including while held by a Subprocessor.",
+          "point": "A suspected access is enough, and the definition reaches data held by a Subprocessor. It does not matter that what was viewed is still unknown."
+        },
+        {
+          "section": "2.4",
+          "quote": "\"Subprocessor\" means any third party, including any Vendor Affiliate, that processes Retailer Data on Vendor's behalf.",
+          "point": "Labelforge labels Retailer Data on Vendor's behalf, so it is a Subprocessor."
+        },
+        {
+          "section": "6.1",
+          "quote": "Vendor shall notify Retailer of a Data Incident without undue delay and no later than twenty-four (24) hours after Vendor becomes aware of it.",
+          "point": "Notice duty and 24-hour limit."
+        },
+        {
+          "section": "9.2",
+          "quote": "A change of control of Vendor, by merger, acquisition or otherwise, does not terminate or modify this VDPA.",
+          "point": "ExampleCo's 2025 acquisition of XYZwire leaves this VDPA in force."
+        },
+        {
+          "section": "1.1",
+          "quote": "This VDPA prevails over the Subscription Agreement and over any data processing terms, policies or online terms of Vendor or its Affiliates.",
+          "point": "ExampleCo's own standard terms do not displace the 24-hour notice duty."
+        }
+      ],
+      "notice_section": "6.1",
+      "clock_start": "exampleco_told",
+      "clock_reason": "Section 6.1 runs from when 'Vendor' (XYZwire) becomes aware; Labelforge is a Subprocessor rather than the Vendor, and XYZwire became aware when ExampleCo's security team, which runs XYZwire's security, was told at 3:00 PM PT on Nov 2.",
+      "time_limit": "PT24H",
+      "deadline": "2026-11-03T15:00:00-08:00",
+      "also_do": [
+        {
+          "section": "6.2",
+          "quote": "Vendor shall send notice by email to Retailer Security Operations at secops@arg.example and by telephone to +1 (614) 555-0182.",
+          "point": "Send the notice by email to secops@arg.example and also call +1 (614) 555-0182, without undue delay and inside the 24-hour limit. Both channels are required."
+        },
+        {
+          "section": "6.2",
+          "quote": "Notice to Retailer's account or procurement contacts does not satisfy Section 6.1.",
+          "point": "Do not rely on account managers or procurement contacts to give the notice. Only Security Operations counts."
+        },
+        {
+          "section": "6.4",
+          "quote": "Vendor shall not inform Retailer's customers or any third party of a Data Incident involving Retailer Data without Retailer's prior written approval, except as required by law.",
+          "point": "Do not tell ARG's customers or any other third party about the incident without ARG's prior written approval, unless the law requires it."
+        },
+        {
+          "section": "6.3",
+          "quote": "Vendor's notice shall describe the Data Incident, the Retailer Data involved, any Subprocessor involved, and the steps Vendor has taken.",
+          "point": "Make sure the notice names Labelforge as the Subprocessor, describes batch LF-2026-0818 and lists the steps taken. Get the steps-taken facts confirmed before sending."
+        },
+        {
+          "section": "6.3",
+          "quote": "Vendor shall supplement the notice as new information becomes available.",
+          "point": "Get from Labelforge what was viewed or downloaded and when, and send ARG supplemental updates as facts arrive."
+        },
+        {
+          "section": "6.5",
+          "quote": "Vendor shall cooperate with Retailer's investigation and shall bear the reasonable costs of a Data Incident to the extent caused by Vendor or its Subprocessors.",
+          "point": "Prepare to cooperate with ARG's investigation. Ask Labelforge to keep logs and evidence, and track incident costs."
+        },
+        {
+          "section": "8.1",
+          "quote": "Retailer may audit Vendor's compliance with this VDPA once per calendar year on thirty (30) days' notice, and within ten (10) days after notice following a Data Incident.",
+          "point": "Be ready for an ARG audit on 10 days' notice, which will include how Labelforge was engaged."
+        },
+        {
+          "section": "5.2",
+          "quote": "Vendor shall request consent for a new Subprocessor in writing at least thirty (30) days before the Subprocessor begins processing Retailer Data. Retailer's silence is not consent.",
+          "point": "Before moving ARG labeling work to any replacement vendor, get ARG's written consent at least 30 days ahead. Coordinate with ARG before deleting or pulling data from Labelforge so that investigation evidence is not lost."
+        },
+        {
+          "section": "4.3",
+          "quote": "Vendor shall obtain a SOC 2 Type II report covering the Services each year and provide it to Retailer within fifteen (15) days after Retailer's request.",
+          "point": "Have the current SOC 2 Type II report ready, because ARG may request it after the incident."
+        }
+      ],
+      "recurring": [],
+      "legal_flags": [
+        {
+          "section": "5.1",
+          "quote": "Vendor shall not permit any Subprocessor other than those listed in Appendix B to process Retailer Data without Retailer's prior written consent.",
+          "point": "Labelforge is not listed in Appendix B or Amendment No. 1, yet ARG data was sent to it in November 2025 and August 2026. This looks like an unapproved Subprocessor unless separate written consent exists."
+        },
+        {
+          "section": "6.3",
+          "quote": "Vendor's notice shall describe the Data Incident, the Retailer Data involved, any Subprocessor involved, and the steps Vendor has taken.",
+          "point": "The notice must name Labelforge, so it will show ARG that an unlisted Subprocessor was used."
+        },
+        {
+          "section": "5.3",
+          "quote": "Vendor shall bind each Subprocessor in writing to obligations at least as protective as this VDPA, and remains liable for each Subprocessor's acts and omissions.",
+          "point": "XYZwire is liable for Labelforge's acts, and under 6.5 it bears the incident costs to the extent Labelforge caused them."
+        },
+        {
+          "section": "Appendix B",
+          "quote": "Platform hosting and AI features for the Services",
+          "point": "ExampleCo is approved only for hosting and AI features. If ExampleCo engaged Labelforge itself, that adds an unapproved processing layer under ExampleCo."
+        }
+      ],
+      "open_questions": [
+        "Did ARG give prior written consent to Labelforge outside Appendix B?",
+        "Did XYZwire or ExampleCo contract with Labelforge, and on whose terms (relevant to 1.1, 5.3 and 9.2)? Does that contract bind Labelforge to terms at least as protective as this VDPA?",
+        "What did the intruder view or download, and when did the unauthorized access begin?",
+        "Where does Labelforge store the data (3.3 requires US or Canada only), and was it encrypted at rest (4.2)?",
+        "Should notice be timed from Labelforge's 6:00 AM PT detection to be safe, in case ARG argues a Subprocessor's awareness counts as Vendor's?",
+        "Are the hashes salted, or could they be reversed to recover IP addresses and user IDs?",
+        "Is batch LF-2025-1103 fully deleted at Labelforge, including backups? Does Labelforge hold any other ARG-derived data, such as labels or model artifacts?",
+        "Does any law require notifying anyone else, which is the only exception in 6.4?",
+        "What steps have XYZwire and Labelforge actually taken, for use in the 6.3 notice?"
+      ],
+      "notice_draft": {
+        "to": [
+          "secops@arg.example",
+          "+1 (614) 555-0182"
+        ],
+        "subject": "Data Incident Notice under VDPA ARG-VDPA-2024-0093 \u2013 Labelforge (Subprocessor)",
+        "body": "To: Astounding Retail Group Security Operations\n\nXYZwire, Inc. (an ExampleCo company) is notifying you under Section 6 of the Vendor Data Protection Agreement (ARG-VDPA-2024-0093) of a suspected Data Incident involving Retailer Data held by a Subprocessor.\n\nWhat happened: Someone logged into the annotation platform of Labelforge, a third-party data labeling provider, using a stolen employee credential. Labelforge's security team detected the access at 6:00 AM PT on November 2, 2026 and notified us by email at 3:00 PM PT the same day. We do not yet know when the unauthorized access began.\n\nSubprocessor involved: Labelforge.\n\nRetailer Data involved: At the time of the incident, Labelforge held one batch of Retailer Data, LF-2026-0818, sent on August 18, 2026. It contains 6,300 labeled anomaly examples: log lines and trace snippets from your checkout services, with IP addresses and user IDs hashed. It contains no direct identifiers. The batch was sent to improve anomaly detectors used only for Astounding Retail Group. An earlier batch (LF-2025-1103) was deleted from Labelforge before the incident.\n\nWhat is not yet known: Which data, if any, was viewed or downloaded.\n\nSteps taken: [PLACEHOLDER \u2013 describe the steps XYZwire and Labelforge have actually taken, as confirmed]\n\nWe will supplement this notice as new information becomes available and will cooperate with your investigation. Please direct questions to [PLACEHOLDER \u2013 XYZwire incident contact name, email, phone].\n\n[PLACEHOLDER \u2013 name, title]\nXYZwire, Inc."
+      },
+      "vendor_report_section": null,
+      "status": "Draft ready for counsel; flagged for legal",
+      "needs_person": false,
+      "dropped_citations": [],
+      "batches_held": [
+        "LF-2026-0818"
+      ],
+      "batches_gone": [
+        "LF-2025-1103"
+      ],
+      "methods_held": [
+        "hashed_identifiers"
+      ],
+      "served_by": "claude-opus-5-5"
+    },
+    {
+      "contract": "AHS",
+      "customer": "Amazing Health System",
+      "notify": "no",
+      "why": "Both Amazing Health System batches Labelforge held had been de-identified under the HIPAA Safe Harbor method, and the BAA says such information is not PHI and is not subject to the BAA. Every reporting duty in Section 4 depends on PHI or ePHI, so no notice is owed on these facts.",
+      "evidence": [
+        {
+          "section": "2.3",
+          "quote": "Information de-identified in accordance with this Section 2.3 is not PHI and is not subject to this BAA.",
+          "point": "Safe Harbor de-identified data falls outside the BAA"
+        },
+        {
+          "section": "2.3",
+          "quote": "Business Associate may de-identify PHI only in accordance with the safe harbor method at 45 C.F.R. \u00a7 164.514(b)(2), and may use the de-identified information only to provide and improve the services under the Underlying Agreements.",
+          "point": "Both batches used Safe Harbor and were sent to improve the AHS claims-triage feature, which fits this clause"
+        },
+        {
+          "section": "1.2",
+          "quote": "\"Security Incident\" has the meaning given in 45 C.F.R. \u00a7 164.304, limited to incidents involving ePHI that Business Associate or its Subcontractors create, receive, maintain or transmit for Covered Entity.",
+          "point": "A Security Incident requires ePHI, so the 4.2 duty is not triggered"
+        },
+        {
+          "section": "4.1",
+          "quote": "Business Associate shall report to Covered Entity any Breach of Unsecured PHI without unreasonable delay and in no event later than ten (10) calendar days after Discovery.",
+          "point": "The Breach duty covers only Unsecured PHI"
+        },
+        {
+          "section": "4.3",
+          "quote": "Business Associate shall report to Covered Entity any use or disclosure of PHI not provided for by this BAA within ten (10) calendar days after becoming aware of it.",
+          "point": "The impermissible-disclosure duty covers only PHI"
+        },
+        {
+          "section": "1.1",
+          "quote": "Terms used but not defined in this BAA have the meanings given in the HIPAA Rules (45 C.F.R. Parts 160 and 164), including \"Breach,\" \"Discovery,\" \"Protected Health Information\" (\"PHI\"), \"Electronic Protected Health Information\" (\"ePHI\") and \"Unsecured Protected Health Information.\"",
+          "point": "PHI takes its HIPAA meaning, under which Safe Harbor de-identified data is excluded"
+        }
+      ],
+      "notice_section": null,
+      "clock_start": null,
+      "clock_reason": null,
+      "time_limit": null,
+      "deadline": null,
+      "also_do": [
+        {
+          "section": "4.2",
+          "quote": "Business Associate shall report to Covered Entity any Security Incident within five (5) business days after Business Associate becomes aware of it.",
+          "point": "Confirm today whether any AHS ePHI, not just the two de-identified batches, was on the Labelforge platform. If any was, a report is due within 5 business days of awareness on Nov 2 to privacy-office@ahs.example, cc iso@ahs.example (4.4)."
+        },
+        {
+          "section": "2.3",
+          "quote": "Business Associate may de-identify PHI only in accordance with the safe harbor method at 45 C.F.R. \u00a7 164.514(b)(2)",
+          "point": "Pull and preserve the Safe Harbor and Privacy review records for LF-2026-0602 and LF-2026-0915 to support the no-notice decision."
+        },
+        {
+          "section": "4.4",
+          "quote": "Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ahs.example, with a copy to its Information Security Office at iso@ahs.example.",
+          "point": "If any report later becomes due, send it in writing only to these addresses."
+        }
+      ],
+      "recurring": [],
+      "legal_flags": [],
+      "open_questions": [
+        "Was Safe Harbor fully met for the free-text reviewer feedback, including identifiers embedded in narrative text and the 'no actual knowledge' condition, so that the 2.3 exclusion actually applies?",
+        "Did Labelforge's annotation platform hold any other AHS data, such as raw PHI, limited data sets (PHI under 2.4) or re-identification codes, beyond the two listed batches?",
+        "Could the accessed data be combined with anything else on Labelforge's platform to re-identify individuals?",
+        "What data did the intruder view or download? Labelforge has not yet said.",
+        "Should ExampleCo tell AHS voluntarily as a relationship courtesy, even though the BAA does not require it? This is a business and counsel decision.",
+        "Is any change to the Labelforge relationship planned, such as early deletion of LF-2026-0915, which is held until 2027-03-14? The BAA imposes no constraints on non-PHI data."
+      ],
+      "notice_draft": null,
+      "vendor_report_section": null,
+      "status": "Logged with reason; counsel to confirm",
+      "needs_person": false,
+      "dropped_citations": [],
+      "batches_held": [
+        "LF-2026-0602",
+        "LF-2026-0915"
+      ],
+      "batches_gone": [],
+      "methods_held": [
+        "hipaa_safe_harbor"
+      ],
+      "served_by": "claude-opus-5-5"
+    }
+  ],
+  "vendor_finding": {
+    "contract": "ANB",
+    "customer": "Awesome National Bank",
+    "section": "5.3",
+    "elapsed_hours": 9.0,
+    "limit_hours": 6,
+    "vendor": "Labelforge"
+  },
+  "usage": {
+    "input_tokens": 35094,
+    "output_tokens": 16015
+  }
+}
