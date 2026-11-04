@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notice Clock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Plan: an incident desk. Sans for the working table, mono for times and clause numbers,
+   serif for the memo. One steel-blue accent; red and amber mean only "due" states. */
+:root {
+  --bg: #f4f5f6; --surface: #ffffff; --ink: #1b2229; --muted: #5a6672; --line: #d5dae0;
+  --accent: #1f5f8b; --accent-soft: #e3edf4;
+  --due: #a8261c; --due-soft: #fae9e7; --soon: #8a5a00; --soon-soft: #f8efd9; --none: #2e6b4f; --none-soft: #e4f1ea;
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+  --serif: "Source Serif 4", Georgia, serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14191e; --surface: #1c232a; --ink: #e7ebef; --muted: #9aa6b2; --line: #333d47;
+    --accent: #7db6dc; --accent-soft: #223543;
+    --due: #f09a90; --due-soft: #3f2320; --soon: #e2bd6b; --soon-soft: #3a2f17; --none: #86cfa9; --none-soft: #1f3529;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14191e; --surface: #1c232a; --ink: #e7ebef; --muted: #9aa6b2; --line: #333d47;
+  --accent: #7db6dc; --accent-soft: #223543;
+  --due: #f09a90; --due-soft: #3f2320; --soon: #e2bd6b; --soon-soft: #3a2f17; --none: #86cfa9; --none-soft: #1f3529;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--sans); }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px 56px; }
+
+nav { display: flex; align-items: center; gap: 20px; border-bottom: 1px solid var(--line); margin-bottom: 28px; flex-wrap: wrap; }
+nav strong { font-weight: 600; padding: 14px 0; margin-right: 8px; }
+nav button { all: unset; cursor: pointer; padding: 14px 2px 12px; color: var(--muted); border-bottom: 2px solid transparent; font-weight: 500; }
+nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+nav button:focus-visible { outline: 2px solid var(--accent); }
+
+.report { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 12px 16px; max-width: 76ch; margin: 0 0 20px; }
+.label { font-size: 12px; font-weight: 600; color: var(--muted); margin: 0 0 4px; }
+.controls { display: flex; flex-wrap: wrap; gap: 16px 32px; margin-bottom: 20px; }
+.seg { display: inline-flex; border: 1px solid var(--line); background: var(--surface); flex-wrap: wrap; }
+.seg button { all: unset; cursor: pointer; padding: 6px 12px; font-size: 14px; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); font-weight: 500; }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+h1 { font-size: 22px; line-height: 1.3; font-weight: 600; margin: 0 0 16px; text-wrap: balance; }
+.headline { font-size: 18px; font-weight: 600; margin: 0 0 12px; text-wrap: balance; }
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
+table.desk { border-collapse: collapse; width: 100%; min-width: 880px; }
+.desk th { text-align: left; font-size: 12px; font-weight: 600; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.desk td { vertical-align: top; padding: 12px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.desk tr:last-child td { border-bottom: 0; }
+.desk td:first-child { font-weight: 600; width: 13%; }
+.pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; white-space: nowrap; }
+.pill.yes { background: var(--soon-soft); color: var(--soon); }
+.pill.no { background: var(--none-soft); color: var(--none); }
+.pill.late { background: var(--due-soft); color: var(--due); }
+.pill.soon { background: var(--due-soft); color: var(--due); }
+.pill.later { background: var(--soon-soft); color: var(--soon); }
+.when { font-family: var(--mono); font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; display: block; margin-bottom: 4px; }
+.small { color: var(--muted); font-size: 13px; }
+.actions { margin: 0; padding-left: 16px; }
+.actions li + li { margin-top: 4px; }
+.sec { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.finding { background: var(--soon-soft); padding: 10px 14px; margin: 14px 0 0; max-width: 76ch; }
+
+h2.customers { font-size: 16px; font-weight: 600; margin: 32px 0 10px; }
+details { background: var(--surface); border: 1px solid var(--line); margin-bottom: 10px; }
+summary { cursor: pointer; padding: 11px 16px; font-weight: 600; }
+.detail { padding: 2px 16px 16px; display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+@media (max-width: 800px) { .detail { grid-template-columns: minmax(0, 1fr); } }
+.detail h3 { font-size: 13px; font-weight: 600; margin: 0 0 6px; }
+.detail section + section { margin-top: 16px; }
+.detail ul { margin: 0; padding-left: 16px; font-size: 14px; }
+.detail li + li { margin-top: 6px; }
+.quote { color: var(--muted); font-size: 13px; display: block; margin-top: 1px; }
+.draft { background: var(--bg); border: 1px solid var(--line); padding: 12px 14px; font: 12.5px/1.55 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; }
+.draftmark { color: var(--due); font-weight: 600; font-size: 12px; margin: 0 0 6px; }
+.note { color: var(--muted); font-size: 13px; max-width: 76ch; margin-top: 24px; }
+
+#memo-panel { max-width: 800px; font: 17px/1.6 var(--serif); }
+#memo-panel h1 { font: 600 30px/1.2 var(--sans); margin: 8px 0 18px; }
+#memo-panel h2 { font: 600 19px/1.3 var(--sans); margin: 34px 0 10px; }
+#memo-panel p, #memo-panel ul, #memo-panel ol { max-width: 68ch; margin: 0 0 14px; }
+#memo-panel li + li { margin-top: 6px; }
+#memo-panel li > ul { margin: 6px 0 0; }
+#memo-panel .tw { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); margin: 18px 0; }
+#memo-panel table { border-collapse: collapse; width: 100%; min-width: 720px; font: 14px/1.45 var(--sans); }
+#memo-panel th { text-align: left; font-size: 12px; color: var(--muted); padding: 9px 11px; border-bottom: 1px solid var(--line); }
+#memo-panel td { vertical-align: top; padding: 11px; border-bottom: 1px solid var(--line); }
+#memo-panel tr:last-child td { border-bottom: 0; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: no-preference) { details { scroll-margin-top: 12px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav role="tablist" aria-label="Page">
+    <strong>Notice Clock</strong>
+    <button role="tab" id="tab-memo" aria-controls="memo-panel">Memo</button>
+    <button role="tab" id="tab-demo" aria-controls="demo-panel">Demo</button>
+  </nav>
+
+  <article id="memo-panel" role="tabpanel" aria-labelledby="tab-memo"><!--MEMO--></article>
+
+  <main id="demo-panel" role="tabpanel" aria-labelledby="tab-demo">
+    <p class="label">What the agent was told</p>
+    <blockquote class="report" id="report"></blockquote>
+
+    <div class="controls">
+      <div>
+        <p class="label">Time now, Eastern</p>
+        <div class="seg" id="times"></div>
+      </div>
+      <div>
+        <p class="label">How the health system's data was prepared, from the vendor log</p>
+        <div class="seg" id="methods"></div>
+      </div>
+    </div>
+
+    <p class="headline" id="headline"></p>
+    <div class="tablewrap">
+      <table class="desk">
+        <thead><tr><th>Customer</th><th>Notify?</th><th>Why</th><th>Deadline</th><th>Do first</th><th>Status</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="finding" id="finding"></p>
+
+    <h2 class="customers">Contract wording, flags for legal, and draft notices</h2>
+    <div id="details"></div>
+
+    <p class="note" id="note"></p>
+  </main>
+</div>
+
+<script id="data" type="application/json"><!--DATA--></script>
+<script>
+const DATA = JSON.parse(document.getElementById("data").textContent);
+const TIMES = [
+  { label: "Nov 2, 4 PM", at: "2026-11-02T16:00:00-05:00" },
+  { label: "Nov 2, 7 PM", at: "2026-11-02T19:00:00-05:00" },
+  { label: "Nov 3, 4 PM", at: "2026-11-03T16:00:00-05:00" },
+];
+const METHODS = [
+  { id: "base", label: "Safe Harbor (recorded run)" },
+  { id: "flip", label: "Limited data set (test change)" },
+];
+let timeIndex = 0, method = "base";
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function hoursLeft(deadline, now) { return (new Date(deadline) - new Date(now)) / 3600000; }
+function leftWords(h) {
+  if (h < 0) return "overdue by " + Math.round(-h) + (Math.round(-h) === 1 ? " hour" : " hours");
+  return Math.round(h) + (Math.round(h) === 1 ? " hour left" : " hours left");
+}
+function leftClass(h) { return h < 0 ? "late" : h <= 4 ? "soon" : "later"; }
+
+function currentRows() {
+  return DATA.rows.map(r => r.contract === "EHS" && method === "flip" ? DATA.flip : r);
+}
+
+function renderSeg(id, items, isOn, onPick, labelOf) {
+  const el = document.getElementById(id);
+  el.innerHTML = "";
+  items.forEach((item, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = labelOf(item);
+    b.setAttribute("aria-pressed", isOn(item, i) ? "true" : "false");
+    b.addEventListener("click", () => { onPick(item, i); render(); });
+    el.appendChild(b);
+  });
+}
+
+function list(items, fn) { return "<ul>" + items.map(x => "<li>" + fn(x) + "</li>").join("") + "</ul>"; }
+function cited(c) {
+  return esc(c.point) + ' <span class="sec">' + esc(c.section) + '</span><span class="quote">"' + esc(c.quote) + '"</span>';
+}
+
+function render() {
+  renderSeg("times", TIMES, (_, i) => i === timeIndex, (_, i) => { timeIndex = i; }, t => t.label);
+  renderSeg("methods", METHODS, m => m.id === method, m => { method = m.id; }, m => m.label);
+  const now = TIMES[timeIndex].at;
+  const rows = currentRows();
+  const notify = rows.filter(r => r.notify === "yes");
+  const open = notify.filter(r => r.deadline).sort((a, b) => a.deadline.localeCompare(b.deadline));
+  let head = notify.length + " to notify, " + (rows.length - notify.length) + " with no notice owed.";
+  const next = open.find(r => hoursLeft(r.deadline, now) >= 0);
+  const late = open.filter(r => hoursLeft(r.deadline, now) < 0);
+  if (late.length) head += " " + late.length + " past deadline unless already sent.";
+  if (next) head += " Next deadline: " + next.deadline_words + " (" + leftWords(hoursLeft(next.deadline, now)) + ").";
+  document.getElementById("headline").textContent = head;
+
+  document.getElementById("rows").innerHTML = rows.map(r => {
+    let due = '<span class="small">n/a</span>';
+    if (r.deadline) {
+      const h = hoursLeft(r.deadline, now);
+      due = '<span class="when">' + esc(r.deadline_words) + '</span><span class="pill ' + leftClass(h) + '">' + leftWords(h) + '</span>'
+          + '<div class="small" style="margin-top:6px">' + esc(r.clock_words) + '</div>';
+    }
+    const first = r.also_do.slice(0, 4);
+    const acts = first.length
+      ? '<ul class="actions">' + first.map(c => "<li>" + esc(c.point) + ' <span class="sec">' + esc(c.section) + "</span></li>").join("") + "</ul>"
+      : '<span class="small">None the contract requires.</span>';
+    return "<tr><td>" + esc(r.customer) + '</td><td><span class="pill ' + r.notify + '">' + (r.notify === "yes" ? "Yes" : "No") + "</span></td><td>"
+      + esc(r.why) + "</td><td>" + due + "</td><td>" + acts + '</td><td class="small">' + esc(r.status) + "</td></tr>";
+  }).join("");
+
+  const f = DATA.finding;
+  document.getElementById("finding").innerHTML = f
+    ? "<strong>Separate finding:</strong> " + esc(f) : "";
+
+  const wasOpen = {};
+  document.querySelectorAll("#details details").forEach(d => { wasOpen[d.dataset.contract] = d.open; });
+  document.getElementById("details").innerHTML = rows.map(r => {
+    const left = [], right = [];
+    if (r.evidence.length) left.push("<section><h3>Contract wording behind the decision</h3>" + list(r.evidence, cited) + "</section>");
+    if (r.legal_flags.length) left.push("<section><h3>For legal</h3>" + list(r.legal_flags, cited) + "</section>");
+    if (r.also_do.length > 4) left.push("<section><h3>Also required</h3>" + list(r.also_do.slice(4), c => esc(c.point) + ' <span class="sec">' + esc(c.section) + "</span>") + "</section>");
+    if (r.notice_draft) {
+      const d = r.notice_draft;
+      right.push('<section><h3>Draft notice</h3><p class="draftmark">Draft for counsel. Not sent.</p><pre class="draft">'
+        + esc("To: " + d.to.join(", ") + "\nSubject: " + d.subject + "\n\n" + d.body) + "</pre></section>");
+    }
+    if (r.open_questions.length) right.push("<section><h3>Open questions</h3>" + list(r.open_questions, esc) + "</section>");
+    right.push('<section><h3>Batches at the vendor</h3><ul><li>Held: ' + esc(r.batches_held.join(", ") || "none")
+      + "</li><li>Deleted before the incident: " + esc(r.batches_gone.join(", ") || "none") + "</li></ul></section>");
+    const isOpen = r.contract in wasOpen ? wasOpen[r.contract] : r.contract === "ENB";
+    return '<details data-contract="' + esc(r.contract) + '"' + (isOpen ? " open" : "") + "><summary>" + esc(r.customer) + '</summary><div class="detail"><div>'
+      + left.join("") + "</div><div>" + right.join("") + "</div></div></details>";
+  }).join("");
+}
+
+function showTab(name) {
+  ["memo", "demo"].forEach(t => {
+    document.getElementById(t + "-panel").hidden = t !== name;
+    document.getElementById("tab-" + t).setAttribute("aria-selected", t === name ? "true" : "false");
+  });
+}
+function route() { showTab(location.hash === "#demo" ? "demo" : "memo"); window.scrollTo(0, 0); }
+document.getElementById("tab-memo").addEventListener("click", () => { location.hash = "memo"; route(); });
+document.getElementById("tab-demo").addEventListener("click", () => { location.hash = "demo"; route(); });
+window.addEventListener("hashchange", route);
+
+document.getElementById("report").textContent = DATA.report;
+document.getElementById("note").textContent = DATA.note;
+render();
+route();
+</script>
+</body>
+</html>
