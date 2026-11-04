@@ -20,7 +20,9 @@ All company and vendor names are fictional placeholders: Example National Bank, 
 
 ## Labelforge transfer log
 
-`incident-labelforge/labelforge-transfer-log.csv` is ExampleCo's record of what it sent to Labelforge for human labeling, one row per batch. The incident agent uses it to decide which customers had data at Labelforge and in what form. The contracts then decide whether that form counts.
+`incident-labelforge/labelforge-transfer-log.csv` is ExampleCo's record of what it sent to Labelforge, its data-labeling vendor. Staff at ExampleCo's customers rate the outputs of the AI agents they run on ExampleCo's platform. Every few months ExampleCo exports a set of those rated examples (one row in the log, called a batch), strips identifiers, and sends it to Labelforge. Labelforge's annotators label each example (correct, wrong, why), and ExampleCo uses the labels to improve that customer's agents. The `exampleco_customer` column names the ExampleCo customer the data came from.
+
+The incident agent uses the log to decide which customers had data at Labelforge and in what form. The contracts then decide whether that form counts.
 
 - `deidentification_method`: `tokenized` (names and account numbers replaced with tokens), `hashed_identifiers` (IP addresses and user IDs hashed), or `hipaa_safe_harbor` (HIPAA's 18 identifiers removed).
 - `contains_direct_identifiers` is `no` for every row. That doesn't settle exposure: the bank and retail contracts count de-identified and derived data as their data.
