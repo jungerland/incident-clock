@@ -1,4 +1,4 @@
-# Notice Clock: an incident notification agent
+# Breach Clock: an incident notification agent
 
 You tell it a vendor was breached. It reads each customer contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. It sends nothing.
 
