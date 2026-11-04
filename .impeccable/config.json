@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "ui/template.html"
+        ],
+        "createdAt": "2026-11-04T17:24:46.924Z",
+        "reason": "user confirmed: Jay reviewed on 2026-11-04 and chose to ignore; likely the small status pills (2px vertical padding), intentional"
+      }
+    ]
+  }
+}
