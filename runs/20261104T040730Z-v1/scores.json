@@ -1,0 +1,493 @@
+{
+  "runs": 1,
+  "metrics": {
+    "recall": {
+      "mean": 0.986,
+      "min": 0.986,
+      "max": 0.986
+    },
+    "recall_incident": {
+      "mean": 0.971,
+      "min": 0.971,
+      "max": 0.971
+    },
+    "precision": {
+      "mean": 0.707,
+      "min": 0.707,
+      "max": 0.707
+    },
+    "quote_accuracy": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "type_accuracy": {
+      "mean": 0.957,
+      "min": 0.957,
+      "max": 0.957
+    },
+    "deadline_accuracy": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "recipient_accuracy": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "counterpart_accuracy": {
+      "mean": 0.833,
+      "min": 0.833,
+      "max": 0.833
+    }
+  },
+  "hit_rate": {
+    "DPA-4.2": 1.0,
+    "DPA-5.2": 1.0,
+    "DPA-5.3": 1.0,
+    "DPA-5.4": 1.0,
+    "DPA-6.1": 1.0,
+    "DPA-6.2": 1.0,
+    "DPA-7.1": 1.0,
+    "DPA-7.2": 1.0,
+    "DPA-7.3": 1.0,
+    "DPA-8.1": 1.0,
+    "DPA-8.3": 1.0,
+    "DPA-9.2": 1.0,
+    "DPA-9.3": 1.0,
+    "DPA-10.1": 1.0,
+    "ENB-1.2": 1.0,
+    "ENB-3.4": 1.0,
+    "ENB-3.5": 1.0,
+    "ENB-4.1": 1.0,
+    "ENB-4.2": 1.0,
+    "ENB-5.1": 1.0,
+    "ENB-5.2": 1.0,
+    "ENB-5.2-OBJ": 1.0,
+    "ENB-5.3-FLOW": 1.0,
+    "ENB-6.1": 1.0,
+    "ENB-6.2": 1.0,
+    "ENB-6.3-INIT": 1.0,
+    "ENB-6.3-UPD": 1.0,
+    "ENB-6.4": 1.0,
+    "ENB-6.5": 1.0,
+    "ENB-6.6": 1.0,
+    "ENB-6.8": 1.0,
+    "ENB-7.1": 1.0,
+    "ENB-7.2": 1.0,
+    "ENB-7.3": 1.0,
+    "ENB-8.1": 1.0,
+    "ENB-8.2": 1.0,
+    "ENB-8.3": 1.0,
+    "ENB-8.4": 1.0,
+    "ENB-9.1": 1.0,
+    "ENB-9.2": 1.0,
+    "ENB-10.1": 1.0,
+    "ENB-11.1": 1.0,
+    "ENB-11.2": 1.0,
+    "ENB-D.2": 1.0,
+    "ERG-1.1": 1.0,
+    "ERG-3.2": 1.0,
+    "ERG-3.3": 1.0,
+    "ERG-4.1": 1.0,
+    "ERG-4.3": 1.0,
+    "ERG-5.1": 1.0,
+    "ERG-5.2": 1.0,
+    "ERG-5.3": 1.0,
+    "ERG-6.1": 1.0,
+    "ERG-6.2": 1.0,
+    "ERG-6.3": 1.0,
+    "ERG-6.4": 1.0,
+    "ERG-6.5": 1.0,
+    "ERG-7.1": 1.0,
+    "ERG-8.1": 1.0,
+    "ERG-9.2": 1.0,
+    "EHS-2.3": 1.0,
+    "EHS-2.4": 0.0,
+    "EHS-3.2": 1.0,
+    "EHS-3.3": 1.0,
+    "EHS-4.1": 1.0,
+    "EHS-4.2": 1.0,
+    "EHS-4.3": 1.0,
+    "EHS-4.4": 1.0,
+    "EHS-4.6": 1.0,
+    "EHS-5.1": 1.0,
+    "EHS-7.1": 1.0
+  },
+  "per_run": [
+    {
+      "file": "runs/20261104T040730Z-v1/run-01.json",
+      "prompt": "v1",
+      "metrics": {
+        "recall": 0.9859154929577465,
+        "recall_incident": 0.9705882352941176,
+        "precision": 0.7068965517241379,
+        "quote_accuracy": 1.0,
+        "type_accuracy": 0.9571428571428572,
+        "deadline_accuracy": 1.0,
+        "recipient_accuracy": 1.0,
+        "counterpart_accuracy": 0.8333333333333334
+      },
+      "counts": {
+        "required_found": 70,
+        "required_total": 71,
+        "incident_found": 33,
+        "incident_total": 34,
+        "agent_commitments": 129,
+        "rejected": 0,
+        "extras": 34
+      },
+      "must_not_extract": [
+        {
+          "trap": "ENB-T4",
+          "item": "ENB breach notification deadline = 72 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "ENB-T5",
+          "item": "ENB breach notification deadline = 6 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "ERG-T1",
+          "item": "ERG breach notification deadline = 72 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "EHS-T3",
+          "item": "EHS breach notification deadline = 60 days",
+          "clean": true,
+          "produced_by": []
+        }
+      ],
+      "traps": {
+        "ENB-T2": {
+          "passed": true,
+          "check": "6.1 found, and its scope or deviation says suspected incidents count"
+        },
+        "ENB-T4": {
+          "passed": true,
+          "check": "D.2 found, 72h not operative, 6.1's 12h operative"
+        },
+        "ENB-T5": {
+          "passed": true,
+          "check": "5.3 flow-down found, 6h not operative"
+        },
+        "ENB-T8": {
+          "passed": true,
+          "check": "5.2 found with 90 days before, TPRM recipient, deviation from DPA 5.2"
+        },
+        "ENB-T9": {
+          "passed": true,
+          "check": "6.3 updates recorded as recurring every 24h"
+        },
+        "ENB-T10": {
+          "passed": true,
+          "check": "4.2 found, flagged as a deviation from DPA 6.2"
+        },
+        "EHS-T3": {
+          "passed": true,
+          "check": "4.1's 10 days operative, 60 days not"
+        }
+      },
+      "traps_deferred": [
+        "EHS-T1",
+        "EHS-T2",
+        "EHS-T4",
+        "ENB-T1",
+        "ENB-T3",
+        "ENB-T6",
+        "ENB-T7",
+        "ERG-T1",
+        "ERG-T2",
+        "ERG-T3",
+        "ERG-T4",
+        "ERG-T5"
+      ],
+      "found": [
+        "DPA-10.1",
+        "DPA-4.2",
+        "DPA-5.2",
+        "DPA-5.3",
+        "DPA-5.4",
+        "DPA-6.1",
+        "DPA-6.2",
+        "DPA-7.1",
+        "DPA-7.2",
+        "DPA-7.3",
+        "DPA-8.1",
+        "DPA-8.3",
+        "DPA-9.2",
+        "DPA-9.3",
+        "EHS-2.3",
+        "EHS-3.2",
+        "EHS-3.3",
+        "EHS-4.1",
+        "EHS-4.2",
+        "EHS-4.3",
+        "EHS-4.4",
+        "EHS-4.6",
+        "EHS-5.1",
+        "EHS-7.1",
+        "ENB-1.2",
+        "ENB-10.1",
+        "ENB-11.1",
+        "ENB-11.2",
+        "ENB-3.4",
+        "ENB-3.5",
+        "ENB-4.1",
+        "ENB-4.2",
+        "ENB-5.1",
+        "ENB-5.2",
+        "ENB-5.2-OBJ",
+        "ENB-5.3-FLOW",
+        "ENB-6.1",
+        "ENB-6.2",
+        "ENB-6.3-INIT",
+        "ENB-6.3-UPD",
+        "ENB-6.4",
+        "ENB-6.5",
+        "ENB-6.6",
+        "ENB-6.8",
+        "ENB-7.1",
+        "ENB-7.2",
+        "ENB-7.3",
+        "ENB-8.1",
+        "ENB-8.2",
+        "ENB-8.3",
+        "ENB-8.4",
+        "ENB-9.1",
+        "ENB-9.2",
+        "ENB-D.2",
+        "ERG-1.1",
+        "ERG-3.2",
+        "ERG-3.3",
+        "ERG-4.1",
+        "ERG-4.3",
+        "ERG-5.1",
+        "ERG-5.2",
+        "ERG-5.3",
+        "ERG-6.1",
+        "ERG-6.2",
+        "ERG-6.3",
+        "ERG-6.4",
+        "ERG-6.5",
+        "ERG-7.1",
+        "ERG-8.1",
+        "ERG-9.2"
+      ],
+      "missed": [
+        "EHS-2.4"
+      ],
+      "extras": [
+        {
+          "contract": "example-health-system-baa.md",
+          "section": "2.1",
+          "quote": "Business Associate may use and disclose PHI only as necessary to perform the Underlying Agreements, as required by law, or as permitted by this BAA."
+        },
+        {
+          "contract": "example-health-system-baa.md",
+          "section": "3.1",
+          "quote": "Business Associate shall comply with Subpart C of 45 C.F.R. Part 164 with respect to ePHI."
+        },
+        {
+          "contract": "example-health-system-baa.md",
+          "section": "4.2",
+          "quote": "This Section 4.2 serves as notice of, and no further report is required for, unsuccessful attempts such as pings, port scans and blocked log-in attempts that do not result in unauthorized access to ePHI."
+        },
+        {
+          "contract": "example-health-system-baa.md",
+          "section": "6.2",
+          "quote": "Business Associate shall make its internal practices, books and records relating to PHI available to the Secretary of Health and Human Services for purposes of determining compliance with the HIPAA Rules."
+        },
+        {
+          "contract": "example-health-system-baa.md",
+          "section": "7.1",
+          "quote": "If return or destruction is not feasible, Business Associate shall extend the protections of this BAA to that PHI for as long as it retains it."
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "3.1",
+          "quote": "Supplier shall maintain a written information security program that is consistent with the NIST Cybersecurity Framework and the FFIEC Information Technology Examination Handbook."
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "5.3",
+          "quote": "Supplier shall impose on each Subcontractor written obligations at least as protective of Bank Data as this Addendum."
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "5.4",
+          "quote": "Supplier remains fully liable to Bank for the acts and omissions of its Subcontractors."
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "6.4",
+          "quote": "Where law requires such notice, Supplier shall inform Bank before giving it, to the extent legally permitted."
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "6.7",
+          "quote": "Supplier's obligations to ENB Securities LLC are supplemented by Exhibit D."
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "8.4",
+          "quote": "Nothing in this Addendum limits the access of any regulator with authority over Bank."
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "12.1",
+          "quote": "Sections 6, 10 and 11 survive termination of the Agreement for as long as Supplier or any Subcontractor holds Bank Data."
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Amazon Web Services, Inc. | Infrastructure hosting | All Bank Data, US regions only | United States"
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Model Provider A, Inc. | Large-model inference for AI agent features | Prompts and outputs only; zero retention | United States"
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Labelforge, Inc. | Human annotation of feedback samples | Only de-identified feedback samples that Bank submits through the Services' feedback feature, for improving Bank's own agents. Bank Data in identifiable form is not permitted. | United States; US-based annotators only"
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Helpdesk Platform, Inc. | Support ticketing | Contact details of Bank users only | United States"
+        },
+        {
+          "contract": "example-national-bank-security-addendum.md",
+          "section": "D.3",
+          "quote": "This Exhibit supplements, and does not replace, Section 6 of the Addendum."
+        },
+        {
+          "contract": "example-retail-group-xyzwire-dpa.md",
+          "section": "4.2",
+          "quote": "Vendor shall encrypt Retailer Data at rest and in transit using industry-standard encryption."
+        },
+        {
+          "contract": "example-retail-group-xyzwire-dpa.md",
+          "section": "9.1",
+          "quote": "This VDPA binds and benefits each party's successors and permitted assigns."
+        },
+        {
+          "contract": "example-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B",
+          "quote": "Amazon Web Services, Inc. | Hosting | United States"
+        },
+        {
+          "contract": "example-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B",
+          "quote": "Helpdesk Platform, Inc. | Support ticketing | United States"
+        },
+        {
+          "contract": "example-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B (Amendment No. 1)",
+          "quote": "ExampleCo, Inc. (Vendor Affiliate) | Platform hosting and AI features for the Services | United States"
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "2.2",
+          "quote": "ExampleCo will process Customer Personal Data only on Customer's documented instructions, which are set out in the Agreement, this DPA, and Customer's configuration of the Services."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "3.1",
+          "quote": "ExampleCo will ensure that personnel authorized to process Customer Personal Data are bound by written obligations of confidentiality."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "4.1",
+          "quote": "ExampleCo will implement and maintain the technical and organizational measures described in Annex 2 (\"Security Measures\")."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "4.1",
+          "quote": "ExampleCo may update the Security Measures from time to time, provided that updates do not materially reduce the overall security of the Services."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "6.2",
+          "quote": "Any transfer is made under the transfer mechanism in Annex 3."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "7.3",
+          "quote": "ExampleCo's notice will describe, to the extent then known, the nature of the Personal Data Breach, the categories of data affected, and the measures taken or proposed to address it."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "8.3",
+          "quote": "ExampleCo lists the third-party model providers used by AI features as Subprocessors on the Trust Center."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "9.3",
+          "quote": "Customer agrees that the reports in Sections 9.1 and 9.2 satisfy any audit right under Data Protection Laws."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "11.1",
+          "quote": "If this DPA conflicts with the Agreement, this DPA controls as to the processing of Customer Personal Data."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 2",
+          "quote": "Access to production systems requires multi-factor authentication."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 2",
+          "quote": "ExampleCo maintains a business continuity and disaster recovery plan and tests it at least annually."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 3",
+          "quote": "Transfers of Customer Personal Data subject to EU or UK Data Protection Laws are made under the Standard Contractual Clauses, Module 2 or Module 3 as applicable."
+        }
+      ],
+      "wrong_type": [
+        "DPA-7.2",
+        "ENB-8.2",
+        "EHS-4.4"
+      ],
+      "wrong_deadline": [],
+      "wrong_recipient": [],
+      "wrong_counterpart": [
+        "ENB-3.4",
+        "ENB-6.6",
+        "ENB-9.1",
+        "ERG-4.1",
+        "ERG-6.5",
+        "EHS-4.2",
+        "EHS-4.3",
+        "EHS-4.6"
+      ],
+      "not_verbatim": [],
+      "optional_found": [
+        "DPA-10.2",
+        "DPA-5.1",
+        "DPA-5.5",
+        "DPA-7.4",
+        "DPA-8.2",
+        "DPA-9.1",
+        "DPA-ANNEX2-ENC",
+        "EHS-2.2",
+        "EHS-4.5",
+        "EHS-6.1",
+        "ENB-3.2",
+        "ENB-3.3",
+        "ERG-3.1"
+      ]
+    }
+  ]
+}
