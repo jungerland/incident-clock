@@ -573,6 +573,416 @@
           "scored_in": "extraction (deviation)"
         }
       ]
+    },
+    {
+      "id": "ERG",
+      "file": "contracts/example-retail-group-xyzwire-dpa.md",
+      "counterparty": "Example Retail Group, Inc.",
+      "contracting_entity": "XYZwire, Inc. (ExampleCo subsidiary since 2025)",
+      "paper": "customer",
+      "role": "customer_contract",
+      "business_unit": "XYZwire",
+      "effective": "2024-01-15",
+      "segment": "Large US retailer; XYZwire observability customer from before the acquisition",
+      "notes": "Signed with XYZwire before ExampleCo acquired it. Never moved to ExampleCo's standard terms, and 9.2 says ExampleCo's terms do not apply without the retailer's written agreement. Amendment No. 1 added ExampleCo as a subprocessor but not Labelforge.",
+      "commitments": [
+        {
+          "id": "ERG-1.1",
+          "section": "1.1",
+          "type": "breach_notification",
+          "quote": "This VDPA prevails over the Subscription Agreement and over any data processing terms, policies or online terms of Vendor or its Affiliates.",
+          "summary": "This agreement overrides any terms of XYZwire or its affiliates, including ExampleCo's DPA.",
+          "any_type_ok": true,
+          "incident_relevant": true
+        },
+        {
+          "id": "ERG-3.1",
+          "section": "3.1",
+          "type": "ai_data_use",
+          "quote": "Vendor shall process Retailer Data only to provide the services described in the Subscription Agreement (the \"Services\") and on Retailer's written instructions.",
+          "summary": "Process retailer data only to provide the services, on written instructions.",
+          "optional": true
+        },
+        {
+          "id": "ERG-3.2",
+          "section": "3.2",
+          "type": "ai_data_use",
+          "quote": "Vendor shall not use Retailer Data to train or improve any machine learning model, except models used only to provide the Services to Retailer.",
+          "summary": "No model training on retailer data except models used only for this retailer.",
+          "standard_counterpart": "DPA-8.1",
+          "deviation": "Stricter: any model, and covers improving as well as training."
+        },
+        {
+          "id": "ERG-3.3",
+          "section": "3.3",
+          "type": "data_residency",
+          "quote": "Vendor shall store Retailer Data only in the United States or Canada.",
+          "summary": "Storage in the US or Canada only.",
+          "standard_counterpart": "DPA-6.1",
+          "deviation": "Fixed to US or Canada rather than a customer-chosen region."
+        },
+        {
+          "id": "ERG-4.1",
+          "section": "4.1",
+          "type": "security_controls",
+          "quote": "Vendor shall maintain administrative, technical and physical safeguards that meet or exceed the CIS Critical Security Controls, Implementation Group 2.",
+          "summary": "Safeguards at least CIS Controls IG2.",
+          "standard_counterpart": null,
+          "deviation": "No DPA equivalent."
+        },
+        {
+          "id": "ERG-4.3",
+          "section": "4.3",
+          "type": "certification",
+          "quote": "Vendor shall obtain a SOC 2 Type II report covering the Services each year and provide it to Retailer within fifteen (15) days after Retailer's request.",
+          "summary": "Annual SOC 2 Type II, delivered within 15 days of request.",
+          "deadline": {"duration": "P15D", "direction": "after", "anchor": "Retailer's request"},
+          "standard_counterpart": "DPA-9.1",
+          "deviation": "Stricter: direct delivery with a 15-day deadline instead of Trust Center access."
+        },
+        {
+          "id": "ERG-5.1",
+          "section": "5.1",
+          "type": "subprocessor_scope",
+          "quote": "Vendor shall not permit any Subprocessor other than those listed in Appendix B to process Retailer Data without Retailer's prior written consent.",
+          "summary": "Only Appendix B subprocessors (AWS, Helpdesk Platform, ExampleCo). Anyone else needs prior written consent.",
+          "standard_counterpart": "DPA-5.1",
+          "deviation": "Stricter: closed list and prior consent instead of general authorization.",
+          "incident_relevant": true
+        },
+        {
+          "id": "ERG-5.2",
+          "section": "5.2",
+          "type": "subprocessor_notice",
+          "quote": "Vendor shall request consent for a new Subprocessor in writing at least thirty (30) days before the Subprocessor begins processing Retailer Data. Retailer's silence is not consent.",
+          "summary": "Ask for consent in writing 30 days ahead; silence is not consent.",
+          "deadline": {"duration": "P30D", "direction": "before", "anchor": "new Subprocessor begins processing"},
+          "standard_counterpart": "DPA-5.2",
+          "deviation": "Stricter: consent required, not notice with a right to object."
+        },
+        {
+          "id": "ERG-5.3",
+          "section": "5.3",
+          "type": "subprocessor_scope",
+          "quote": "Vendor shall bind each Subprocessor in writing to obligations at least as protective as this VDPA, and remains liable for each Subprocessor's acts and omissions.",
+          "summary": "Flow down equal protections to each subprocessor; XYZwire stays liable.",
+          "standard_counterpart": "DPA-5.5",
+          "deviation": "Adds a written flow-down requirement."
+        },
+        {
+          "id": "ERG-6.1",
+          "section": "6.1",
+          "type": "breach_notification",
+          "quote": "Vendor shall notify Retailer of a Data Incident without undue delay and no later than twenty-four (24) hours after Vendor becomes aware of it.",
+          "summary": "Notify within 24 hours of XYZwire becoming aware. Suspected incidents and incidents at subprocessors count (2.3).",
+          "deadline": {"duration": "PT24H", "direction": "after", "anchor": "Vendor becomes aware", "clock_start_kind": "awareness by the Vendor (XYZwire, run by ExampleCo); subprocessor awareness not included"},
+          "scope": "Any Data Incident (2.3): actual or suspected, including at a Subprocessor. Retailer Data includes derived data (2.2).",
+          "recipient": "Retailer Security Operations by email and telephone (6.2)",
+          "standard_counterpart": "DPA-7.1",
+          "deviation": "Stricter: 24h vs. 72h; awareness rather than confirmation; suspected incidents and all retailer data, not just personal data.",
+          "incident_relevant": true
+        },
+        {
+          "id": "ERG-6.2",
+          "section": "6.2",
+          "type": "breach_notification",
+          "quote": "Vendor shall send notice by email to Retailer Security Operations at secops@erg.example and by telephone to +1 (614) 555-0182. Notice to Retailer's account or procurement contacts does not satisfy Section 6.1.",
+          "summary": "Email and phone Retailer Security Operations. Account or procurement contacts do not count.",
+          "recipient": "secops@erg.example and +1 (614) 555-0182",
+          "standard_counterpart": "DPA-7.2",
+          "deviation": "Different recipient and two required channels.",
+          "incident_relevant": true
+        },
+        {
+          "id": "ERG-6.3",
+          "section": "6.3",
+          "type": "incident_updates",
+          "quote": "Vendor's notice shall describe the Data Incident, the Retailer Data involved, any Subprocessor involved, and the steps Vendor has taken. Vendor shall supplement the notice as new information becomes available.",
+          "summary": "Notice must name the data and any subprocessor involved; supplement as information arrives. No fixed update schedule.",
+          "standard_counterpart": "DPA-7.3",
+          "deviation": "Adds a requirement to name the subprocessor, which exposes the undisclosed Labelforge use.",
+          "incident_relevant": true
+        },
+        {
+          "id": "ERG-6.4",
+          "section": "6.4",
+          "type": "incident_communications",
+          "quote": "Vendor shall not inform Retailer's customers or any third party of a Data Incident involving Retailer Data without Retailer's prior written approval, except as required by law.",
+          "summary": "No notice to the retailer's customers or third parties without the retailer's written approval.",
+          "standard_counterpart": null,
+          "deviation": "No DPA equivalent.",
+          "incident_relevant": true
+        },
+        {
+          "id": "ERG-6.5",
+          "section": "6.5",
+          "type": "incident_costs",
+          "quote": "Vendor shall cooperate with Retailer's investigation and shall bear the reasonable costs of a Data Incident to the extent caused by Vendor or its Subprocessors.",
+          "summary": "Cooperate with the investigation and pay reasonable incident costs caused by XYZwire or its subprocessors.",
+          "standard_counterpart": "DPA-7.4",
+          "deviation": "Opposite direction: standard disclaims fault.",
+          "incident_relevant": true
+        },
+        {
+          "id": "ERG-7.1",
+          "section": "7.1",
+          "type": "data_deletion",
+          "quote": "Within thirty (30) days after the Subscription Agreement ends, Vendor shall delete all Retailer Data and confirm the deletion to Retailer in writing.",
+          "summary": "Delete within 30 days of the end of the agreement and confirm in writing.",
+          "deadline": {"duration": "P30D", "direction": "after", "anchor": "Subscription Agreement ends"},
+          "standard_counterpart": "DPA-10.1",
+          "deviation": "Stricter: 30 days vs. 90; confirmation automatic."
+        },
+        {
+          "id": "ERG-8.1",
+          "section": "8.1",
+          "type": "testing_and_audit",
+          "quote": "Retailer may audit Vendor's compliance with this VDPA once per calendar year on thirty (30) days' notice, and within ten (10) days after notice following a Data Incident.",
+          "summary": "Annual audit on 30 days' notice, plus a post-incident audit on 10 days' notice.",
+          "standard_counterpart": "DPA-9.3",
+          "deviation": "Stricter: no regulator precondition, shorter notice, post-incident audit right.",
+          "incident_relevant": true
+        },
+        {
+          "id": "ERG-9.2",
+          "section": "9.2",
+          "type": "breach_notification",
+          "quote": "A change of control of Vendor, by merger, acquisition or otherwise, does not terminate or modify this VDPA. Any acquirer's standard terms do not apply to Retailer Data unless Retailer agrees in writing.",
+          "summary": "The acquisition does not change this agreement. ExampleCo's standard terms do not apply to retailer data.",
+          "notes": "Decides which notice terms apply after the acquisition; any type accepted.",
+          "any_type_ok": true,
+          "incident_relevant": true
+        }
+      ],
+      "traps": [
+        {
+          "id": "ERG-T1",
+          "name": "The acquisition does not bring ExampleCo's terms",
+          "where": "1.1, 9.2",
+          "correct": "The XYZwire agreement still governs. Notice is due in 24 hours, not the 72 hours in ExampleCo's DPA.",
+          "wrong": "Applying ExampleCo's DPA because ExampleCo now owns XYZwire.",
+          "must_not_extract": "ERG breach notification deadline = 72 hours",
+          "scored_in": "incident scenario"
+        },
+        {
+          "id": "ERG-T2",
+          "name": "Clock starts at XYZwire's awareness, not Labelforge's",
+          "where": "6.1",
+          "correct": "Unlike the bank contract, this one starts the clock when the Vendor becomes aware. ExampleCo runs security for XYZwire and learned at 3:00 PM on Nov 2, so the deadline is 3:00 PM on Nov 3.",
+          "wrong": "Starting the clock at Labelforge's 6:00 AM discovery (gives 6:00 AM Nov 3), or copying the bank's Discovery definition.",
+          "acceptable_alternative": "Flagging 6:00 AM Nov 3 as a conservative option for counsel, as long as 3:00 PM Nov 3 is given as the contractual deadline.",
+          "scored_in": "incident scenario"
+        },
+        {
+          "id": "ERG-T3",
+          "name": "Labelforge was never approved",
+          "where": "5.1, Appendix B, Amendment No. 1",
+          "correct": "The amendment added ExampleCo but not Labelforge. Sending retailer data to Labelforge needed prior written consent. Flag for legal; the notice must still name Labelforge (6.3).",
+          "wrong": "Treating Labelforge as approved because it is on ExampleCo's subprocessor list, or leaving it out of the notice.",
+          "scored_in": "incident scenario (finding and notice draft)"
+        },
+        {
+          "id": "ERG-T4",
+          "name": "Derived data counts",
+          "where": "2.2",
+          "correct": "Feedback samples drawn from XYZwire telemetry are derived data and therefore Retailer Data.",
+          "wrong": "Concluding the retailer is out of scope because Labelforge held samples, not raw telemetry.",
+          "scored_in": "incident scenario"
+        },
+        {
+          "id": "ERG-T5",
+          "name": "Notice channel",
+          "where": "6.2",
+          "correct": "Email and phone to Retailer Security Operations.",
+          "wrong": "Addressing the notice to the account or procurement contact, or to the DPA's admin-console contact.",
+          "scored_in": "incident scenario (notice draft)"
+        }
+      ]
+    },
+    {
+      "id": "EHS",
+      "file": "contracts/example-health-system-baa.md",
+      "counterparty": "Example Health System",
+      "paper": "customer",
+      "role": "customer_contract",
+      "business_unit": "Healthcare and Life Sciences",
+      "effective": "2025-02-01",
+      "segment": "US health system (HIPAA covered entity)",
+      "notes": "The health system's own BAA. Stricter than HIPAA on timing (10 days vs. 60), but uses HIPAA's definitions, so Safe Harbor de-identified data is outside it. The 'not exposed' row depends on the transfer log showing Safe Harbor, not a limited data set.",
+      "commitments": [
+        {
+          "id": "EHS-2.2",
+          "section": "2.2",
+          "type": "ai_data_use",
+          "quote": "Business Associate shall limit its uses and disclosures of PHI to the minimum necessary.",
+          "summary": "Minimum necessary use and disclosure of PHI.",
+          "optional": true
+        },
+        {
+          "id": "EHS-2.3",
+          "section": "2.3",
+          "type": "ai_data_use",
+          "quote": "Business Associate may de-identify PHI only in accordance with the safe harbor method at 45 C.F.R. § 164.514(b)(2), and may use the de-identified information only to provide and improve the services under the Underlying Agreements. Information de-identified in accordance with this Section 2.3 is not PHI and is not subject to this BAA.",
+          "summary": "De-identification allowed by Safe Harbor only; de-identified data may be used only for these services, and is outside the BAA.",
+          "standard_counterpart": "DPA-8.2",
+          "deviation": "Narrower: Safe Harbor method only, use limited to these services.",
+          "incident_relevant": true
+        },
+        {
+          "id": "EHS-2.4",
+          "section": "2.4",
+          "type": "ai_data_use",
+          "quote": "A limited data set under 45 C.F.R. § 164.514(e) is PHI for all purposes of this BAA.",
+          "summary": "A limited data set is still PHI.",
+          "incident_relevant": true
+        },
+        {
+          "id": "EHS-3.2",
+          "section": "3.2",
+          "type": "offshore_access",
+          "quote": "Business Associate shall not store, process or access PHI outside the United States.",
+          "summary": "No storage, processing or access to PHI outside the US.",
+          "standard_counterpart": "DPA-6.2",
+          "deviation": "Conflicts with standard: the Manila support center may not access PHI."
+        },
+        {
+          "id": "EHS-3.3",
+          "section": "3.3",
+          "type": "certification",
+          "quote": "Business Associate shall maintain HITRUST r2 certification for the systems that store or process PHI.",
+          "summary": "Keep HITRUST r2 for systems holding PHI.",
+          "standard_counterpart": "DPA-4.2",
+          "deviation": "Adds HITRUST r2."
+        },
+        {
+          "id": "EHS-4.1",
+          "section": "4.1",
+          "type": "breach_notification",
+          "quote": "Business Associate shall report to Covered Entity any Breach of Unsecured PHI without unreasonable delay and in no event later than ten (10) calendar days after Discovery.",
+          "summary": "Report a Breach of Unsecured PHI within 10 calendar days of Discovery.",
+          "deadline": {"duration": "P10D", "direction": "after", "anchor": "Discovery (HIPAA, 45 C.F.R. 164.410(a)(2))", "clock_start_kind": "earliest awareness by the Business Associate, actual or constructive"},
+          "scope": "Unsecured PHI only. De-identified data is not PHI (2.3).",
+          "recipient": "Privacy Office, copy to Information Security Office (4.4)",
+          "standard_counterpart": "DPA-7.1",
+          "deviation": "Longer than the DPA's 72 hours but stricter than HIPAA's 60 days; limited to PHI.",
+          "incident_relevant": true
+        },
+        {
+          "id": "EHS-4.2",
+          "section": "4.2",
+          "type": "breach_notification",
+          "quote": "Business Associate shall report to Covered Entity any Security Incident within five (5) business days after Business Associate becomes aware of it.",
+          "summary": "Report a Security Incident (one involving this customer's ePHI) within 5 business days.",
+          "deadline": {"duration": "5 business days", "direction": "after", "anchor": "Business Associate becomes aware"},
+          "scope": "Security Incidents involving ePHI for this customer only (1.2). Unsuccessful attempts are pre-reported (4.2).",
+          "standard_counterpart": null,
+          "deviation": "No DPA equivalent.",
+          "incident_relevant": true
+        },
+        {
+          "id": "EHS-4.3",
+          "section": "4.3",
+          "type": "breach_notification",
+          "quote": "Business Associate shall report to Covered Entity any use or disclosure of PHI not provided for by this BAA within ten (10) calendar days after becoming aware of it.",
+          "summary": "Report any unpermitted use or disclosure of PHI within 10 calendar days.",
+          "deadline": {"duration": "P10D", "direction": "after", "anchor": "becoming aware"},
+          "standard_counterpart": null,
+          "deviation": "No DPA equivalent.",
+          "incident_relevant": true
+        },
+        {
+          "id": "EHS-4.4",
+          "section": "4.4",
+          "type": "breach_notification",
+          "quote": "Reports under this Section 4 shall be made in writing to Covered Entity's Privacy Office at privacy-office@ehs.example, with a copy to its Information Security Office at iso@ehs.example.",
+          "summary": "Reports go in writing to the Privacy Office, copying the Information Security Office.",
+          "recipient": "privacy-office@ehs.example, cc iso@ehs.example",
+          "standard_counterpart": "DPA-7.2",
+          "deviation": "Different recipients.",
+          "incident_relevant": true
+        },
+        {
+          "id": "EHS-4.5",
+          "section": "4.5",
+          "type": "breach_notification",
+          "quote": "A report of a Breach shall include, to the extent known, the identity of each individual affected, the PHI involved, the date of the Breach and of its Discovery, and the steps taken to mitigate it.",
+          "summary": "Breach report contents: individuals affected, PHI involved, dates, mitigation.",
+          "optional": true
+        },
+        {
+          "id": "EHS-4.6",
+          "section": "4.6",
+          "type": "incident_costs",
+          "quote": "Business Associate shall reimburse Covered Entity's reasonable costs of notifying individuals, regulators and the media of a Breach caused by Business Associate or its Subcontractors.",
+          "summary": "Pay the health system's notification costs for a Breach caused by ExampleCo or its subcontractors.",
+          "standard_counterpart": "DPA-7.4",
+          "deviation": "Opposite direction: standard disclaims fault."
+        },
+        {
+          "id": "EHS-5.1",
+          "section": "5.1",
+          "type": "subprocessor_scope",
+          "quote": "Business Associate shall ensure that each Subcontractor that creates, receives, maintains or transmits PHI on its behalf agrees in writing to the same restrictions and conditions that apply to Business Associate under this BAA.",
+          "summary": "Any subcontractor handling PHI must sign the same restrictions (a downstream BAA).",
+          "standard_counterpart": "DPA-5.5",
+          "deviation": "Adds a written flow-down requirement for PHI."
+        },
+        {
+          "id": "EHS-6.1",
+          "section": "6.1",
+          "type": "data_deletion",
+          "quote": "Business Associate shall make PHI in a Designated Record Set available to Covered Entity within ten (10) business days after Covered Entity's request, so Covered Entity can meet 45 C.F.R. § 164.524.",
+          "summary": "Provide PHI for patient access requests within 10 business days.",
+          "deadline": {"duration": "10 business days", "direction": "after", "anchor": "Covered Entity's request"},
+          "any_type_ok": true,
+          "optional": true
+        },
+        {
+          "id": "EHS-7.1",
+          "section": "7.1",
+          "type": "data_deletion",
+          "quote": "On termination of the Underlying Agreements, Business Associate shall return or destroy all PHI within thirty (30) days.",
+          "summary": "Return or destroy PHI within 30 days of termination.",
+          "deadline": {"duration": "P30D", "direction": "after", "anchor": "termination"},
+          "standard_counterpart": "DPA-10.1",
+          "deviation": "Stricter: 30 days vs. 90."
+        }
+      ],
+      "traps": [
+        {
+          "id": "EHS-T1",
+          "name": "Same facts as the bank, opposite answer",
+          "where": "2.3, 1.1",
+          "correct": "Labelforge held only Safe Harbor de-identified samples. Under 2.3 that data is not PHI and is outside the BAA, so no Breach report (4.1) or Security Incident report (4.2) is owed. Answer: No, with the reason and a note for counsel to confirm.",
+          "wrong": "Notifying because the bank contract treats de-identified data as covered, or because any vendor breach is reportable.",
+          "scored_in": "incident scenario"
+        },
+        {
+          "id": "EHS-T2",
+          "name": "The No depends on how the data was de-identified",
+          "where": "2.3, 2.4",
+          "correct": "The agent must check the transfer log for the method. Safe Harbor means outside the BAA. A limited data set would be PHI (2.4), and the answer would flip to Yes with a 10-day deadline.",
+          "wrong": "Saying No without checking the method, or treating any 'de-identified' label as enough.",
+          "scored_in": "incident scenario"
+        },
+        {
+          "id": "EHS-T3",
+          "name": "Ten days, not HIPAA's sixty",
+          "where": "4.1",
+          "correct": "The contract deadline is 10 calendar days after Discovery.",
+          "wrong": "Reporting HIPAA's 60-day outer limit as the deadline.",
+          "must_not_extract": "EHS breach notification deadline = 60 days",
+          "scored_in": "extraction"
+        },
+        {
+          "id": "EHS-T4",
+          "name": "Security Incident is limited to this customer's ePHI",
+          "where": "1.2, 4.2",
+          "correct": "A break-in at Labelforge is a Security Incident under the BAA only if it involved this customer's ePHI. It did not.",
+          "wrong": "Reporting under 4.2 because HIPAA's general definition covers attempted access to any information system.",
+          "scored_in": "incident scenario"
+        }
+      ]
     }
   ]
 }

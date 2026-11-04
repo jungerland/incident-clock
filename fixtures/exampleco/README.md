@@ -13,8 +13,8 @@ All company and vendor names are fictional placeholders: Example National Bank, 
 |---|---|---|---|
 | `exampleco-standard-dpa.md` | ExampleCo standard terms | all | drafted |
 | `example-national-bank-security-addendum.md` | Large US bank, 12-hour notice | Commercial Cloud | drafted |
-| (planned) | Example Health System BAA, 10-day notice, not exposed | Healthcare and Life Sciences | |
-| (planned) | Example Retail Group, XYZwire contract from before the acquisition, 24-hour notice | XYZwire | |
+| `example-health-system-baa.md` | Example Health System BAA, 10-day notice, not exposed | Healthcare and Life Sciences | drafted |
+| `example-retail-group-xyzwire-dpa.md` | Example Retail Group, XYZwire contract from before the acquisition, 24-hour notice | XYZwire | drafted |
 | (planned) | Labelforge transfer log | | |
 | `incident-labelforge/target-summary.md` | Incident scenario: target output and answer key | | drafted |
 
