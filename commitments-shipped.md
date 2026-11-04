@@ -27,13 +27,9 @@ Researched 2026-11-03. Sources are Vanta's own pages. [DOC] = help center or cha
 
 ## Confirmed by online research (2026-11-03)
 
-> "During an incident, you can filter by event type and affected data to see which customers require notice, their contractual notification windows (such as 24 or 72 hours), and notification contacts."
-
-Follow-up on deadlines and tracking:
-
-> "It confirms extracting each customer's contractual notification window, but because we notified immediately and began [remediating], I couldn't find a specific deadline from incident discovery. I believe we do track which customers have been notified, but I'm not entirely sure."
-
-So the incident lookup exists as a manual filter on the commitment inventory. No deadline computed from discovery time was found. Tracking of notified customers is unconfirmed. A first reply conflated this with control monitoring ("if any of your controls or policies are broken, you're notified").
+- **Incident lookup:** a manual filter on the commitment inventory. You filter by event type and affected data to see which customers require notice, their notification windows (such as 24 or 72 hours), and their contacts.
+- **Deadlines:** each customer's notification window is extracted, but I found no deadline computed from discovery time.
+- **Tracking notified customers:** unconfirmed.
 
 ## Not documented (marketing promises only, or absent)
 
