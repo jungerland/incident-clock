@@ -45,6 +45,7 @@ def main() -> None:
     }
 
     memo = ARTIFACT_LINK.sub("#demo", (ROOT / "MEMO.md").read_text())
+    memo = memo[memo.index("\n# "):].split("\n", 2)[2]  # the page header already carries the title
     memo_html = markdown.markdown(memo, extensions=["tables", "sane_lists"])
     memo_html = memo_html.replace("<table>", '<div class="tw"><table>').replace("</table>", "</table></div>")
 
