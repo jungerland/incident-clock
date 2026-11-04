@@ -19,6 +19,7 @@ from collections import Counter
 from pathlib import Path
 from statistics import mean
 
+from commitments.checks import contacts, duration_value
 from commitments.quotes import is_verbatim, normalize
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -74,24 +75,6 @@ def match(item: dict, key_items: list[dict]) -> list[dict]:
 
 # --- field checks ----------------------------------------------------------
 
-def duration_value(text: str | None) -> tuple | None:
-    """Comparable value for a duration, so PT72H equals P3D. None if unreadable."""
-    if not text:
-        return None
-    text = text.strip()
-    m = re.fullmatch(r"P(?:(\d+)Y)?(?:(\d+)D)?(?:T(?:(\d+)H)?)?", text)
-    if m and any(m.groups()):
-        years, days, hours = (int(g or 0) for g in m.groups())
-        return ("hours", (years * 365 + days) * 24 + hours)
-    m = re.fullmatch(r"(\d+)\s+(business days?|calendar days?|days?|hours?)", text.lower())
-    if m:
-        n, unit = int(m.group(1)), m.group(2)
-        if unit.startswith("business"):
-            return ("business days", n)
-        return ("hours", n if unit.startswith("hour") else n * 24)
-    return None
-
-
 def deadlines_of(item: dict) -> list[dict]:
     return [d for d in (item.get("deadline"), item.get("secondary_deadline")) if d]
 
@@ -107,12 +90,6 @@ def deadline_ok(key_item: dict, items: list[dict]) -> bool:
     wanted = [d for d in (key_item.get("deadline"), key_item.get("secondary_deadline")) if d]
     got = [d for i in items for d in deadlines_of(i)]
     return all(any(same_deadline(w, g) for g in got) for w in wanted)
-
-
-def contacts(text: str) -> set[str]:
-    found = set(re.findall(r"[\w.+-]+@[\w.-]+\w", text.lower()))
-    phones = re.findall(r"\+?\d[\d\s().-]{7,}\d", text)
-    return found | {re.sub(r"\D", "", p) for p in phones}
 
 
 def recipient_ok(key_item: dict, item: dict) -> bool:
