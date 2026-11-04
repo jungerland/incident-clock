@@ -13,6 +13,7 @@ When a vendor is breached, the first question is who to notify and by when. Vant
 | Amazing Health System   | **No**  | Labelforge held only data de-identified by HIPAA's Safe Harbor method. This contract says that data is not protected health information and is not subject to the contract (2.3). | n/a                                                                                                                    | Counsel to confirm.                                                                                                                                                             |
 
 *Table notes*
+
 * The numbers in parentheses are contract sections. 
 * Tokenized means names and account numbers were replaced with tokens. 
 * Safe Harbor means 18 kinds of identifier were removed.
