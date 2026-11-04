@@ -470,7 +470,7 @@ def main() -> None:
     parser.add_argument("--label", default="", help="added to the output folder name")
     args = parser.parse_args()
 
-    ledger_path = args.ledger or latest_ledger()
+    ledger_path = (args.ledger or latest_ledger()).resolve()
     ledger: dict[str, list[dict]] = {}
     for item in json.loads(ledger_path.read_text())["commitments"]:
         ledger.setdefault(item["contract"], []).append(item)
