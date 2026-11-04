@@ -172,7 +172,7 @@ summary:hover { background: var(--bg); }
 <h2>The problem</h2>
 <p>Aaron Kiemele, Perforce's CISO, describes the problem in Vanta's launch post: "When an incident happens, the first question is always: who do we need to notify, and by when?" He calls Customer Commitments "exactly the kind of structure we need to plug into our incident response workflows."</p>
 <p>Vanta's website sales chat told me what ships today: "During an incident, you can filter by event type and affected data to see which customers require notice, their contractual notification windows (such as 24 or 72 hours), and notification contacts." A person still does that filtering by hand. I didn't see a way to determine how the incident applies to each contract, or to calculate a notification deadline from discovery time, so that's the focus of this agent.</p>
-<p>A list of windows would show 12 hours, 24 hours and 10 days for these customers. It leaves three questions open, and these are the ones that decide the outcome:</p>
+<p>For these three customers, that filter would show notification windows of 12 hours, 24 hours and 10 days. That's a useful start, but three questions still decide who gets notified and by when:</p>
 <ul>
 <li><strong>Does this contract apply to this data?</strong> De-identified data is covered by the bank's contract and is outside the health system's contract.</li>
 <li><strong>When did the clock start?</strong> The bank's clock started at 6:00 AM, when the vendor found the breach. The retailer's started at 3:00 PM, when ExampleCo heard. A person who starts both at 3:00 PM plans for a bank deadline 9 hours too late.</li>

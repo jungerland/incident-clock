@@ -26,7 +26,7 @@ Aaron Kiemele, Perforce's CISO, describes the problem in Vanta's launch post: "W
 
 Vanta's website sales chat told me what ships today: "During an incident, you can filter by event type and affected data to see which customers require notice, their contractual notification windows (such as 24 or 72 hours), and notification contacts." A person still does that filtering by hand. I didn't see a way to determine how the incident applies to each contract, or to calculate a notification deadline from discovery time, so that's the focus of this agent.
 
-A list of windows would show 12 hours, 24 hours and 10 days for these customers. It leaves three questions open, and these are the ones that decide the outcome:
+For these three customers, that filter would show notification windows of 12 hours, 24 hours and 10 days. That's a useful start, but three questions still decide who gets notified and by when:
 
 - **Does this contract apply to this data?** De-identified data is covered by the bank's contract and is outside the health system's contract.
 - **When did the clock start?** The bank's clock started at 6:00 AM, when the vendor found the breach. The retailer's started at 3:00 PM, when ExampleCo heard. A person who starts both at 3:00 PM plans for a bank deadline 9 hours too late.
