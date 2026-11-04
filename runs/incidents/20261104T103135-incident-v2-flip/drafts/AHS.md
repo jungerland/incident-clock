@@ -9,8 +9,8 @@ Under Section 4.2 of Business Associate Agreement AHS-BAA-2025-0211, ExampleCo, 
 
 What we know:
 - Someone logged into Labelforge's annotation platform using a stolen Labelforge employee credential.
-- Labelforge's security team spotted the login at 6:00 AM ET on November 2, 2026.
-- Labelforge notified ExampleCo by email at 3:00 PM ET the same day.
+- Labelforge's security team spotted the login at 6:00 AM PT on November 2, 2026.
+- Labelforge notified ExampleCo by email at 3:00 PM PT the same day.
 
 AHS data held on the platform at the time:
 - Two batches of reviewer feedback on claims-triage agent outputs, from ExampleCo's AI agent builder.

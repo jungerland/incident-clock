@@ -37,7 +37,7 @@ RUNS = ROOT / "runs"
 MODEL = "claude-opus-5-5"
 EFFORT = "high"
 MAX_TOKENS = 64000
-ET = ZoneInfo("America/New_York")
+PT = ZoneInfo("America/Los_Angeles")
 DEMO_NOW = "2026-11-02T16:00"
 TABLE_ACTIONS = 4   # the rest go under the table, so a reviewer can skim it
 
@@ -297,12 +297,12 @@ def call_model(client: anthropic.Anthropic, schema: dict, system: str, content: 
 
 
 def read_incident(client: anthropic.Anthropic, report: str, now: datetime) -> tuple[dict, dict]:
-    system = ("Read this incident report and record its facts. Times are local, America/New_York, as "
+    system = ("Read this incident report and record its facts. Times are local, America/Los_Angeles, as "
               "YYYY-MM-DDTHH:MM. Use only what the report says.")
     content = f"Current time: {now.isoformat(timespec='minutes')}\n\n<incident_report>\n{report}\n</incident_report>"
     facts, usage, _ = call_model(client, FACTS_SCHEMA, system, content, "low", "incident report")
     for field in ("vendor_found_at", "exampleco_told_at"):
-        facts[field] = datetime.fromisoformat(facts[field]).replace(tzinfo=ET).isoformat()
+        facts[field] = datetime.fromisoformat(facts[field]).replace(tzinfo=PT).isoformat()
     if facts["vendor_found_at"] > facts["exampleco_told_at"]:
         raise RuntimeError("Report says ExampleCo was told before the vendor found the incident. Check the report.")
     return facts, usage
@@ -364,7 +364,7 @@ def render_summary(result: dict) -> str:
         headline += f" First deadline: {pretty_time(deadlines[0])} ({time_left(deadlines[0], now)})."
 
     lines = [f"# {facts['title']}", "", f"**{headline}**", "",
-             f"All times Eastern. As of {pretty_time(result['now'])}. "
+             f"All times Pacific. As of {pretty_time(result['now'])}. "
              f"Read from the report: {facts['vendor']} found it {pretty_time(facts['vendor_found_at'])}, "
              f"told ExampleCo {pretty_time(facts['exampleco_told_at'])}. Not yet known: {facts['not_yet_known']}", "",
              "| Customer | Notify? | Why | Deadline | Also do now | Status |", "|---|---|---|---|---|---|"]
@@ -479,9 +479,9 @@ def main() -> None:
     report = args.report.read_text()
     company = (FIXTURES / "company-facts.md").read_text()
     batches = load_batches(args.transfer_log)
-    now = datetime.fromisoformat(args.now).replace(tzinfo=ET)
+    now = datetime.fromisoformat(args.now).replace(tzinfo=PT)
 
-    stamp = datetime.now(ET).strftime("%Y%m%dT%H%M%S")
+    stamp = datetime.now(PT).strftime("%Y%m%dT%H%M%S")
     out_dir = RUNS / "incidents" / f"{stamp}-{args.prompt}{'-' + args.label if args.label else ''}"
     out_dir.mkdir(parents=True)
 

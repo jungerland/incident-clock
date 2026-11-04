@@ -2,7 +2,7 @@
 
 **Labelforge annotation platform accessed with stolen employee credential. 2 to notify, 1 with no notice owed. First deadline: Nov 2, 6 PM (2h left).**
 
-All times Eastern. As of Nov 2, 4 PM. Read from the report: Labelforge found it Nov 2, 6 AM, told ExampleCo Nov 2, 3 PM. Not yet known: What data was viewed or downloaded.
+All times Pacific. As of Nov 2, 4 PM. Read from the report: Labelforge found it Nov 2, 6 AM, told ExampleCo Nov 2, 3 PM. Not yet known: What data was viewed or downloaded.
 
 | Customer | Notify? | Why | Deadline | Also do now | Status |
 |---|---|---|---|---|---|
@@ -108,7 +108,7 @@ Batches held: LF-2026-0818. Deleted before the incident: LF-2025-1103.
 
 **Open questions**
 - Confirm the safe harbor de-identification actually holds for these batches. Reviewer feedback is free text that may contain names, dates, record numbers or other identifiers. Also confirm ExampleCo had no actual knowledge that the remaining information could identify individuals. If either fails, the data is PHI and the no-notice decision reverses.
-- If the data does turn out to be PHI, decide when the clock starts. The Section 4.2 report runs 5 business days from ExampleCo's awareness, which was Nov 2, 3:00 PM ET. The Section 4.1 Breach clock runs 10 days from Discovery, which could be imputed to 6:00 AM if Labelforge is treated as ExampleCo's agent.
+- If the data does turn out to be PHI, decide when the clock starts. The Section 4.2 report runs 5 business days from ExampleCo's awareness, which was Nov 2, 3:00 PM PT. The Section 4.1 Breach clock runs 10 days from Discovery, which could be imputed to 6:00 AM if Labelforge is treated as ExampleCo's agent.
 - Confirm Labelforge held no other AHS data on the annotation platform beyond these two batches, such as raw PHI, re-identification codes or linking keys, including anything sent by XYZwire.
 - Find out from Labelforge what data the intruder viewed or downloaded.
 - Decide whether to tell AHS voluntarily as a relationship courtesy, even though the BAA does not require it.

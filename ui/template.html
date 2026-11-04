@@ -135,7 +135,7 @@ summary:hover { background: var(--bg); }
 
     <div class="controls">
       <div>
-        <p class="label eyebrow">Time now, Eastern</p>
+        <p class="label eyebrow">Time now, Pacific</p>
         <div class="seg" id="times"></div>
       </div>
       <div>
@@ -164,9 +164,9 @@ summary:hover { background: var(--bg); }
 <script>
 const DATA = JSON.parse(document.getElementById("data").textContent);
 const TIMES = [
-  { label: "Nov 2, 4 PM", at: "2026-11-02T16:00:00-05:00" },
-  { label: "Nov 2, 7 PM", at: "2026-11-02T19:00:00-05:00" },
-  { label: "Nov 3, 4 PM", at: "2026-11-03T16:00:00-05:00" },
+  { label: "Nov 2, 4 PM", at: "2026-11-02T16:00:00-08:00" },
+  { label: "Nov 2, 7 PM", at: "2026-11-02T19:00:00-08:00" },
+  { label: "Nov 3, 4 PM", at: "2026-11-03T16:00:00-08:00" },
 ];
 const METHODS = [
   { id: "base", label: "Safe Harbor (recorded run)" },

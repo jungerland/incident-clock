@@ -2,7 +2,7 @@
 
 **Labelforge annotation platform accessed with stolen employee credential. 1 to notify, 0 with no notice owed. First deadline: Nov 9, 3 PM (167h left).**
 
-All times Eastern. As of Nov 2, 4 PM. Read from the report: Labelforge found it Nov 2, 6 AM, told ExampleCo Nov 2, 3 PM. Not yet known: What data was viewed or downloaded.
+All times Pacific. As of Nov 2, 4 PM. Read from the report: Labelforge found it Nov 2, 6 AM, told ExampleCo Nov 2, 3 PM. Not yet known: What data was viewed or downloaded.
 
 | Customer | Notify? | Why | Deadline | Also do now | Status |
 |---|---|---|---|---|---|

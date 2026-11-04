@@ -7,7 +7,7 @@ To Astounding Retail Group Security Operations,
 
 Under Section 6 of the Vendor Data Protection Agreement (Retailer Agreement No. ARG-VDPA-2024-0093), XYZwire, Inc., an ExampleCo subsidiary, is notifying you of a reasonably suspected Data Incident involving Retailer Data held by a Subprocessor.
 
-What happened: Someone logged into the annotation platform of Labelforge, a data annotation vendor, using a stolen Labelforge employee credential. Labelforge's security team detected the login at 6:00 AM ET on November 2, 2026. Labelforge notified us by email at 3:00 PM ET the same day. We do not yet know when the unauthorized access began.
+What happened: Someone logged into the annotation platform of Labelforge, a data annotation vendor, using a stolen Labelforge employee credential. Labelforge's security team detected the login at 6:00 AM PT on November 2, 2026. Labelforge notified us by email at 3:00 PM PT the same day. We do not yet know when the unauthorized access began.
 
 Subprocessor involved: Labelforge.
 

@@ -5,12 +5,12 @@
   "run": 1,
   "ledger": "runs/20261104T042917Z-v2/run-01.json",
   "transfer_log": "labelforge-transfer-log.csv",
-  "now": "2026-11-02T16:00:00-05:00",
+  "now": "2026-11-02T16:00:00-08:00",
   "facts": {
     "title": "Labelforge annotation platform accessed with stolen employee credential",
     "vendor": "Labelforge",
-    "vendor_found_at": "2026-11-02T06:00:00-05:00",
-    "exampleco_told_at": "2026-11-02T15:00:00-05:00",
+    "vendor_found_at": "2026-11-02T06:00:00-08:00",
+    "exampleco_told_at": "2026-11-02T15:00:00-08:00",
     "known": "Someone logged into Labelforge's annotation platform using a stolen employee credential. Labelforge's security team detected the login at 6:00 AM on Nov 2 and notified us by email at 3:00 PM the same day.",
     "not_yet_known": "What data was viewed or downloaded."
   },
@@ -61,7 +61,7 @@
       "clock_start": "vendor_found_it",
       "clock_reason": "Section 2.3 defines Discovery as the earliest time Supplier or any Subcontractor knew, so the clock started when Labelforge detected the login, not when ExampleCo was told.",
       "time_limit": "PT12H",
-      "deadline": "2026-11-02T18:00:00-05:00",
+      "deadline": "2026-11-02T18:00:00-08:00",
       "also_do": [
         {
           "section": "6.2",
@@ -162,7 +162,7 @@
           "cfc-thirdparty@anb.example"
         ],
         "subject": "Security Incident Notice under Section 6.1, Contract ANB-TPRM-2025-0418: Labelforge annotation platform",
-        "body": "To the Awesome National Bank Cyber Fusion Center:\n\nExampleCo, Inc. (Commercial Cloud) gives notice of a Security Incident under Section 6.1 of the Third-Party Information Security Addendum (Bank Contract No. ANB-TPRM-2025-0418).\n\nWhat happened: Someone logged into the annotation platform of our Approved Subcontractor Labelforge, Inc. using a stolen Labelforge employee credential. This is unauthorized access to a Subcontractor system that stores Bank Data. Access to Bank Data has not been confirmed or ruled out.\n\nDate and time of Discovery: Labelforge's security team detected the login at 6:00 AM ET on November 2, 2026. Labelforge notified ExampleCo by email at 3:00 PM ET the same day. We do not yet know when the unauthorized access began.\n\nSystems and Subcontractors involved: Labelforge, Inc. annotation platform (Labelforge is an Approved Subcontractor for human annotation under Schedule 2).\n\nCategories of Bank Data potentially affected: Analyst feedback on outputs of Bank's fraud-review agents built with ExampleCo's AI agent builder. This consists of agent output text, analyst ratings and analyst comments, with customer names and account numbers replaced by tokens. Labelforge held three batches, sent for improving Bank's own fraud-review agents:\n- LF-2026-0714 (sent July 14, 2026): 4,200 records\n- LF-2026-0908 (sent September 8, 2026): 3,850 records\n- LF-2026-1020 (sent October 20, 2026): 1,900 records\n\nNot yet known: what data was viewed or downloaded, when the unauthorized access began, and whether the incident is contained.\n\nSteps taken so far: [TO BE COMPLETED: containment, credential and access actions, and evidence preservation steps confirmed by ExampleCo and Labelforge]\n\nNext steps: ExampleCo will send written status updates at least once every 24 hours until the incident is contained, and a written root-cause report within 30 days after containment, as Section 6.3 requires. ExampleCo will not notify Bank customers, regulators, law enforcement or the media without Bank's prior written consent.\n\nExampleCo contact: [NAME, TITLE, PHONE, EMAIL]\n\nExampleCo, Inc."
+        "body": "To the Awesome National Bank Cyber Fusion Center:\n\nExampleCo, Inc. (Commercial Cloud) gives notice of a Security Incident under Section 6.1 of the Third-Party Information Security Addendum (Bank Contract No. ANB-TPRM-2025-0418).\n\nWhat happened: Someone logged into the annotation platform of our Approved Subcontractor Labelforge, Inc. using a stolen Labelforge employee credential. This is unauthorized access to a Subcontractor system that stores Bank Data. Access to Bank Data has not been confirmed or ruled out.\n\nDate and time of Discovery: Labelforge's security team detected the login at 6:00 AM PT on November 2, 2026. Labelforge notified ExampleCo by email at 3:00 PM PT the same day. We do not yet know when the unauthorized access began.\n\nSystems and Subcontractors involved: Labelforge, Inc. annotation platform (Labelforge is an Approved Subcontractor for human annotation under Schedule 2).\n\nCategories of Bank Data potentially affected: Analyst feedback on outputs of Bank's fraud-review agents built with ExampleCo's AI agent builder. This consists of agent output text, analyst ratings and analyst comments, with customer names and account numbers replaced by tokens. Labelforge held three batches, sent for improving Bank's own fraud-review agents:\n- LF-2026-0714 (sent July 14, 2026): 4,200 records\n- LF-2026-0908 (sent September 8, 2026): 3,850 records\n- LF-2026-1020 (sent October 20, 2026): 1,900 records\n\nNot yet known: what data was viewed or downloaded, when the unauthorized access began, and whether the incident is contained.\n\nSteps taken so far: [TO BE COMPLETED: containment, credential and access actions, and evidence preservation steps confirmed by ExampleCo and Labelforge]\n\nNext steps: ExampleCo will send written status updates at least once every 24 hours until the incident is contained, and a written root-cause report within 30 days after containment, as Section 6.3 requires. ExampleCo will not notify Bank customers, regulators, law enforcement or the media without Bank's prior written consent.\n\nExampleCo contact: [NAME, TITLE, PHONE, EMAIL]\n\nExampleCo, Inc."
       },
       "vendor_report_section": "5.3",
       "status": "Draft ready for counsel; flagged for legal",
@@ -220,7 +220,7 @@
       "clock_start": "exampleco_told",
       "clock_reason": "Section 6.1 runs from when 'Vendor' (XYZwire) becomes aware, and XYZwire learned of the incident when ExampleCo's security team was told at 3:00 PM on Nov 2; Labelforge's own detection at 6:00 AM is not XYZwire's awareness under this wording.",
       "time_limit": "PT24H",
-      "deadline": "2026-11-03T15:00:00-05:00",
+      "deadline": "2026-11-03T15:00:00-08:00",
       "also_do": [
         {
           "section": "6.2",
@@ -316,7 +316,7 @@
           "+1 (614) 555-0182"
         ],
         "subject": "Data Incident Notice under VDPA ARG-VDPA-2024-0093 - Labelforge (Subprocessor)",
-        "body": "To Astounding Retail Group Security Operations,\n\nUnder Section 6 of the Vendor Data Protection Agreement (Retailer Agreement No. ARG-VDPA-2024-0093), XYZwire, Inc., an ExampleCo subsidiary, is notifying you of a reasonably suspected Data Incident involving Retailer Data held by a Subprocessor.\n\nWhat happened: Someone logged into the annotation platform of Labelforge, a data annotation vendor, using a stolen Labelforge employee credential. Labelforge's security team detected the login at 6:00 AM ET on November 2, 2026. Labelforge notified us by email at 3:00 PM ET the same day. We do not yet know when the unauthorized access began.\n\nSubprocessor involved: Labelforge.\n\nRetailer Data involved: At the time of the incident, Labelforge held one batch of Retailer Data (batch LF-2026-0818, sent August 18, 2026). The batch contains about 6,300 labeled anomaly examples: log lines and trace snippets from your checkout services, used to improve XYZwire Anomaly Detection detectors used only for Astounding Retail Group. IP addresses and user IDs in this data were hashed, and the batch contains no direct identifiers.\n\nWhat is not yet known: We do not yet know whether this batch was viewed or downloaded, or what data was viewed or downloaded.\n\nSteps taken: [PLACEHOLDER - describe steps actually taken by XYZwire/ExampleCo and Labelforge, as confirmed]\n\nWe will supplement this notice as new information becomes available, and we will cooperate with your investigation. We are also calling +1 (614) 555-0182 to give this notice by telephone.\n\nContact: [PLACEHOLDER - name, role, email and phone of incident lead]\n\nXYZwire, Inc. (an ExampleCo company)"
+        "body": "To Astounding Retail Group Security Operations,\n\nUnder Section 6 of the Vendor Data Protection Agreement (Retailer Agreement No. ARG-VDPA-2024-0093), XYZwire, Inc., an ExampleCo subsidiary, is notifying you of a reasonably suspected Data Incident involving Retailer Data held by a Subprocessor.\n\nWhat happened: Someone logged into the annotation platform of Labelforge, a data annotation vendor, using a stolen Labelforge employee credential. Labelforge's security team detected the login at 6:00 AM PT on November 2, 2026. Labelforge notified us by email at 3:00 PM PT the same day. We do not yet know when the unauthorized access began.\n\nSubprocessor involved: Labelforge.\n\nRetailer Data involved: At the time of the incident, Labelforge held one batch of Retailer Data (batch LF-2026-0818, sent August 18, 2026). The batch contains about 6,300 labeled anomaly examples: log lines and trace snippets from your checkout services, used to improve XYZwire Anomaly Detection detectors used only for Astounding Retail Group. IP addresses and user IDs in this data were hashed, and the batch contains no direct identifiers.\n\nWhat is not yet known: We do not yet know whether this batch was viewed or downloaded, or what data was viewed or downloaded.\n\nSteps taken: [PLACEHOLDER - describe steps actually taken by XYZwire/ExampleCo and Labelforge, as confirmed]\n\nWe will supplement this notice as new information becomes available, and we will cooperate with your investigation. We are also calling +1 (614) 555-0182 to give this notice by telephone.\n\nContact: [PLACEHOLDER - name, role, email and phone of incident lead]\n\nXYZwire, Inc. (an ExampleCo company)"
       },
       "vendor_report_section": null,
       "status": "Draft ready for counsel; flagged for legal",
@@ -391,7 +391,7 @@
       "legal_flags": [],
       "open_questions": [
         "Confirm the safe harbor de-identification actually holds for these batches. Reviewer feedback is free text that may contain names, dates, record numbers or other identifiers. Also confirm ExampleCo had no actual knowledge that the remaining information could identify individuals. If either fails, the data is PHI and the no-notice decision reverses.",
-        "If the data does turn out to be PHI, decide when the clock starts. The Section 4.2 report runs 5 business days from ExampleCo's awareness, which was Nov 2, 3:00 PM ET. The Section 4.1 Breach clock runs 10 days from Discovery, which could be imputed to 6:00 AM if Labelforge is treated as ExampleCo's agent.",
+        "If the data does turn out to be PHI, decide when the clock starts. The Section 4.2 report runs 5 business days from ExampleCo's awareness, which was Nov 2, 3:00 PM PT. The Section 4.1 Breach clock runs 10 days from Discovery, which could be imputed to 6:00 AM if Labelforge is treated as ExampleCo's agent.",
         "Confirm Labelforge held no other AHS data on the annotation platform beyond these two batches, such as raw PHI, re-identification codes or linking keys, including anything sent by XYZwire.",
         "Find out from Labelforge what data the intruder viewed or downloaded.",
         "Decide whether to tell AHS voluntarily as a relationship courtesy, even though the BAA does not require it."

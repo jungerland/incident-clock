@@ -14,10 +14,10 @@ from commitments.incident import (CLOCK_TOLD, CLOCK_VENDOR, CONTRACT_FILES, FIXT
                                   load_batches, render_summary, vendor_report_finding)
 from evals.score_incident import EXPECTED, KEY, claimed_actions, score_run
 
-ET = ZoneInfo("America/New_York")
+PT = ZoneInfo("America/Los_Angeles")
 TEXT = {c: (FIXTURES / "contracts" / f).read_text() for c, f in CONTRACT_FILES.items()}
 FACTS = {"title": "Labelforge credential breach", "vendor": "Labelforge",
-         "vendor_found_at": "2026-11-02T06:00:00-05:00", "exampleco_told_at": "2026-11-02T15:00:00-05:00",
+         "vendor_found_at": "2026-11-02T06:00:00-08:00", "exampleco_told_at": "2026-11-02T15:00:00-08:00",
          "known": "x", "not_yet_known": "what was viewed"}
 LEDGER = {
     "ANB": [
@@ -73,7 +73,7 @@ def row(raw: dict, contract: str, facts: dict = FACTS) -> dict:
 
 
 def perfect() -> dict:
-    return {"now": "2026-11-02T16:00:00-05:00", "facts": FACTS, "usage": {},
+    return {"now": "2026-11-02T16:00:00-08:00", "facts": FACTS, "usage": {},
             "rows": [row(bank(), "ANB"), row(retail(), "ARG"), row(health(), "AHS")]}
 
 
@@ -84,17 +84,17 @@ def expected_and_traps():
 
 
 def test_deadlines_are_calculated_from_the_right_clock() -> None:
-    assert row(bank(), "ANB")["deadline"] == "2026-11-02T18:00:00-05:00"
-    assert row(retail(), "ARG")["deadline"] == "2026-11-03T15:00:00-05:00"
+    assert row(bank(), "ANB")["deadline"] == "2026-11-02T18:00:00-08:00"
+    assert row(retail(), "ARG")["deadline"] == "2026-11-03T15:00:00-08:00"
     wrong_clock = {**bank(), "clock_start": CLOCK_TOLD}
-    assert row(wrong_clock, "ANB")["deadline"] == "2026-11-03T03:00:00-05:00"
+    assert row(wrong_clock, "ANB")["deadline"] == "2026-11-03T03:00:00-08:00"
 
 
 def test_add_duration_handles_business_days_and_clock_change() -> None:
-    friday = datetime(2026, 11, 6, 9, tzinfo=ET)
+    friday = datetime(2026, 11, 6, 9, tzinfo=PT)
     assert add_duration(friday, "1 business day").day == 9
     assert add_duration(friday, "5 business days").day == 13
-    before_change = datetime(2026, 10, 31, 12, tzinfo=ET)
+    before_change = datetime(2026, 10, 31, 12, tzinfo=PT)
     assert add_duration(before_change, "PT24H").hour == 11
     assert add_duration(before_change, "nonsense") is None
 
@@ -155,7 +155,7 @@ def test_recurring_duty_comes_from_the_ledger() -> None:
 def test_vendor_finding_is_calculated() -> None:
     f = vendor_report_finding(perfect()["rows"], FACTS, LEDGER)
     assert f["elapsed_hours"] == 9 and f["limit_hours"] == 6 and f["section"] == "5.3"
-    fast = {**FACTS, "exampleco_told_at": "2026-11-02T09:00:00-05:00"}
+    fast = {**FACTS, "exampleco_told_at": "2026-11-02T09:00:00-08:00"}
     assert vendor_report_finding(perfect()["rows"], fast, LEDGER) is None
 
 
@@ -163,7 +163,7 @@ def test_perfect_proposals_score_full_marks() -> None:
     expected, traps = expected_and_traps()
     run = perfect()
     run["vendor_finding"] = vendor_report_finding(run["rows"], FACTS, LEDGER)
-    flip = {"notify": "yes", "deadline": "2026-11-12T06:00:00-05:00"}
+    flip = {"notify": "yes", "deadline": "2026-11-12T06:00:00-08:00"}
     s = score_run(run, expected, traps, flip)
     assert all(s["decisions"].values()) and all(s["deadlines"].values()) and s["separate_finding_ok"]
     failed = [t for t, v in s["traps"].items() if not v["passed"]]
@@ -173,7 +173,7 @@ def test_perfect_proposals_score_full_marks() -> None:
 
 def test_wrong_answers_lose_the_right_traps() -> None:
     expected, traps = expected_and_traps()
-    flip = {"notify": "yes", "deadline": "2026-11-12T06:00:00-05:00"}
+    flip = {"notify": "yes", "deadline": "2026-11-12T06:00:00-08:00"}
     cases = [
         ("ANB", {"clock_start": CLOCK_TOLD}, {"ANB-T1", "ANB-T4"}),
         ("ARG", {"clock_start": CLOCK_VENDOR}, {"ARG-T1", "ARG-T2"}),
@@ -228,7 +228,7 @@ def test_summary_renders_the_table_and_overdue() -> None:
     text = render_summary(run)
     assert "2 to notify, 1 with no notice owed" in text and "Nov 2, 6 PM" in text and "(2h left)" in text
     assert "Labelforge told ExampleCo 9 hours" in text and "12 hours from when Labelforge found it" in text
-    late = render_summary({**run, "now": "2026-11-02T19:00:00-05:00"})
+    late = render_summary({**run, "now": "2026-11-02T19:00:00-08:00"})
     assert "OVERDUE by 1h" in late
 
 

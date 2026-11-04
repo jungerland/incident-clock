@@ -2,7 +2,7 @@
 
 This is the summary the agent should produce for the main demo story. It is written before the agent exists, so it doubles as the answer key for the incident scenario. The remaining contracts get written to produce exactly these three rows.
 
-All times Eastern.
+All times Pacific.
 
 ---
 

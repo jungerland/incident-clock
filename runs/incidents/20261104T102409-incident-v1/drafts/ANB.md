@@ -9,7 +9,7 @@ ExampleCo, Inc. (Commercial Cloud) is notifying you of a Security Incident under
 
 What happened: An unauthorized party logged into the annotation platform of our Approved Subcontractor Labelforge, Inc. using a stolen Labelforge employee credential.
 
-Date and time of Discovery: Labelforge's security team detected the login at 6:00 AM ET on November 2, 2026. Labelforge informed ExampleCo by email at 3:00 PM ET the same day.
+Date and time of Discovery: Labelforge's security team detected the login at 6:00 AM PT on November 2, 2026. Labelforge informed ExampleCo by email at 3:00 PM PT the same day.
 
 Systems and Subcontractors involved: the Labelforge, Inc. annotation platform. Labelforge is listed in Schedule 2 for human annotation of feedback samples.
 

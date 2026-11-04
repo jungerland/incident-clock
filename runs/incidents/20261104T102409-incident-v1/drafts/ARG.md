@@ -7,7 +7,7 @@ To Astounding Retail Group Security Operations:
 
 XYZwire, Inc. is notifying you of a Data Incident under Section 6.1 of the Vendor Data Protection Agreement ARG-VDPA-2024-0093. We are sending this notice by email and also by telephone, as Section 6.2 requires.
 
-What happened: On November 2, 2026, someone logged into the annotation platform of Labelforge using a stolen Labelforge employee credential. Labelforge is a third party that provides data labeling services and held Retailer Data on our behalf. Labelforge's security team detected the login at 6:00 AM ET. Labelforge informed us by email at 3:00 PM ET the same day.
+What happened: On November 2, 2026, someone logged into the annotation platform of Labelforge using a stolen Labelforge employee credential. Labelforge is a third party that provides data labeling services and held Retailer Data on our behalf. Labelforge's security team detected the login at 6:00 AM PT. Labelforge informed us by email at 3:00 PM PT the same day.
 
 Subprocessor involved: Labelforge.
 

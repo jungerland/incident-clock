@@ -9,7 +9,7 @@ ExampleCo, Inc. (Commercial Cloud) gives notice of a Security Incident under Sec
 
 What happened: Someone logged into the annotation platform of our Approved Subcontractor Labelforge, Inc. using a stolen Labelforge employee credential. This is unauthorized access to a Subcontractor system that stores Bank Data. Access to Bank Data has not been confirmed or ruled out.
 
-Date and time of Discovery: Labelforge's security team detected the login at 6:00 AM ET on November 2, 2026. Labelforge notified ExampleCo by email at 3:00 PM ET the same day. We do not yet know when the unauthorized access began.
+Date and time of Discovery: Labelforge's security team detected the login at 6:00 AM PT on November 2, 2026. Labelforge notified ExampleCo by email at 3:00 PM PT the same day. We do not yet know when the unauthorized access began.
 
 Systems and Subcontractors involved: Labelforge, Inc. annotation platform (Labelforge is an Approved Subcontractor for human annotation under Schedule 2).
 

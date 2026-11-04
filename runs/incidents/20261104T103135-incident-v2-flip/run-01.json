@@ -5,12 +5,12 @@
   "run": 1,
   "ledger": "runs/20261104T042917Z-v2/run-01.json",
   "transfer_log": "labelforge-transfer-log-limited-data-set.csv",
-  "now": "2026-11-02T16:00:00-05:00",
+  "now": "2026-11-02T16:00:00-08:00",
   "facts": {
     "title": "Labelforge annotation platform accessed with stolen employee credential",
     "vendor": "Labelforge",
-    "vendor_found_at": "2026-11-02T06:00:00-05:00",
-    "exampleco_told_at": "2026-11-02T15:00:00-05:00",
+    "vendor_found_at": "2026-11-02T06:00:00-08:00",
+    "exampleco_told_at": "2026-11-02T15:00:00-08:00",
     "known": "Someone logged into Labelforge's annotation platform using a stolen employee credential. Labelforge's security team spotted the login at 6:00 AM on Nov 2 and emailed us about it at 3:00 PM the same day.",
     "not_yet_known": "What data was viewed or downloaded."
   },
@@ -66,7 +66,7 @@
       "clock_start": "exampleco_told",
       "clock_reason": "Section 4.2 runs from when 'Business Associate becomes aware' of the Security Incident, which was when Labelforge emailed ExampleCo at 3:00 PM on Nov 2, 2026, not when Labelforge spotted the login.",
       "time_limit": "5 business days",
-      "deadline": "2026-11-09T15:00:00-05:00",
+      "deadline": "2026-11-09T15:00:00-08:00",
       "also_do": [
         {
           "section": "4.1",
@@ -165,7 +165,7 @@
           "iso@ahs.example"
         ],
         "subject": "BAA AHS-BAA-2025-0211: Security Incident report under Section 4.2 (subcontractor Labelforge)",
-        "body": "To the Amazing Health System Privacy Office (copy: Information Security Office):\n\nUnder Section 4.2 of Business Associate Agreement AHS-BAA-2025-0211, ExampleCo, Inc. reports a Security Incident at its subcontractor, Labelforge. Labelforge provides an annotation platform.\n\nWhat we know:\n- Someone logged into Labelforge's annotation platform using a stolen Labelforge employee credential.\n- Labelforge's security team spotted the login at 6:00 AM ET on November 2, 2026.\n- Labelforge notified ExampleCo by email at 3:00 PM ET the same day.\n\nEHS data held on the platform at the time:\n- Two batches of reviewer feedback on claims-triage agent outputs, from ExampleCo's AI agent builder.\n- Both are limited data sets under 45 C.F.R. 164.514(e). Names and record numbers were removed. Service dates and ZIP codes were kept.\n- Batch LF-2026-0602 (sent June 2, 2026): 2,700 records.\n- Batch LF-2026-0915 (sent September 15, 2026): 3,100 records.\n- Under Section 2.4 of the BAA, this data is PHI.\n\nWhat is not yet known:\n- Whether any AHS data was viewed or downloaded.\n- When the unauthorized access began. The time above is when the login was spotted.\n- Whether this is a Breach of Unsecured PHI. That determination is pending.\n- Which individuals, if any, are affected.\n\nSteps taken: [TO BE COMPLETED BY EXAMPLECO: describe only steps confirmed to have been taken]\n\nIf we determine that a Breach or an impermissible use or disclosure occurred, we will report it under Sections 4.1 and 4.3. That report will include the information required by Section 4.5 to the extent known. We will send updates as we learn more.\n\nContact: [NAME, TITLE, EMAIL, PHONE]\n\nExampleCo, Inc."
+        "body": "To the Amazing Health System Privacy Office (copy: Information Security Office):\n\nUnder Section 4.2 of Business Associate Agreement AHS-BAA-2025-0211, ExampleCo, Inc. reports a Security Incident at its subcontractor, Labelforge. Labelforge provides an annotation platform.\n\nWhat we know:\n- Someone logged into Labelforge's annotation platform using a stolen Labelforge employee credential.\n- Labelforge's security team spotted the login at 6:00 AM PT on November 2, 2026.\n- Labelforge notified ExampleCo by email at 3:00 PM PT the same day.\n\nEHS data held on the platform at the time:\n- Two batches of reviewer feedback on claims-triage agent outputs, from ExampleCo's AI agent builder.\n- Both are limited data sets under 45 C.F.R. 164.514(e). Names and record numbers were removed. Service dates and ZIP codes were kept.\n- Batch LF-2026-0602 (sent June 2, 2026): 2,700 records.\n- Batch LF-2026-0915 (sent September 15, 2026): 3,100 records.\n- Under Section 2.4 of the BAA, this data is PHI.\n\nWhat is not yet known:\n- Whether any AHS data was viewed or downloaded.\n- When the unauthorized access began. The time above is when the login was spotted.\n- Whether this is a Breach of Unsecured PHI. That determination is pending.\n- Which individuals, if any, are affected.\n\nSteps taken: [TO BE COMPLETED BY EXAMPLECO: describe only steps confirmed to have been taken]\n\nIf we determine that a Breach or an impermissible use or disclosure occurred, we will report it under Sections 4.1 and 4.3. That report will include the information required by Section 4.5 to the extent known. We will send updates as we learn more.\n\nContact: [NAME, TITLE, EMAIL, PHONE]\n\nExampleCo, Inc."
       },
       "vendor_report_section": null,
       "status": "Draft ready for counsel; flagged for legal",
