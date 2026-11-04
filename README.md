@@ -1,6 +1,6 @@
 # Incident Clock: what your contracts require, and by when
 
-You tell it a vendor was breached. It reads each customer contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. It sends nothing.
+You tell it a vendor was breached. Incident Clock reads each customer contract, decides who is owed notice, calculates each deadline in code, and drafts each notice for counsel. Nothing goes to customers without human review.
 
 **Demo and memo:** https://claude.ai/artifact/3q22aFqYC36LqojnzfnSYK
 
