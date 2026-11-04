@@ -1,0 +1,1241 @@
+{
+  "runs": 3,
+  "metrics": {
+    "recall": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "recall_incident": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "precision": {
+      "mean": 0.691,
+      "min": 0.679,
+      "max": 0.701
+    },
+    "quote_accuracy": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "type_accuracy": {
+      "mean": 0.944,
+      "min": 0.944,
+      "max": 0.944
+    },
+    "deadline_accuracy": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "recipient_accuracy": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "counterpart_accuracy": {
+      "mean": 0.854,
+      "min": 0.854,
+      "max": 0.854
+    }
+  },
+  "hit_rate": {
+    "DPA-4.2": 1.0,
+    "DPA-5.2": 1.0,
+    "DPA-5.3": 1.0,
+    "DPA-5.4": 1.0,
+    "DPA-6.1": 1.0,
+    "DPA-6.2": 1.0,
+    "DPA-7.1": 1.0,
+    "DPA-7.2": 1.0,
+    "DPA-7.3": 1.0,
+    "DPA-8.1": 1.0,
+    "DPA-8.3": 1.0,
+    "DPA-9.2": 1.0,
+    "DPA-9.3": 1.0,
+    "DPA-10.1": 1.0,
+    "ANB-1.2": 1.0,
+    "ANB-3.4": 1.0,
+    "ANB-3.5": 1.0,
+    "ANB-4.1": 1.0,
+    "ANB-4.2": 1.0,
+    "ANB-5.1": 1.0,
+    "ANB-5.2": 1.0,
+    "ANB-5.2-OBJ": 1.0,
+    "ANB-5.3-FLOW": 1.0,
+    "ANB-6.1": 1.0,
+    "ANB-6.2": 1.0,
+    "ANB-6.3-INIT": 1.0,
+    "ANB-6.3-UPD": 1.0,
+    "ANB-6.4": 1.0,
+    "ANB-6.5": 1.0,
+    "ANB-6.6": 1.0,
+    "ANB-6.8": 1.0,
+    "ANB-7.1": 1.0,
+    "ANB-7.2": 1.0,
+    "ANB-7.3": 1.0,
+    "ANB-8.1": 1.0,
+    "ANB-8.2": 1.0,
+    "ANB-8.3": 1.0,
+    "ANB-8.4": 1.0,
+    "ANB-9.1": 1.0,
+    "ANB-9.2": 1.0,
+    "ANB-10.1": 1.0,
+    "ANB-11.1": 1.0,
+    "ANB-11.2": 1.0,
+    "ANB-D.2": 1.0,
+    "ARG-1.1": 1.0,
+    "ARG-3.2": 1.0,
+    "ARG-3.3": 1.0,
+    "ARG-4.1": 1.0,
+    "ARG-4.3": 1.0,
+    "ARG-5.1": 1.0,
+    "ARG-5.2": 1.0,
+    "ARG-5.3": 1.0,
+    "ARG-6.1": 1.0,
+    "ARG-6.2": 1.0,
+    "ARG-6.3": 1.0,
+    "ARG-6.4": 1.0,
+    "ARG-6.5": 1.0,
+    "ARG-7.1": 1.0,
+    "ARG-8.1": 1.0,
+    "ARG-9.2": 1.0,
+    "AHS-2.3": 1.0,
+    "AHS-2.4": 1.0,
+    "AHS-3.2": 1.0,
+    "AHS-3.3": 1.0,
+    "AHS-4.1": 1.0,
+    "AHS-4.2": 1.0,
+    "AHS-4.3": 1.0,
+    "AHS-4.4": 1.0,
+    "AHS-4.6": 1.0,
+    "AHS-5.1": 1.0,
+    "AHS-7.1": 1.0
+  },
+  "per_run": [
+    {
+      "file": "runs/20261104T190137Z-v2-claude-sonnet-5-5/run-01.json",
+      "prompt": "v2",
+      "metrics": {
+        "recall": 1.0,
+        "recall_incident": 1.0,
+        "precision": 0.7009345794392523,
+        "quote_accuracy": 1.0,
+        "type_accuracy": 0.9436619718309859,
+        "deadline_accuracy": 1.0,
+        "recipient_accuracy": 1.0,
+        "counterpart_accuracy": 0.8541666666666666
+      },
+      "counts": {
+        "required_found": 71,
+        "required_total": 71,
+        "incident_found": 34,
+        "incident_total": 34,
+        "agent_commitments": 120,
+        "rejected": 0,
+        "extras": 32
+      },
+      "must_not_extract": [
+        {
+          "trap": "ANB-T4",
+          "item": "ANB breach notification deadline = 72 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "ANB-T5",
+          "item": "ANB breach notification deadline = 6 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "ARG-T1",
+          "item": "ARG breach notification deadline = 72 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "AHS-T3",
+          "item": "AHS breach notification deadline = 60 days",
+          "clean": true,
+          "produced_by": []
+        }
+      ],
+      "traps": {
+        "ANB-T2": {
+          "passed": true,
+          "check": "6.1 found, and its scope or deviation says suspected incidents count"
+        },
+        "ANB-T4": {
+          "passed": true,
+          "check": "D.2 found, 72h not operative, 6.1's 12h operative"
+        },
+        "ANB-T5": {
+          "passed": true,
+          "check": "5.3 flow-down found, 6h not operative"
+        },
+        "ANB-T8": {
+          "passed": true,
+          "check": "5.2 found with 90 days before, TPRM recipient, deviation from DPA 5.2"
+        },
+        "ANB-T9": {
+          "passed": true,
+          "check": "6.3 updates recorded as recurring every 24h"
+        },
+        "ANB-T10": {
+          "passed": true,
+          "check": "4.2 found, flagged as a deviation from DPA 6.2"
+        },
+        "AHS-T3": {
+          "passed": true,
+          "check": "4.1's 10 days operative, 60 days not"
+        }
+      },
+      "traps_deferred": [
+        "AHS-T1",
+        "AHS-T2",
+        "AHS-T4",
+        "ANB-T1",
+        "ANB-T3",
+        "ANB-T6",
+        "ANB-T7",
+        "ARG-T1",
+        "ARG-T2",
+        "ARG-T3",
+        "ARG-T4",
+        "ARG-T5"
+      ],
+      "found": [
+        "AHS-2.3",
+        "AHS-2.4",
+        "AHS-3.2",
+        "AHS-3.3",
+        "AHS-4.1",
+        "AHS-4.2",
+        "AHS-4.3",
+        "AHS-4.4",
+        "AHS-4.6",
+        "AHS-5.1",
+        "AHS-7.1",
+        "ANB-1.2",
+        "ANB-10.1",
+        "ANB-11.1",
+        "ANB-11.2",
+        "ANB-3.4",
+        "ANB-3.5",
+        "ANB-4.1",
+        "ANB-4.2",
+        "ANB-5.1",
+        "ANB-5.2",
+        "ANB-5.2-OBJ",
+        "ANB-5.3-FLOW",
+        "ANB-6.1",
+        "ANB-6.2",
+        "ANB-6.3-INIT",
+        "ANB-6.3-UPD",
+        "ANB-6.4",
+        "ANB-6.5",
+        "ANB-6.6",
+        "ANB-6.8",
+        "ANB-7.1",
+        "ANB-7.2",
+        "ANB-7.3",
+        "ANB-8.1",
+        "ANB-8.2",
+        "ANB-8.3",
+        "ANB-8.4",
+        "ANB-9.1",
+        "ANB-9.2",
+        "ANB-D.2",
+        "ARG-1.1",
+        "ARG-3.2",
+        "ARG-3.3",
+        "ARG-4.1",
+        "ARG-4.3",
+        "ARG-5.1",
+        "ARG-5.2",
+        "ARG-5.3",
+        "ARG-6.1",
+        "ARG-6.2",
+        "ARG-6.3",
+        "ARG-6.4",
+        "ARG-6.5",
+        "ARG-7.1",
+        "ARG-8.1",
+        "ARG-9.2",
+        "DPA-10.1",
+        "DPA-4.2",
+        "DPA-5.2",
+        "DPA-5.3",
+        "DPA-5.4",
+        "DPA-6.1",
+        "DPA-6.2",
+        "DPA-7.1",
+        "DPA-7.2",
+        "DPA-7.3",
+        "DPA-8.1",
+        "DPA-8.3",
+        "DPA-9.2",
+        "DPA-9.3"
+      ],
+      "missed": [],
+      "extras": [
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "2.1",
+          "quote": "Business Associate may use and disclose PHI only as necessary to perform the Underlying Agreements, as required by law, or as permitted by this BAA."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "3.1",
+          "quote": "Business Associate shall comply with Subpart C of 45 C.F.R. Part 164 with respect to ePHI."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "4.2",
+          "quote": "This Section 4.2 serves as notice of, and no further report is required for, unsuccessful attempts such as pings, port scans and blocked log-in attempts that do not result in unauthorized access to ePHI."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "6.2",
+          "quote": "Business Associate shall make its internal practices, books and records relating to PHI available to the Secretary of Health and Human Services for purposes of determining compliance with the HIPAA Rules."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "7.1",
+          "quote": "If return or destruction is not feasible, Business Associate shall extend the protections of this BAA to that PHI for as long as it retains it."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "2.2",
+          "quote": "\"Retailer Data\" means all data that Retailer, its employees or its customers provide to Vendor or that Vendor collects from Retailer's systems, including telemetry, logs, traces and metrics, and all data derived from any of it."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "4.2",
+          "quote": "Vendor shall encrypt Retailer Data at rest and in transit using industry-standard encryption."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B",
+          "quote": "ExampleCo, Inc. (Vendor Affiliate) Platform hosting and AI features for the Services United States"
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "9.1",
+          "quote": "This VDPA binds and benefits each party's successors and permitted assigns."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "1.2",
+          "quote": "Terms incorporated by reference to a Supplier website, including any Supplier trust or security site, do not bind Bank and do not modify this Addendum."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "2.2",
+          "quote": "\"Bank Data\" means all data and information, in any form, that Supplier or any Subcontractor receives, accesses, creates or processes in connection with the Agreement, including (a) data provided by or on behalf of Bank or its customers; (b) metadata, logs and configuration data relating to Bank's use of the Services; and (c) any data derived from any of the foregoing, including model outputs, embeddings, annotations, and data that has been aggregated, de-identified, pseudonymized or tokenized."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "3.1",
+          "quote": "Supplier shall maintain a written information security program that is consistent with the NIST Cybersecurity Framework and the FFIEC Information Technology Examination Handbook."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "5.3",
+          "quote": "Supplier shall impose on each Subcontractor written obligations at least as protective of Bank Data as this Addendum."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "5.4",
+          "quote": "Supplier remains fully liable to Bank for the acts and omissions of its Subcontractors."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "6.7",
+          "quote": "Supplier's obligations to ANB Securities LLC are supplemented by Exhibit D."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "8.4",
+          "quote": "Nothing in this Addendum limits the access of any regulator with authority over Bank."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "12.1",
+          "quote": "Sections 6, 10 and 11 survive termination of the Agreement for as long as Supplier or any Subcontractor holds Bank Data."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "All Bank Data, US regions only"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Prompts and outputs only; zero retention"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Only de-identified feedback samples that Bank submits through the Services' feedback feature, for improving Bank's own agents. Bank Data in identifiable form is not permitted."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Contact details of Bank users only"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "D.1",
+          "quote": "This Exhibit applies to Supplier's processing of customer information of ANB Securities LLC, a broker-dealer registered with the U.S. Securities and Exchange Commission."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "D.3",
+          "quote": "This Exhibit supplements, and does not replace, Section 6 of the Addendum."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "2.1",
+          "quote": "This DPA applies only to ExampleCo's processing of Customer Personal Data."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "2.2",
+          "quote": "ExampleCo will process Customer Personal Data only on Customer's documented instructions, which are set out in the Agreement, this DPA, and Customer's configuration of the Services."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "3.1",
+          "quote": "ExampleCo will ensure that personnel authorized to process Customer Personal Data are bound by written obligations of confidentiality."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "4.1",
+          "quote": "ExampleCo will implement and maintain the technical and organizational measures described in Annex 2 (\"Security Measures\"). ExampleCo may update the Security Measures from time to time, provided that updates do not materially reduce the overall security of the Services."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "8.3",
+          "quote": "ExampleCo lists the third-party model providers used by AI features as Subprocessors on the Trust Center."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "11.1",
+          "quote": "If this DPA conflicts with the Agreement, this DPA controls as to the processing of Customer Personal Data."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 2",
+          "quote": "Access to production systems requires multi-factor authentication."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 2",
+          "quote": "ExampleCo maintains a business continuity and disaster recovery plan and tests it at least annually."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 3",
+          "quote": "Transfers of Customer Personal Data subject to EU or UK Data Protection Laws are made under the Standard Contractual Clauses, Module 2 or Module 3 as applicable."
+        }
+      ],
+      "wrong_type": [
+        "DPA-7.2",
+        "ANB-8.3",
+        "AHS-4.2",
+        "AHS-4.4"
+      ],
+      "wrong_deadline": [],
+      "wrong_recipient": [],
+      "wrong_counterpart": [
+        "ANB-6.6",
+        "ANB-9.1",
+        "ARG-4.1",
+        "ARG-6.5",
+        "AHS-4.2",
+        "AHS-4.3",
+        "AHS-4.6"
+      ],
+      "not_verbatim": [],
+      "optional_found": [
+        "AHS-2.2",
+        "AHS-4.5",
+        "AHS-6.1",
+        "ANB-3.2",
+        "ANB-3.3",
+        "ARG-3.1",
+        "DPA-10.2",
+        "DPA-5.1",
+        "DPA-5.5",
+        "DPA-7.4",
+        "DPA-8.2",
+        "DPA-9.1",
+        "DPA-ANNEX2-ENC"
+      ]
+    },
+    {
+      "file": "runs/20261104T190137Z-v2-claude-sonnet-5-5/run-02.json",
+      "prompt": "v2",
+      "metrics": {
+        "recall": 1.0,
+        "recall_incident": 1.0,
+        "precision": 0.6788990825688074,
+        "quote_accuracy": 1.0,
+        "type_accuracy": 0.9436619718309859,
+        "deadline_accuracy": 1.0,
+        "recipient_accuracy": 1.0,
+        "counterpart_accuracy": 0.8541666666666666
+      },
+      "counts": {
+        "required_found": 71,
+        "required_total": 71,
+        "incident_found": 34,
+        "incident_total": 34,
+        "agent_commitments": 122,
+        "rejected": 0,
+        "extras": 35
+      },
+      "must_not_extract": [
+        {
+          "trap": "ANB-T4",
+          "item": "ANB breach notification deadline = 72 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "ANB-T5",
+          "item": "ANB breach notification deadline = 6 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "ARG-T1",
+          "item": "ARG breach notification deadline = 72 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "AHS-T3",
+          "item": "AHS breach notification deadline = 60 days",
+          "clean": true,
+          "produced_by": []
+        }
+      ],
+      "traps": {
+        "ANB-T2": {
+          "passed": true,
+          "check": "6.1 found, and its scope or deviation says suspected incidents count"
+        },
+        "ANB-T4": {
+          "passed": true,
+          "check": "D.2 found, 72h not operative, 6.1's 12h operative"
+        },
+        "ANB-T5": {
+          "passed": true,
+          "check": "5.3 flow-down found, 6h not operative"
+        },
+        "ANB-T8": {
+          "passed": true,
+          "check": "5.2 found with 90 days before, TPRM recipient, deviation from DPA 5.2"
+        },
+        "ANB-T9": {
+          "passed": true,
+          "check": "6.3 updates recorded as recurring every 24h"
+        },
+        "ANB-T10": {
+          "passed": true,
+          "check": "4.2 found, flagged as a deviation from DPA 6.2"
+        },
+        "AHS-T3": {
+          "passed": true,
+          "check": "4.1's 10 days operative, 60 days not"
+        }
+      },
+      "traps_deferred": [
+        "AHS-T1",
+        "AHS-T2",
+        "AHS-T4",
+        "ANB-T1",
+        "ANB-T3",
+        "ANB-T6",
+        "ANB-T7",
+        "ARG-T1",
+        "ARG-T2",
+        "ARG-T3",
+        "ARG-T4",
+        "ARG-T5"
+      ],
+      "found": [
+        "AHS-2.3",
+        "AHS-2.4",
+        "AHS-3.2",
+        "AHS-3.3",
+        "AHS-4.1",
+        "AHS-4.2",
+        "AHS-4.3",
+        "AHS-4.4",
+        "AHS-4.6",
+        "AHS-5.1",
+        "AHS-7.1",
+        "ANB-1.2",
+        "ANB-10.1",
+        "ANB-11.1",
+        "ANB-11.2",
+        "ANB-3.4",
+        "ANB-3.5",
+        "ANB-4.1",
+        "ANB-4.2",
+        "ANB-5.1",
+        "ANB-5.2",
+        "ANB-5.2-OBJ",
+        "ANB-5.3-FLOW",
+        "ANB-6.1",
+        "ANB-6.2",
+        "ANB-6.3-INIT",
+        "ANB-6.3-UPD",
+        "ANB-6.4",
+        "ANB-6.5",
+        "ANB-6.6",
+        "ANB-6.8",
+        "ANB-7.1",
+        "ANB-7.2",
+        "ANB-7.3",
+        "ANB-8.1",
+        "ANB-8.2",
+        "ANB-8.3",
+        "ANB-8.4",
+        "ANB-9.1",
+        "ANB-9.2",
+        "ANB-D.2",
+        "ARG-1.1",
+        "ARG-3.2",
+        "ARG-3.3",
+        "ARG-4.1",
+        "ARG-4.3",
+        "ARG-5.1",
+        "ARG-5.2",
+        "ARG-5.3",
+        "ARG-6.1",
+        "ARG-6.2",
+        "ARG-6.3",
+        "ARG-6.4",
+        "ARG-6.5",
+        "ARG-7.1",
+        "ARG-8.1",
+        "ARG-9.2",
+        "DPA-10.1",
+        "DPA-4.2",
+        "DPA-5.2",
+        "DPA-5.3",
+        "DPA-5.4",
+        "DPA-6.1",
+        "DPA-6.2",
+        "DPA-7.1",
+        "DPA-7.2",
+        "DPA-7.3",
+        "DPA-8.1",
+        "DPA-8.3",
+        "DPA-9.2",
+        "DPA-9.3"
+      ],
+      "missed": [],
+      "extras": [
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "1.2",
+          "quote": "\"Security Incident\" has the meaning given in 45 C.F.R. \u00a7 164.304, limited to incidents involving ePHI that Business Associate or its Subcontractors create, receive, maintain or transmit for Covered Entity."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "2.1",
+          "quote": "Business Associate may use and disclose PHI only as necessary to perform the Underlying Agreements, as required by law, or as permitted by this BAA."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "3.1",
+          "quote": "Business Associate shall comply with Subpart C of 45 C.F.R. Part 164 with respect to ePHI."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "4.2",
+          "quote": "This Section 4.2 serves as notice of, and no further report is required for, unsuccessful attempts such as pings, port scans and blocked log-in attempts that do not result in unauthorized access to ePHI."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "6.2",
+          "quote": "Business Associate shall make its internal practices, books and records relating to PHI available to the Secretary of Health and Human Services for purposes of determining compliance with the HIPAA Rules."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "7.1",
+          "quote": "If return or destruction is not feasible, Business Associate shall extend the protections of this BAA to that PHI for as long as it retains it."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "2.2",
+          "quote": "\"Retailer Data\" means all data that Retailer, its employees or its customers provide to Vendor or that Vendor collects from Retailer's systems, including telemetry, logs, traces and metrics, and all data derived from any of it."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "2.3",
+          "quote": "\"Data Incident\" means any actual or reasonably suspected unauthorized access to, or acquisition, disclosure or loss of, Retailer Data, including while held by a Subprocessor."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "2.4",
+          "quote": "\"Subprocessor\" means any third party, including any Vendor Affiliate, that processes Retailer Data on Vendor's behalf."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "4.2",
+          "quote": "Vendor shall encrypt Retailer Data at rest and in transit using industry-standard encryption."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "9.1",
+          "quote": "This VDPA binds and benefits each party's successors and permitted assigns."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B",
+          "quote": "| Amazon Web Services, Inc. | Hosting | United States |\n| Helpdesk Platform, Inc. | Support ticketing | United States |"
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B",
+          "quote": "| ExampleCo, Inc. (Vendor Affiliate) | Platform hosting and AI features for the Services | United States |"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "2.2",
+          "quote": "\"Bank Data\" means all data and information, in any form, that Supplier or any Subcontractor receives, accesses, creates or processes in connection with the Agreement, including (a) data provided by or on behalf of Bank or its customers; (b) metadata, logs and configuration data relating to Bank's use of the Services; and (c) any data derived from any of the foregoing, including model outputs, embeddings, annotations, and data that has been aggregated, de-identified, pseudonymized or tokenized."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "3.1",
+          "quote": "Supplier shall maintain a written information security program that is consistent with the NIST Cybersecurity Framework and the FFIEC Information Technology Examination Handbook."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "5.3",
+          "quote": "Supplier shall impose on each Subcontractor written obligations at least as protective of Bank Data as this Addendum."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "5.4",
+          "quote": "Supplier remains fully liable to Bank for the acts and omissions of its Subcontractors."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "6.4",
+          "quote": "Where law requires such notice, Supplier shall inform Bank before giving it, to the extent legally permitted."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "6.7",
+          "quote": "Supplier's obligations to ANB Securities LLC are supplemented by Exhibit D."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "D.3",
+          "quote": "This Exhibit supplements, and does not replace, Section 6 of the Addendum."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "12.1",
+          "quote": "Sections 6, 10 and 11 survive termination of the Agreement for as long as Supplier or any Subcontractor holds Bank Data."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "All Bank Data, US regions only"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Prompts and outputs only; zero retention"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Only de-identified feedback samples that Bank submits through the Services' feedback feature, for improving Bank's own agents. Bank Data in identifiable form is not permitted."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Contact details of Bank users only"
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "2.1",
+          "quote": "This DPA applies only to ExampleCo's processing of Customer Personal Data."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "2.2",
+          "quote": "ExampleCo will process Customer Personal Data only on Customer's documented instructions, which are set out in the Agreement, this DPA, and Customer's configuration of the Services."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "3.1",
+          "quote": "ExampleCo will ensure that personnel authorized to process Customer Personal Data are bound by written obligations of confidentiality."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "4.1",
+          "quote": "ExampleCo will implement and maintain the technical and organizational measures described in Annex 2 (\"Security Measures\"). ExampleCo may update the Security Measures from time to time, provided that updates do not materially reduce the overall security of the Services."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "8.3",
+          "quote": "ExampleCo lists the third-party model providers used by AI features as Subprocessors on the Trust Center."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "9.3",
+          "quote": "Customer agrees that the reports in Sections 9.1 and 9.2 satisfy any audit right under Data Protection Laws."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "11.1",
+          "quote": "If this DPA conflicts with the Agreement, this DPA controls as to the processing of Customer Personal Data."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 2",
+          "quote": "Access to production systems requires multi-factor authentication."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 2",
+          "quote": "ExampleCo maintains a business continuity and disaster recovery plan and tests it at least annually."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 3",
+          "quote": "Transfers of Customer Personal Data subject to EU or UK Data Protection Laws are made under the Standard Contractual Clauses, Module 2 or Module 3 as applicable."
+        }
+      ],
+      "wrong_type": [
+        "ANB-8.3",
+        "ARG-6.2",
+        "AHS-4.2",
+        "AHS-4.4"
+      ],
+      "wrong_deadline": [],
+      "wrong_recipient": [],
+      "wrong_counterpart": [
+        "ANB-6.6",
+        "ANB-9.1",
+        "ARG-4.1",
+        "ARG-4.3",
+        "ARG-6.5",
+        "AHS-4.2",
+        "AHS-4.6"
+      ],
+      "not_verbatim": [],
+      "optional_found": [
+        "AHS-2.2",
+        "AHS-4.5",
+        "AHS-6.1",
+        "ANB-3.2",
+        "ANB-3.3",
+        "ARG-3.1",
+        "DPA-10.2",
+        "DPA-5.1",
+        "DPA-5.5",
+        "DPA-7.4",
+        "DPA-8.2",
+        "DPA-9.1",
+        "DPA-ANNEX2-ENC"
+      ]
+    },
+    {
+      "file": "runs/20261104T190137Z-v2-claude-sonnet-5-5/run-03.json",
+      "prompt": "v2",
+      "metrics": {
+        "recall": 1.0,
+        "recall_incident": 1.0,
+        "precision": 0.6923076923076923,
+        "quote_accuracy": 1.0,
+        "type_accuracy": 0.9436619718309859,
+        "deadline_accuracy": 1.0,
+        "recipient_accuracy": 1.0,
+        "counterpart_accuracy": 0.8541666666666666
+      },
+      "counts": {
+        "required_found": 71,
+        "required_total": 71,
+        "incident_found": 34,
+        "incident_total": 34,
+        "agent_commitments": 130,
+        "rejected": 0,
+        "extras": 36
+      },
+      "must_not_extract": [
+        {
+          "trap": "ANB-T4",
+          "item": "ANB breach notification deadline = 72 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "ANB-T5",
+          "item": "ANB breach notification deadline = 6 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "ARG-T1",
+          "item": "ARG breach notification deadline = 72 hours",
+          "clean": true,
+          "produced_by": []
+        },
+        {
+          "trap": "AHS-T3",
+          "item": "AHS breach notification deadline = 60 days",
+          "clean": true,
+          "produced_by": []
+        }
+      ],
+      "traps": {
+        "ANB-T2": {
+          "passed": true,
+          "check": "6.1 found, and its scope or deviation says suspected incidents count"
+        },
+        "ANB-T4": {
+          "passed": true,
+          "check": "D.2 found, 72h not operative, 6.1's 12h operative"
+        },
+        "ANB-T5": {
+          "passed": true,
+          "check": "5.3 flow-down found, 6h not operative"
+        },
+        "ANB-T8": {
+          "passed": true,
+          "check": "5.2 found with 90 days before, TPRM recipient, deviation from DPA 5.2"
+        },
+        "ANB-T9": {
+          "passed": true,
+          "check": "6.3 updates recorded as recurring every 24h"
+        },
+        "ANB-T10": {
+          "passed": true,
+          "check": "4.2 found, flagged as a deviation from DPA 6.2"
+        },
+        "AHS-T3": {
+          "passed": true,
+          "check": "4.1's 10 days operative, 60 days not"
+        }
+      },
+      "traps_deferred": [
+        "AHS-T1",
+        "AHS-T2",
+        "AHS-T4",
+        "ANB-T1",
+        "ANB-T3",
+        "ANB-T6",
+        "ANB-T7",
+        "ARG-T1",
+        "ARG-T2",
+        "ARG-T3",
+        "ARG-T4",
+        "ARG-T5"
+      ],
+      "found": [
+        "AHS-2.3",
+        "AHS-2.4",
+        "AHS-3.2",
+        "AHS-3.3",
+        "AHS-4.1",
+        "AHS-4.2",
+        "AHS-4.3",
+        "AHS-4.4",
+        "AHS-4.6",
+        "AHS-5.1",
+        "AHS-7.1",
+        "ANB-1.2",
+        "ANB-10.1",
+        "ANB-11.1",
+        "ANB-11.2",
+        "ANB-3.4",
+        "ANB-3.5",
+        "ANB-4.1",
+        "ANB-4.2",
+        "ANB-5.1",
+        "ANB-5.2",
+        "ANB-5.2-OBJ",
+        "ANB-5.3-FLOW",
+        "ANB-6.1",
+        "ANB-6.2",
+        "ANB-6.3-INIT",
+        "ANB-6.3-UPD",
+        "ANB-6.4",
+        "ANB-6.5",
+        "ANB-6.6",
+        "ANB-6.8",
+        "ANB-7.1",
+        "ANB-7.2",
+        "ANB-7.3",
+        "ANB-8.1",
+        "ANB-8.2",
+        "ANB-8.3",
+        "ANB-8.4",
+        "ANB-9.1",
+        "ANB-9.2",
+        "ANB-D.2",
+        "ARG-1.1",
+        "ARG-3.2",
+        "ARG-3.3",
+        "ARG-4.1",
+        "ARG-4.3",
+        "ARG-5.1",
+        "ARG-5.2",
+        "ARG-5.3",
+        "ARG-6.1",
+        "ARG-6.2",
+        "ARG-6.3",
+        "ARG-6.4",
+        "ARG-6.5",
+        "ARG-7.1",
+        "ARG-8.1",
+        "ARG-9.2",
+        "DPA-10.1",
+        "DPA-4.2",
+        "DPA-5.2",
+        "DPA-5.3",
+        "DPA-5.4",
+        "DPA-6.1",
+        "DPA-6.2",
+        "DPA-7.1",
+        "DPA-7.2",
+        "DPA-7.3",
+        "DPA-8.1",
+        "DPA-8.3",
+        "DPA-9.2",
+        "DPA-9.3"
+      ],
+      "missed": [],
+      "extras": [
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "1.2",
+          "quote": "\"Security Incident\" has the meaning given in 45 C.F.R. \u00a7 164.304, limited to incidents involving ePHI that Business Associate or its Subcontractors create, receive, maintain or transmit for Covered Entity."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "2.1",
+          "quote": "Business Associate may use and disclose PHI only as necessary to perform the Underlying Agreements, as required by law, or as permitted by this BAA."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "3.1",
+          "quote": "Business Associate shall comply with Subpart C of 45 C.F.R. Part 164 with respect to ePHI."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "4.2",
+          "quote": "This Section 4.2 serves as notice of, and no further report is required for, unsuccessful attempts such as pings, port scans and blocked log-in attempts that do not result in unauthorized access to ePHI."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "6.2",
+          "quote": "Business Associate shall make its internal practices, books and records relating to PHI available to the Secretary of Health and Human Services for purposes of determining compliance with the HIPAA Rules."
+        },
+        {
+          "contract": "amazing-health-system-baa.md",
+          "section": "7.1",
+          "quote": "If return or destruction is not feasible, Business Associate shall extend the protections of this BAA to that PHI for as long as it retains it."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "2.2",
+          "quote": "\"Retailer Data\" means all data that Retailer, its employees or its customers provide to Vendor or that Vendor collects from Retailer's systems, including telemetry, logs, traces and metrics, and all data derived from any of it."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "4.2",
+          "quote": "Vendor shall encrypt Retailer Data at rest and in transit using industry-standard encryption."
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B",
+          "quote": "Amazon Web Services, Inc. | Hosting | United States"
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B",
+          "quote": "Helpdesk Platform, Inc. | Support ticketing | United States"
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "Appendix B, Amendment No. 1",
+          "quote": "ExampleCo, Inc. (Vendor Affiliate) | Platform hosting and AI features for the Services | United States"
+        },
+        {
+          "contract": "astounding-retail-group-xyzwire-dpa.md",
+          "section": "9.1",
+          "quote": "This VDPA binds and benefits each party's successors and permitted assigns."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "1.2",
+          "quote": "Terms incorporated by reference to a Supplier website, including any Supplier trust or security site, do not bind Bank and do not modify this Addendum."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "2.2",
+          "quote": "\"Bank Data\" means all data and information, in any form, that Supplier or any Subcontractor receives, accesses, creates or processes in connection with the Agreement, including (a) data provided by or on behalf of Bank or its customers; (b) metadata, logs and configuration data relating to Bank's use of the Services; and (c) any data derived from any of the foregoing, including model outputs, embeddings, annotations, and data that has been aggregated, de-identified, pseudonymized or tokenized."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "3.1",
+          "quote": "Supplier shall maintain a written information security program that is consistent with the NIST Cybersecurity Framework and the FFIEC Information Technology Examination Handbook."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "5.3",
+          "quote": "Supplier shall impose on each Subcontractor written obligations at least as protective of Bank Data as this Addendum."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "5.4",
+          "quote": "Supplier remains fully liable to Bank for the acts and omissions of its Subcontractors."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "6.4",
+          "quote": "Where law requires such notice, Supplier shall inform Bank before giving it, to the extent legally permitted."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "6.7",
+          "quote": "Supplier's obligations to ANB Securities LLC are supplemented by Exhibit D."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "8.4",
+          "quote": "Nothing in this Addendum limits the access of any regulator with authority over Bank."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "12.1",
+          "quote": "Sections 6, 10 and 11 survive termination of the Agreement for as long as Supplier or any Subcontractor holds Bank Data."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "All Bank Data, US regions only"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Prompts and outputs only; zero retention"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Only de-identified feedback samples that Bank submits through the Services' feedback feature, for improving Bank's own agents. Bank Data in identifiable form is not permitted."
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "Schedule 2",
+          "quote": "Contact details of Bank users only"
+        },
+        {
+          "contract": "awesome-national-bank-security-addendum.md",
+          "section": "D.3",
+          "quote": "This Exhibit supplements, and does not replace, Section 6 of the Addendum."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "2.1",
+          "quote": "This DPA applies only to ExampleCo's processing of Customer Personal Data."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "2.2",
+          "quote": "ExampleCo will process Customer Personal Data only on Customer's documented instructions, which are set out in the Agreement, this DPA, and Customer's configuration of the Services."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "3.1",
+          "quote": "ExampleCo will ensure that personnel authorized to process Customer Personal Data are bound by written obligations of confidentiality."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "4.1",
+          "quote": "ExampleCo will implement and maintain the technical and organizational measures described in Annex 2 (\"Security Measures\"). ExampleCo may update the Security Measures from time to time, provided that updates do not materially reduce the overall security of the Services."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "8.3",
+          "quote": "ExampleCo lists the third-party model providers used by AI features as Subprocessors on the Trust Center."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "9.3",
+          "quote": "Customer agrees that the reports in Sections 9.1 and 9.2 satisfy any audit right under Data Protection Laws."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "11.1",
+          "quote": "If this DPA conflicts with the Agreement, this DPA controls as to the processing of Customer Personal Data."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 2",
+          "quote": "Access to production systems requires multi-factor authentication."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 2",
+          "quote": "ExampleCo maintains a business continuity and disaster recovery plan and tests it at least annually."
+        },
+        {
+          "contract": "exampleco-standard-dpa.md",
+          "section": "Annex 3",
+          "quote": "Transfers of Customer Personal Data subject to EU or UK Data Protection Laws are made under the Standard Contractual Clauses, Module 2 or Module 3 as applicable."
+        }
+      ],
+      "wrong_type": [
+        "ANB-6.3-INIT",
+        "ANB-8.3",
+        "AHS-2.4",
+        "AHS-4.4"
+      ],
+      "wrong_deadline": [],
+      "wrong_recipient": [],
+      "wrong_counterpart": [
+        "ANB-6.6",
+        "ANB-9.1",
+        "ARG-4.1",
+        "ARG-4.3",
+        "ARG-6.5",
+        "AHS-4.2",
+        "AHS-4.6"
+      ],
+      "not_verbatim": [],
+      "optional_found": [
+        "AHS-2.2",
+        "AHS-4.5",
+        "AHS-6.1",
+        "ANB-3.2",
+        "ANB-3.3",
+        "ARG-3.1",
+        "DPA-10.2",
+        "DPA-5.1",
+        "DPA-5.5",
+        "DPA-7.4",
+        "DPA-8.2",
+        "DPA-9.1",
+        "DPA-ANNEX2-ENC"
+      ]
+    }
+  ]
+}
