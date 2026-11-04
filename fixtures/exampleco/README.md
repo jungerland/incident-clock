@@ -15,7 +15,15 @@ All company and vendor names are fictional placeholders: Example National Bank, 
 | `example-national-bank-security-addendum.md` | Large US bank, 12-hour notice | Commercial Cloud | drafted |
 | `example-health-system-baa.md` | Example Health System BAA, 10-day notice, not exposed | Healthcare and Life Sciences | drafted |
 | `example-retail-group-xyzwire-dpa.md` | Example Retail Group, XYZwire contract from before the acquisition, 24-hour notice | XYZwire | drafted |
-| (planned) | Labelforge transfer log | | |
+| `incident-labelforge/labelforge-transfer-log.csv` | Labelforge transfer log | | drafted |
 | `incident-labelforge/target-summary.md` | Incident scenario: target output and answer key | | drafted |
+
+## Labelforge transfer log
+
+`incident-labelforge/labelforge-transfer-log.csv` is ExampleCo's record of what it sent to Labelforge for human labeling, one row per batch. The incident agent uses it to decide which customers had data at Labelforge and in what form. The contracts then decide whether that form counts.
+
+- `deidentification_method`: `tokenized` (names and account numbers replaced with tokens), `hashed_identifiers` (IP addresses and user IDs hashed), or `hipaa_safe_harbor` (HIPAA's 18 identifiers removed).
+- `contains_direct_identifiers` is `no` for every row. That doesn't settle exposure: the bank and retail contracts count de-identified and derived data as their data.
+- `held_at_labelforge_until`: when Labelforge deletes the batch. Only batches still held on Nov 2, 2026 were exposed. One retail batch was deleted in May 2026; a later one is still held.
 
 Dropped on 2026-11-03 to keep the demo explainable in a short memo: the EU bank (repeated the bank's role) and the defense prime (needed too much backstory; its evidence-keeping duty is already in the bank contract).

@@ -10,7 +10,7 @@ All times Eastern.
 
 > Labelforge, our data-labeling vendor, emailed us at 3:00 PM today (Nov 2). Someone logged into their annotation platform with a stolen employee credential. Their security team spotted it at 6:00 AM. They don't yet know what was viewed or downloaded.
 
-The agent also has the Labelforge transfer log: which customers' data ExampleCo sent to Labelforge, and in what form. (Fixture still to write.)
+The agent also has the Labelforge transfer log: which customers' data ExampleCo sent to Labelforge, and in what form (`labelforge-transfer-log.csv`, one row per batch).
 
 **Now:** Nov 2, 4:00 PM.
 
