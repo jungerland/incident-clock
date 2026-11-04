@@ -28,4 +28,11 @@ The incident agent uses the log to decide which customers had data at Labelforge
 - `contains_direct_identifiers` is `no` for every row. That doesn't settle exposure: the bank and retail contracts count de-identified and derived data as their data.
 - `held_at_labelforge_until`: when Labelforge deletes the batch. Only batches still held on Nov 2, 2026 were exposed. One retail batch was deleted in May 2026; a later one is still held.
 
+## Incident inputs and expected answers
+
+- `incident-labelforge/incident.md`: the report the agent is told. It reads this, never `target-summary.md`.
+- `company-facts.md`: what a customer would configure once, here that ExampleCo runs XYZwire's security.
+- `incident-labelforge/expected.json`: the target summary's decisions and deadlines, in the form the scorer reads.
+- `incident-labelforge/labelforge-transfer-log-limited-data-set.csv`: the same log with the health system's batches changed to a limited data set. The health answer must flip to yes on this log, which shows the no comes from the data and not from memory.
+
 Dropped on 2026-11-03 to keep the demo explainable in a short memo: the EU bank (repeated the bank's role) and the defense prime (needed too much backstory; its evidence-keeping duty is already in the bank contract).
